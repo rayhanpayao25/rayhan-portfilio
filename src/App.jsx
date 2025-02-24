@@ -8,25 +8,31 @@ import AboutMe from "./components/AboutMe/AboutMe"
 
 const App = () => {
   return (
-    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
+    <motion.div 
+      initial={{ opacity: 0 }} 
+      animate={{ opacity: 1 }} 
+      transition={{ duration: 0.5 }}
+    >
       <Navbar />
-      <div id="hero">
+      
+      <section id="hero">
         <Hero />
-      </div>
+      </section>
 
-      <div id="programs" className="container">
+      <section id="programs" className="container">
         <Title subTitle="GDSC Program" title="My GDSC Projects" />
         <Programs />
-      </div>
+      </section>
 
-      <div id="about-me">
+      <section id="about-me">
         <AboutMe />
-      </div>
+      </section>
 
-      <div id="contact"></div>
+      <section id="contact">
+        {/* Contact content goes here */}
+      </section>
     </motion.div>
   )
 }
 
-export default App
-
+export default App;
