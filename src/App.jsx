@@ -23,7 +23,7 @@ const App = () => {
         <AboutMe />
       </div>
 
-      <div id="contact">{}</div>
+      <div id="contact"></div>
     </motion.div>
   )
 }
