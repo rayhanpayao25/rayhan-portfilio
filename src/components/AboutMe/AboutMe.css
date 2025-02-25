@@ -317,7 +317,7 @@
   box-shadow: 0 5px 15px rgba(52, 168, 83, 0.3);
 }
 
- 
+/* Card Face Rotations */
 .about-face {
   transform: rotateY(0deg);
 }
@@ -331,7 +331,7 @@
   transform: rotateY(270deg);
 }
 
-
+/* Animations */
 @keyframes float {
   0% {
     transform: translateY(0px);
@@ -368,6 +368,7 @@
   }
 }
 
+/* Responsive Scaling */
 @media (max-width: 1200px) {
   .gradient-bg,
   .card-container {
@@ -375,41 +376,12 @@
   }
   .about-wrapper {
     grid-template-columns: 1fr;
-    gap: 0; 
-    padding: 1rem;
+    gap: 2rem;
   }
   .left-side {
     padding-left: 2rem;
-    order: -1;
-    justify-content: center;
-    padding: 0 1rem 0.5rem; 
-    min-height: auto;  
-  }
-  .big-text {
-    text-align: center;
-    margin-bottom: 0; 
-    font-size: clamp(3rem, 6vw, 6rem);  
-  }
-  .right-side {
-    padding-top: 0; 
   }
 }
-
-@media (max-width: 768px) {
-  .gradient-bg,
-  .card-container {
-    transform: scale(0.7);
-    margin-top: -2rem;  
-  }
-  .about-wrapper {
-    padding: 0.5rem;
-  }
-  .left-side {
-    padding: 0 0.5rem;
-  }
-}
-
-
 
 @media (max-width: 992px) {
   .gradient-bg,
