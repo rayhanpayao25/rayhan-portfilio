@@ -13,16 +13,17 @@ const App = () => {
       <div id="hero">
         <Hero />
       </div>
+      
+      <div id="about-me">
+        <AboutMe />
+      </div>
 
       <div id="programs" className="container">
         <Title subTitle="GDSC Program" title="My GDSC Projects" />
         <Programs />
       </div>
 
-      <div id="about-me">
-        <AboutMe />
-      </div>
-
+     
       <div id="contact">{}</div>
     </motion.div>
   )

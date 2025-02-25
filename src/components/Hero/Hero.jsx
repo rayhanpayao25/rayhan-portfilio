@@ -7,10 +7,10 @@ const Hero = () => {
     <div className='hero container'>
       <div  className='hero-text'>
       <h1>Hi, I am Rayhan</h1>
-      <p>A passionate front-end web designer and developer. I specialize in creating visually appealing, user-friendly websites that provide 
-        seamless and engaging experiences. I focus on both design and functionality to ensure a balanced approach to web development. 
-        Whether it's crafting responsive layouts or optimizing user interfaces, I'm dedicated to building websites that not only look 
-        great but also perform efficiently across all devices.</p>
+      <p>Welcome to my little corner of the web. I’m a front-end developer, and I’m all about turning ideas into interactive, 
+        fun, and beautiful websites. 
+        I'm here to make your web experience something special. Take a look around, explore, 
+        and feel free to reach out if you want to create something awesome together! </p>
         <button className='btn'>Hire Me <img src="{dark_arrow}" alt="" /></button>
     </div>
     </div>

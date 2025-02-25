@@ -7,6 +7,7 @@ import program_icon from '../../assets/icon1.png'
 
 const Programs = () => {
   return (
+    <div className="programs-container">
     <div className="programs">
             <div className="program">
                <img src={program} alt="" />
@@ -29,12 +30,23 @@ const Programs = () => {
                <div className="capt">
                <img src={program_icon} alt="" />
                 <p>GDSC Announcement work</p>
-                <img src="" alt="" />
+
                </div>
+
+
              </div>
+
+             
+    </div>
+    <a href="https://www.facebook.com/gdgoncampuswmsu" className="explore-more" target="_blank" rel="noopener noreferrer">
+        Explore More
+      </a>
     </div>
     
+    
+    
   )
+  
 }
 
 export default Programs

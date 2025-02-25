@@ -1,15 +1,82 @@
-.title{
+.title {
     text-align: center;
-    color: #10043f;
+    color: #ffffff;
     font-size: 15px;
     font-weight: 600;
-    text-transform:uppercase;
+    text-transform: uppercase;
     margin: 70px 0 30px;
-}
-
-.title h2{
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease forwards;
+  }
+  
+  .title h2 {
     font-size: 32px;
-    color: #000F38 ;
+    color: #ffffff;
     margin-top: 5px;
     text-transform: none;
-}
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease forwards 0.2s;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .title p {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .title p::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 50%;
+    background-color: #ffffff;
+    transition: all 0.5s ease;
+    transform: translateX(-50%);
+    animation: expandLine 0.5s ease forwards 1s;
+  }
+  
+  @keyframes expandLine {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  
+  .title h2 {
+    background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    background-size: 200% 200%;
+    animation: fadeInUp 0.8s ease forwards 0.2s, gradientShift 5s ease infinite;
+  }
+  
+  @keyframes gradientShift {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  
