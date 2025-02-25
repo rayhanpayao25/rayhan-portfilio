@@ -1,6 +1,5 @@
 import React from 'react'
 import './Hero.css'
-//import dark_arrow from '../../assets/'
 
 const Hero = () => {
   return (
@@ -11,7 +10,7 @@ const Hero = () => {
         fun, and beautiful websites. 
         I'm here to make your web experience something special. Take a look around, explore, 
         and feel free to reach out if you want to create something awesome together! </p>
-        <button className='btn'>Hire Me <img src="{dark_arrow}" alt="" /></button>
+        <button className='btn'>Hire Me </button>
     </div>
     </div>
   )
