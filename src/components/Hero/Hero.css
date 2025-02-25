@@ -25,3 +25,7 @@
     margin: 10px auto 20px;
     line-height: 1.4;
   }
+  
+  .hero-text btn{
+    font-size: 40px;
+  }
