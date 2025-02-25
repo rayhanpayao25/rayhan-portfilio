@@ -1,31 +1,77 @@
 .hero {
-  
-    min-height: 100vh;
-    height: 100%;
-    background:linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), url('../../assets/bg.jpg');
-    background-size: cover;
-    background-position:center ;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .hero-text{
-    text-align: center;
-    max-width:800px ;
-  }
-  .hero-text h1{
-    font-size: 60px;
-    font-weight: 600;
-  }
+  min-height: 100vh;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(243, 232, 232, 0.7)), url('../../assets/bg.jpg') ;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
 
-  .hero-text p{
-    max-width:700px ;
-    margin: 10px auto 20px;
-    line-height: 1.4;
-  }
-  
-  .hero-text btn{
+.hero-text {
+  text-align: center;
+  max-width: 800px;
+}
+
+.hero-text h1 {
+  font-size: 60px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  max-width: 700px;
+  margin: 0 auto 20px;
+  line-height: 1.4;
+}
+
+.btn {
+  font-size: 18px;
+  padding: 10px 20px;
+  background-color: #fff;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #f0f0f0;
+}
+
+.btn img {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  margin-left: 10px;
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+  .hero-text h1 {
     font-size: 40px;
   }
+
+  .hero-text p {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero-text h1 {
+    font-size: 32px;
+  }
+
+  .hero-text p {
+    font-size: 14px;
+  }
+
+  .btn {
+    font-size: 16px;
+    padding: 8px 16px;
+  }
+}
