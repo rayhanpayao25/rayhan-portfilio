@@ -1,41 +1,57 @@
-import React from 'react' 
-import './Programs.css' 
-import program from '../../assets/p.png' 
-import program_1 from '../../assets/p1.png' 
-import program_2 from '../../assets/p3.png' 
-import program_icon from '../../assets/icon1.png'
+"use client"
 
-const Programs = () => { return ( <div className="programs-container"> <div className="programs"> <div className="program"> <img src={program} alt="" /> <div className="capt"> <img src={program_icon} alt="" /> <p>GDSC Officer</p> </div> </div>
+import { useState } from "react"
+import "./Programs.css"
+import program from "../../assets/p.png"
+import program_1 from "../../assets/p1.png"
+import program_2 from "../../assets/p3.png"
+import program_icon from "../../assets/icon1.png"
 
-         <div className="program">
-           <img src={program_1} alt="" />
-           <div className="capt">
-           <img src={program_icon} alt="" />
-            <p>GDSC Countdown work</p>
-           </div>
+const Programs = () => {
+  const programItems = [
+    { img: program, caption: "GDSC Officer" },
+    { img: program_1, caption: "GDSC Countdown work" },
+    { img: program_2, caption: "GDSC Announcement work" },
+  ]
+
+
+  const allItems = [...programItems, ...programItems, ...programItems, ...programItems]
+
+  const [isPaused, setIsPaused] = useState(false)
+
+  return (
+    <div className="programs-container">
+      <div className="fade-overlay-left" />
+      <div className="fade-overlay-right" />
+      <div
+        className={`programs-scroll-container ${isPaused ? "paused" : ""}`}
+        onMouseEnter={() => setIsPaused(true)}
+        onMouseLeave={() => setIsPaused(false)}
+      >
+        <div className="programs-track">
+          {allItems.map((item, index) => (
+            <div className="program" key={index}>
+              <img src={item.img || "/placeholder.svg"} alt="" />
+              <div className="capt">
+                <img src={program_icon || "/placeholder.svg"} alt="" />
+                <p>{item.caption}</p>
+              </div>
+            </div>
+          ))}
         </div>
+      </div>
 
-         <div className="program">
-           <img src={program_2} alt="" />
-           <div className="capt">
-           <img src={program_icon} alt="" />
-            <p>GDSC Announcement work</p>
-
-           </div>
-
-
-         </div>
-
-         
-</div>
-<a href="https://www.facebook.com/gdgoncampuswmsu" className="explore-more" target="_blank" rel="noopener noreferrer">
-    Explore More
-  </a>
-</div>
-
-
-)
-
+      <a
+        href="https://www.facebook.com/gdgoncampuswmsu"
+        className="explore-more"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Explore More
+      </a>
+    </div>
+  )
 }
 
 export default Programs
+

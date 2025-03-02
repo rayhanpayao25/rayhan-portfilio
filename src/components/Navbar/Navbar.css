@@ -1,3 +1,12 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
 nav {
   width: 100%;
   background-color: black;
@@ -9,19 +18,21 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  z-index: 10;
+  z-index: 1000;
   flex-wrap: wrap;
+  box-sizing: border-box;
 }
 
 .logo {
-  width: 70px; 
+  width: 70px;
   height: auto;
 }
 
- 
 .desktop-menu {
   display: flex;
   align-items: center;
+  margin: 0;
+  padding: 0;
 }
 
 .desktop-menu li {
@@ -32,12 +43,14 @@ nav {
   cursor: pointer;
 }
 
- 
 .mobile-menu-button {
   display: none;
   cursor: pointer;
+  background: none;
+  border: none;
+  color: white;
 }
- 
+
 .mobile-menu {
   width: 100%;
   overflow: hidden;
@@ -45,7 +58,7 @@ nav {
   top: 100%;
   left: 0;
   background-color: black;
-  z-index: 9;
+  z-index: 999;
 }
 
 .mobile-menu ul {
@@ -53,6 +66,7 @@ nav {
   flex-direction: column;
   width: 100%;
   padding: 10px 0;
+  margin: 0;
 }
 
 .mobile-menu li {
@@ -76,6 +90,32 @@ nav {
   font: inherit;
   padding: 0;
   margin: 0;
+  position: relative;
+  transition: color 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 50%;
+  background-color: #1861c1;
+  transition: all 0.3s ease-in-out;
+  transform: translateX(-50%);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #1861c1;
 }
 
 .nav-link:focus {
@@ -90,9 +130,14 @@ nav {
   border: none;
   cursor: pointer;
   font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
- 
+.btn:hover {
+  background-color: #1861c1;
+  color: white;
+}
+
 @media (max-width: 768px) {
   nav {
     padding: 12px 16px;
@@ -111,7 +156,6 @@ nav {
   }
 }
 
- 
 @media (max-width: 480px) {
   nav {
     padding: 10px 12px;
