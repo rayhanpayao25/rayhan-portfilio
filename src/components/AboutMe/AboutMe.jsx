@@ -3,11 +3,13 @@ import { useState, useEffect, useCallback } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Code2, Award, Briefcase, User, ChevronRight, Mail } from "lucide-react"
 import "./AboutMe.css"
+import cvFile from "../../resume/Rayhan.pdf"
 
 const AboutMe = () => {
   const [currentFace, setCurrentFace] = useState(0)
   const faces = ["About", "Skills", "Work", "Career Goals"]
   const [isEmailHovered, setIsEmailHovered] = useState(false)
+  const [isCVHovered, setIsCVHovered] = useState(false)
   const [isMobile, setIsMobile] = useState(false)
 
   const rotateCard = useCallback(() => {
@@ -32,6 +34,11 @@ const AboutMe = () => {
   const handleEmailClick = (e) => {
     e.preventDefault()
     window.open("mailto:Rayhanpyo2016@gmail.com", "_blank")
+  }
+
+  const handleViewCVClick = (e) => {
+    e.preventDefault()
+    window.open(cvFile, "_blank")
   }
 
   useEffect(() => {
@@ -66,7 +73,21 @@ const AboutMe = () => {
             <span>.</span>
           </span>
         </h1>
+
+        <motion.button
+                    className="rotate-button cv-button"
+                    onClick={handleViewCVClick}
+                    onMouseEnter={() => setIsCVHovered(true)}
+                    onMouseLeave={() => setIsCVHovered(false)}
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    <ChevronRight className="button-icon" />
+                    {isCVHovered ? "Open CV" : "View CV"}
+                  </motion.button>
       </motion.div>
+
+      
 
       <div className="right-side">
         <div className="gradient-bg">
@@ -85,6 +106,8 @@ const AboutMe = () => {
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.5 }}
               >
+
+                
                 <div className="card-face about-face">
                   {getIcon("About")}
                   <h2>About Me</h2>
@@ -116,16 +139,16 @@ const AboutMe = () => {
                       <h3>Freelancer</h3>
                       <p>Quality Assurance - Consumer 2023- 2025 </p>
                     </motion.div>
-                   
-                  <h2>Personal Touch </h2> 
-                  <div className="personaltouch-list">
-                    <motion.div className="work-card" whileHover={{ scale: 1.05 }}>
-                      <p>Hobbies: Playing mobile games, Painting, Photography and Playing musical instruments. </p>
-                      <p>Fun Facts: I am more productive when I'm cramming.</p>
-                      <p>Life Motto: Dream big, work hard, stay focused.</p>
-                      <p>Inspirational Quotes: The only way to do great work is to love what you do.</p>
-                    </motion.div>
-                  </div>  
+
+                    <h2>Personal Touch </h2>
+                    <div className="personaltouch-list">
+                      <motion.div className="work-card" whileHover={{ scale: 1.05 }}>
+                        <p>Hobbies: Playing mobile games, Painting, Photography and Playing musical instruments. </p>
+                        <p>Fun Facts: I am more productive when I'm cramming.</p>
+                        <p>Life Motto: Dream big, work hard, stay focused.</p>
+                        <p>Inspirational Quotes: The only way to do great work is to love what you do.</p>
+                      </motion.div>
+                    </div>
                   </div>
                 </div>
 
@@ -194,16 +217,17 @@ const AboutMe = () => {
                   </div>
                   <br />
                   <motion.button
-                      className="rotate-button email-button"
-                      onClick={handleEmailClick}
-                      onMouseEnter={() => setIsEmailHovered(true)}
-                      onMouseLeave={() => setIsEmailHovered(false)}
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                    >
-                      <Mail className="button-icon" />
-                      {isEmailHovered ? "Rayhanpyo2016@gmail.com" : "Email Me!"}
-                    </motion.button>
+                    className="rotate-button email-button"
+                    onClick={handleEmailClick}
+                    onMouseEnter={() => setIsEmailHovered(true)}
+                    onMouseLeave={() => setIsEmailHovered(false)}
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    <Mail className="button-icon" />
+                    {isEmailHovered ? "Rayhanpyo2016@gmail.com" : "Email Me!"}
+                  </motion.button>
+               
                 </div>
               </motion.div>
             </AnimatePresence>
