@@ -1,13 +1,15 @@
 "use client"
+
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Menu, X } from "lucide-react"
 import "./Navbar.css"
 import logo from "../../assets/logo.jpg"
 
-const Navbar = () => {
+export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
   const [isMobile, setIsMobile] = useState(false)
+  const [activeSection, setActiveSection] = useState("hero")
 
   useEffect(() => {
     const checkScreenSize = () => {
@@ -17,30 +19,78 @@ const Navbar = () => {
       }
     }
 
-    // Initial check
+   
     checkScreenSize()
 
-    // Add event listener
     window.addEventListener("resize", checkScreenSize)
 
-    // Cleanup
-    return () => window.removeEventListener("resize", checkScreenSize)
+
+    const handleScroll = () => {
+      const sections = ["hero", "about-me", "programs", "contact"]
+
+      for (const sectionId of sections) {
+        const section = document.getElementById(sectionId)
+        if (section) {
+          const rect = section.getBoundingClientRect()
+         
+          if (rect.top <= 100 && rect.bottom >= 100) {
+            setActiveSection(sectionId)
+
+     
+            const path = sectionId === "hero" ? "/" : `/${sectionId}`
+            if (window.location.pathname !== path) {
+              window.history.pushState(null, "", path)
+            }
+            break
+          }
+        }
+      }
+    }
+
+    window.addEventListener("scroll", handleScroll)
+
+   
+    const handleInitialPath = () => {
+      const path = window.location.pathname
+      if (path === "/") {
+        scrollToSection("hero", false)
+      } else {
+        const sectionId = path.substring(1)
+        const validSections = ["hero", "about-me", "programs", "contact"]
+        if (validSections.includes(sectionId)) {
+          scrollToSection(sectionId, false)
+        }
+      }
+    }
+
+  
+    handleInitialPath()
+
+ 
+    return () => {
+      window.removeEventListener("resize", checkScreenSize)
+      window.removeEventListener("scroll", handleScroll)
+    }
   }, [])
 
   const navItems = [
-    { name: "Home", to: "hero" },
-    { name: "About Me", to: "about-me" },
-    { name: "Program", to: "programs" },
-    { name: "Contact Me", to: "contact" },
+    { name: "Home", to: "hero", path: "/" },
+    { name: "About Me", to: "about-me", path: "/about-me" },
+    { name: "Program", to: "programs", path: "/programs" },
+    { name: "Contact Me", to: "contact", path: "/contact" },
   ]
 
-  const scrollToSection = (sectionId) => {
+  const scrollToSection = (sectionId, updateUrl = true) => {
     const section = document.getElementById(sectionId)
     if (section) {
-      // Close the mobile menu first
+ 
       setIsOpen(false)
 
-      // Small delay to ensure the menu is closed before scrolling
+      if (updateUrl) {
+        const path = sectionId === "hero" ? "/" : `/${sectionId}`
+        window.history.pushState(null, "", path)
+      }
+
       setTimeout(() => {
         const yOffset = -70
         const y = section.getBoundingClientRect().top + window.scrollY + yOffset
@@ -60,14 +110,12 @@ const Navbar = () => {
     >
       <motion.img src={logo} alt="Logo" className="logo" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} />
 
-    
       <div className="mobile-menu-button">
         <button onClick={() => setIsOpen(!isOpen)} aria-label="Toggle menu">
           {isOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
 
- 
       <ul className="desktop-menu">
         {navItems.map((item, index) => (
           <motion.li
@@ -78,18 +126,26 @@ const Navbar = () => {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
           >
-            <button onClick={() => scrollToSection(item.to)} className="nav-link">
+            <button
+              onClick={() => scrollToSection(item.to)}
+              className={`nav-link ${activeSection === item.to ? "active" : ""}`}
+            >
               {item.name}
             </button>
           </motion.li>
         ))}
         <motion.li initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }}>
-          <motion.button className="btn" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+          <motion.button
+            className="btn"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            onClick={() => window.open("/portfolio", "_blank")}
+          >
             Portfolio
           </motion.button>
         </motion.li>
       </ul>
- 
+
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -107,25 +163,24 @@ const Navbar = () => {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: index * 0.1 }}
                 >
-                  <button onClick={() => scrollToSection(item.to)} className="nav-link">
+                  <button
+                    onClick={() => scrollToSection(item.to)}
+                    className={`nav-link ${activeSection === item.to ? "active" : ""}`}
+                  >
                     {item.name}
                   </button>
                 </motion.li>
               ))}
               <motion.li initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.4 }}>
-                <button className="btn mobile-btn">Portfolio</button>
+                <button className="btn mobile-btn" onClick={() => window.open("/portfolio", "_blank")}>
+                  Portfolio
+                </button>
               </motion.li>
             </ul>
           </motion.div>
         )}
       </AnimatePresence>
-      {console.log(
-        "Nav items:",
-        navItems.map((item) => item.to),
-      )}
     </motion.nav>
   )
 }
-
-export default Navbar
 
