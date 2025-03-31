@@ -166,12 +166,13 @@ function App() {
 
   return (
     <div className="calculator-wrapper">
-      <div className="calculator">
-        <div className="calculator-header">
+          <div className="calculator-header">
           <h1 className="calculator-title">Scientific Calculator</h1>
         </div>
+      <div className="calculator">
+    
         <div className="display">
-          <div className="mode-indicator">{isRadians ? "RAD" : "DEG"}</div>
+          <div className="mode-indicator">{isRadians ? "" : "DEG"}</div>
           <div className="value">{display}</div>
         </div>
 

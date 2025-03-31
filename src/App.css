@@ -52,7 +52,7 @@ body {
   position: absolute;
   top: 12px;
   right: 16px;
-  font-size: 14px;
+  font-size: 10px;
   color: #4caf50;
   font-weight: 500;
 }
@@ -114,6 +114,7 @@ button {
 .mode-btn {
   background-color: #4caf50;
   color: white;
+  font-size: 10px;
   font-weight: bold;
 }
 
