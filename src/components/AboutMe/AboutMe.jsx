@@ -1,250 +1,306 @@
 "use client"
-import { useState, useEffect, useCallback } from "react"
-import { motion, AnimatePresence } from "framer-motion"
-import { Code2, Award, Briefcase, User, ChevronRight, Mail } from "lucide-react"
-import AnimatedSection from "../AnimatedSection/AnimatedSection"
+
+import { useState, useEffect } from "react"
+import { motion } from "framer-motion"
 import "./AboutMe.css"
-import cvFile from "../../resume/Rayhan.pdf"
 
-const AboutMe = () => {
-  const [currentFace, setCurrentFace] = useState(0)
-  const faces = ["About", "Skills", "Work", "Career Goals"]
-  const [isEmailHovered, setIsEmailHovered] = useState(false)
-  const [isCVHovered, setIsCVHovered] = useState(false)
-  const [isMobile, setIsMobile] = useState(false)
-
-  const rotateCard = useCallback(() => {
-    setCurrentFace((prevFace) => (prevFace + 1) % faces.length)
-  }, [])
-
-  const getIcon = (face) => {
-    switch (face) {
-      case "About":
-        return <User className="face-icon" />
-      case "Skills":
-        return <Code2 className="face-icon" />
-      case "Work":
-        return <Award className="face-icon" />
-      case "Career Goals":
-        return <Briefcase className="face-icon" />
-      default:
-        return null
-    }
-  }
-
-  const handleEmailClick = (e) => {
-    e.preventDefault()
-    window.open("mailto:Rayhanpyo2016@gmail.com", "_blank")
-  }
-
-  const handleViewCVClick = (e) => {
-    e.preventDefault()
-    window.open(cvFile, "_blank")
-  }
+export default function AboutMe() {
+  const [isVisible, setIsVisible] = useState(false)
 
   useEffect(() => {
-    const timer = setTimeout(rotateCard, 5000)
-    return () => clearTimeout(timer)
-  }, [rotateCard])
-
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth <= 768)
-    }
-    checkMobile()
-    window.addEventListener("resize", checkMobile)
-    return () => window.removeEventListener("resize", checkMobile)
+    setIsVisible(true)
   }, [])
+
+  const skills = [
+    
+  ]
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.3,
+        delayChildren: 0.2,
+      },
+    },
+  }
+
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: { type: "spring", stiffness: 100 },
+    },
+  }
 
   return (
-    <AnimatedSection>
-      <div className="about-wrapper">
-        <motion.div
-          className="left-side"
-          initial={{ opacity: 0, y: 100 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.20, ease: "easeOut" }}
-        >
-          <h1 className="big-text">
-            About
-            <br />
-            Me
-            <span className="loading-dots">
-              <span>.</span>
-              <span>.</span>
-              <span>.</span>
-            </span>
-          </h1>
-
-          <motion.button
-            className="rotate-button cv-button"
-            onClick={handleViewCVClick}
-            onMouseEnter={() => setIsCVHovered(true)}
-            onMouseLeave={() => setIsCVHovered(false)}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+    <div className="about-me-container">
+      {/* Hero Section with Introduction */}
+      <motion.div
+        className="hero-section"
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+      >
+        <div className="profile-image">
+          <motion.div
+            className="image-container"
+            initial={{ rotate: -10, scale: 0.8 }}
+            animate={{ rotate: 0, scale: 1 }}
+            transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
           >
-            <ChevronRight className="button-icon" />
-            {isCVHovered ? "Open CV" : "View CV"}
-          </motion.button>
-        </motion.div>
-
-        <div className="right-side">
-          <div className="gradient-bg">
-            <motion.div
-              className="card-container"
-              initial={{ opacity: 0, y: 100 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-            >
-              <AnimatePresence mode="wait">
-                <motion.div
-                  key={currentFace}
-                  className="card"
-                  initial={{ opacity: 0, rotateY: 0 }}
-                  animate={{ opacity: 1, rotateY: currentFace * 90 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 0.5 }}
-                >
-                  <div className="card-face about-face">
-                    {getIcon("About")}
-                    <h2>About Me</h2>
-                    <div className="content-wrapper">
-                      <p>
-                        Hello! I'm <span className="highlight">Rayhan</span>, a passionate developer and member of the
-                        Google Developer Student Clubs (GDSC). I'm dedicated to learning and applying new technologies
-                        to solve real-world problems.
-                      </p>
-                      <p>Someone who thrives on tackling challenges head-on and learning from every experience.</p>
-                      <div className="quick-info">
-                        <motion.div className="info-item" whileHover={{ scale: 1.05 }}>
-                          <span className="label">Role</span>
-                          <span className="value">Frontend Web Developer</span>
-                        </motion.div>
-                        <motion.div className="info-item" whileHover={{ scale: 1.05 }}>
-                          <span className="label">Focus</span>
-                          <span className="value">Web Designing</span>
-                        </motion.div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="card-face work-face">
-                    {getIcon("Work")}
-                    <h2>Work</h2>
-                    <div className="work-grid">
-                      <motion.div className="work-card" whileHover={{ scale: 1.05 }}>
-                        <h3>Freelancer</h3>
-                        <p>Quality Assurance - Consumer 2023- 2025 </p>
-                      </motion.div>
-
-                      <h2>Personal Touch </h2>
-                      <div className="personaltouch-list">
-                        <motion.div className="work-card" whileHover={{ scale: 1.05 }}>
-                          <p>Hobbies: Playing mobile games, Painting, Photography and Playing musical instruments. </p>
-                          <p>Fun Facts: I am more productive when I'm cramming.</p>
-                          <p>Life Motto: Dream big, work hard, stay focused.</p>
-                          <p>Inspirational Quotes: The only way to do great work is to love what you do.</p>
-                        </motion.div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="card-face skills-face">
-                    {getIcon("Skills")}
-                    <h2>Skills</h2>
-                    <div className="skills-grid">
-                      <div className="skill-category">
-                        <h3>Frontend</h3>
-                        <ul>
-                          <motion.li whileHover={{ scale: 1.1 }}>
-                            <span className="skill-tag">React</span>
-                          </motion.li>
-                          <motion.li whileHover={{ scale: 1.1 }}>
-                            <span className="skill-tag">JavaScript</span>
-                          </motion.li>
-                          <motion.li whileHover={{ scale: 1.1 }}>
-                            <span className="skill-tag">HTML/CSS</span>
-                          </motion.li>
-                        </ul>
-                      </div>
-                      <div className="skill-category">
-                        <h3>Backend</h3>
-                        <ul>
-                          <motion.li whileHover={{ scale: 1.1 }}>
-                            <span className="skill-tag">Node.js</span>
-                          </motion.li>
-                          <motion.li whileHover={{ scale: 1.1 }}>
-                            <span className="skill-tag">Django</span>
-                          </motion.li>
-                        </ul>
-                      </div>
-                    </div>
-
-                    {getIcon("Contests")}
-                    <h2>Contests</h2>
-                    <div className="contests-list">
-                      <motion.div className="contest-item" whileHover={{ x: 10 }}>
-                        <span className="contest-badge">🏆</span>
-                        <div>
-                          <h3>GDSC Solution Challenge 2023</h3>
-                        </div>
-                      </motion.div>
-                      <motion.div className="contest-item" whileHover={{ x: 10 }}>
-                        <span className="contest-badge">🥇</span>
-                        <div>
-                          <h3>2025 FRONTEND WEB DESIGNING - CCS</h3>
-                        </div>
-                      </motion.div>
-                    </div>
-                  </div>
-
-                  <div className="card-face career-face">
-                    {getIcon("Career Goals")}
-                    <h2>Career Goals</h2>
-                    <div className="career-grid">
-                      <motion.div className="info-item" whileHover={{ scale: 1.05 }}>
-                        <span className="value">MASTER HTML5 AND CSS3 </span>
-                      </motion.div>
-                      <motion.div className="info-item" whileHover={{ scale: 1.05 }}>
-                        <span className="value">MASTER JAVASCRIPT FOR FRONT-END DEVELOPMENT </span>
-                      </motion.div>
-                      <motion.div className="info-item" whileHover={{ scale: 1.05 }}>
-                        <span className="value">BECOME EXPERT IN RESPONSIVE WEB DESIGN </span>
-                      </motion.div>
-                    </div>
-                    <br />
-                    <motion.button
-                      className="rotate-button email-button"
-                      onClick={handleEmailClick}
-                      onMouseEnter={() => setIsEmailHovered(true)}
-                      onMouseLeave={() => setIsEmailHovered(false)}
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                    >
-                      <Mail className="button-icon" />
-                      {isEmailHovered ? "Rayhanpyo2016@gmail.com" : "Email Me!"}
-                    </motion.button>
-                  </div>
-                </motion.div>
-              </AnimatePresence>
-            </motion.div>
-
-            <motion.button
-              className="rotate-button"
-              onClick={rotateCard}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              {isMobile ? "Next" : `Next: ${faces[(currentFace + 1) % faces.length]}`}
-              <ChevronRight className="button-icon" />
-            </motion.button>
-          </div>
+            <img src="../src/assets/rayhan.png" alt="Profile" />
+          </motion.div>
         </div>
-      </div>
-    </AnimatedSection>
+        <motion.h1
+          initial={{ y: -50, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+        >
+          Rayhan Payao
+        </motion.h1>
+        <motion.h2
+          initial={{ y: 50, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.5 }}
+        >
+          Frontend Developer & UI Designer
+        </motion.h2>
+        <motion.div
+          className="social-links"
+          initial={{ scale: 0, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.7 }}
+        >
+          <a href="#" className="social-icon">
+            <i className="fab fa-github"></i>
+          </a>
+          <a href="#" className="social-icon">
+            <i className="fab fa-linkedin"></i>
+          </a>
+          <a href="#" className="social-icon">
+            <i className="fab fa-twitter"></i>
+          </a>
+        </motion.div>
+      </motion.div>
+
+      {/* Introduction Section */}
+      <motion.div
+        className="section"
+        variants={containerVariants}
+        initial="hidden"
+        animate={isVisible ? "visible" : "hidden"}
+      >
+        <motion.h3 variants={itemVariants}>Introduction</motion.h3>
+        <motion.p variants={itemVariants}>
+          I'm a passionate frontend developer with over 5 years of experience creating beautiful, responsive, and
+          user-friendly web applications. I specialize in React and modern JavaScript, with a strong focus on creating
+          engaging user experiences that blend aesthetics with functionality.
+        </motion.p>
+        <motion.p variants={itemVariants}>
+          My journey in tech began when I built my first website at 15, and I've been hooked ever since. I believe in
+          the power of technology to transform lives and businesses, and I'm committed to creating digital experiences
+          that make a difference.
+        </motion.p>
+      </motion.div>
+
+      {/* Entered Contest Section */}
+      <motion.div
+        className="section"
+        variants={containerVariants}
+        initial="hidden"
+        animate={isVisible ? "visible" : "hidden"}
+      >
+        <motion.h3 variants={itemVariants}>Entered Contests</motion.h3>
+        <motion.div className="contest-grid" variants={itemVariants}>
+          <div className="contest-card">
+            <div className="contest-badge">🏆 Winner</div>
+            <h4>Web Innovation Hackathon 2023</h4>
+            <p>Created an AI-powered accessibility tool that won first place among 200+ participants.</p>
+          </div>
+          <div className="contest-card">
+            <div className="contest-badge">🥈 Runner-up</div>
+            <h4>CSS Design Awards 2022</h4>
+            <p>Designed an interactive portfolio that was recognized for its innovative use of animations.</p>
+          </div>
+          <div className="contest-card">
+            <div className="contest-badge">🏅 Finalist</div>
+            <h4>JavaScript Coding Challenge 2021</h4>
+            <p>Developed a real-time collaborative coding environment in just 48 hours.</p>
+          </div>
+        </motion.div>
+      </motion.div>
+
+      {/* Skills & Expertise Section */}
+      <motion.div
+        className="section"
+        variants={containerVariants}
+        initial="hidden"
+        animate={isVisible ? "visible" : "hidden"}
+      >
+        <motion.h3 variants={itemVariants}>Skills & Expertise</motion.h3>
+        <div className="skills-container">
+          {skills.map((skill, index) => (
+            <motion.div key={index} className="skill-item" variants={itemVariants}>
+              <span className="skill-name">{skill.name}</span>
+              <div className="skill-bar-container">
+                <motion.div
+                  className="skill-bar"
+                  initial={{ width: 0 }}
+                  animate={{ width: `${skill.level}%` }}
+                  transition={{ duration: 1, delay: 0.2 + index * 0.1 }}
+                ></motion.div>
+              </div>
+              <span className="skill-percentage">{skill.level}%</span>
+            </motion.div>
+          ))}
+        </div>
+        <motion.div className="expertise-grid" variants={itemVariants}>
+          <div className="expertise-card">
+            <div className="expertise-icon">
+              <i className="fas fa-laptop-code"></i>
+            </div>
+            <h4>Frontend Development</h4>
+            <p>Building responsive, accessible, and performant web applications with modern frameworks.</p>
+          </div>
+          <div className="expertise-card">
+            <div className="expertise-icon">
+              <i className="fas fa-paint-brush"></i>
+            </div>
+            <h4>UI/UX Design</h4>
+            <p>Creating intuitive user interfaces with a focus on user experience and visual aesthetics.</p>
+          </div>
+          <div className="expertise-card">
+            <div className="expertise-icon">
+              <i className="fas fa-mobile-alt"></i>
+            </div>
+            <h4>Mobile Development</h4>
+            <p>Developing cross-platform mobile applications using React Native and other technologies.</p>
+          </div>
+        </motion.div>
+      </motion.div>
+
+      
+
+      {/* Current Work Section */}
+      <motion.div
+        className="section"
+        variants={containerVariants}
+        initial="hidden"
+        animate={isVisible ? "visible" : "hidden"}
+      >
+        <motion.h3 variants={itemVariants}>What I'm Currently Working On</motion.h3>
+        <motion.div className="current-work" variants={itemVariants}>
+          <div className="work-image">
+            <img src="https://via.placeholder.com/400x300" alt="Current Project" />
+          </div>
+          <div className="work-content">
+            <h4>AI-Powered Design System</h4>
+            <p>
+              I'm currently leading the development of an innovative design system that uses AI to adapt to user
+              preferences and accessibility needs in real-time.
+            </p>
+            <p>
+              This project combines my passion for frontend development with emerging AI technologies to create more
+              inclusive digital experiences.
+            </p>
+            <div className="tech-stack">
+              <span>React</span>
+              <span>TypeScript</span>
+              <span>TensorFlow.js</span>
+              <span>WebGL</span>
+            </div>
+          </div>
+        </motion.div>
+      </motion.div>
+
+      {/* Career Goals Section */}
+      <motion.div
+        className="section"
+        variants={containerVariants}
+        initial="hidden"
+        animate={isVisible ? "visible" : "hidden"}
+      >
+        <motion.h3 variants={itemVariants}>Career Goals</motion.h3>
+        <motion.div className="goals-container" variants={itemVariants}>
+          <div className="goal-card">
+            <div className="goal-icon">
+              <i className="fas fa-graduation-cap"></i>
+            </div>
+            <h4>Short-term</h4>
+            <p>
+              Expand my expertise in WebGL and 3D web technologies to create more immersive user experiences. Complete
+              advanced certification in AI integration with frontend applications.
+            </p>
+          </div>
+          <div className="goal-card">
+            <div className="goal-icon">
+              <i className="fas fa-briefcase"></i>
+            </div>
+            <h4>Mid-term</h4>
+            <p>
+              Lead a team of developers in creating innovative web solutions. Contribute to open-source projects that
+              focus on accessibility and inclusive design. Speak at major tech conferences.
+            </p>
+          </div>
+          <div className="goal-card">
+            <div className="goal-icon">
+              <i className="fas fa-rocket"></i>
+            </div>
+            <h4>Long-term</h4>
+            <p>
+              Found a tech startup focused on creating tools that make web development more accessible to everyone.
+              Mentor the next generation of developers and contribute to advancing web standards.
+            </p>
+          </div>
+        </motion.div>
+      </motion.div>
+
+      {/* Personal Touch Section */}
+      <motion.div
+        className="section"
+        variants={containerVariants}
+        initial="hidden"
+        animate={isVisible ? "visible" : "hidden"}
+      >
+        <motion.h3 variants={itemVariants}>Personal Touch</motion.h3>
+        <motion.div className="personal-grid" variants={itemVariants}>
+          <div className="personal-card">
+            <div className="personal-icon">
+              <i className="fas fa-mountain"></i>
+            </div>
+            <h4>Fun Fact</h4>
+            <p>
+              I once coded an entire website while camping at the base of Mount Everest, using a solar-powered laptop
+              and satellite internet. The website won a design award later that year!
+            </p>
+          </div>
+          <div className="personal-card">
+            <div className="personal-icon">
+              <i className="fas fa-plane"></i>
+            </div>
+            <h4>Life-Changing Trip</h4>
+            <p>
+              Backpacking through Southeast Asia for six months changed my perspective on design. I now incorporate
+              principles of minimalism and balance inspired by the temples and landscapes I encountered.
+            </p>
+          </div>
+          <div className="personal-card">
+            <div className="personal-icon">
+              <i className="fas fa-guitar"></i>
+            </div>
+            <h4>Hobbies</h4>
+            <p>
+              When I'm not coding, you'll find me playing jazz guitar, practicing aerial yoga, or experimenting with
+              molecular gastronomy in my kitchen. I believe diverse interests fuel creativity in tech.
+            </p>
+          </div>
+        </motion.div>
+      </motion.div>
+
+        
+    </div>
   )
 }
-
-export default AboutMe
-
