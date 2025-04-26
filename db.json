@@ -1,0 +1,1116 @@
+{
+  "team": [
+    {
+      "id": 2,
+      "name": "ivysaur",
+      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/2.png",
+      "types": [
+        "grass",
+        "poison"
+      ],
+      "stats": {
+        "hp": 60,
+        "attack": 62,
+        "speed": 60
+      }
+    },
+    {
+      "id": 3,
+      "name": "venusaur",
+      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/3.png",
+      "types": [
+        "grass",
+        "poison"
+      ],
+      "stats": {
+        "hp": 80,
+        "attack": 82,
+        "speed": 80
+      }
+    },
+    {
+      "id": 4,
+      "name": "charmander",
+      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/4.png",
+      "types": [
+        "fire"
+      ],
+      "stats": {
+        "hp": 39,
+        "attack": 52,
+        "speed": 65
+      }
+    },
+    {
+      "id": 5,
+      "name": "charmeleon",
+      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/5.png",
+      "types": [
+        "fire"
+      ],
+      "stats": {
+        "hp": 58,
+        "attack": 64,
+        "speed": 80
+      }
+    },
+    {
+      "id": 10,
+      "name": "caterpie",
+      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10.png",
+      "types": [
+        "bug"
+      ],
+      "stats": {
+        "hp": 45,
+        "attack": 30,
+        "speed": 45
+      }
+    },
+    {
+      "id": 9,
+      "name": "blastoise",
+      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/9.png",
+      "types": [
+        "water"
+      ],
+      "stats": {
+        "hp": 79,
+        "attack": 83,
+        "speed": 78
+      }
+    }
+  ],
+  "battles": [
+    {
+      "pokemon1": {
+        "id": 4,
+        "name": "charmander",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/4.png"
+      },
+      "pokemon2": {
+        "id": 9,
+        "name": "blastoise",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/9.png"
+      },
+      "winner": {
+        "id": 9,
+        "name": "blastoise",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/9.png"
+      },
+      "date": "2025-04-17T05:35:43.891Z",
+      "id": 1
+    },
+    {
+      "pokemon1": {
+        "id": 8,
+        "name": "wartortle",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/8.png"
+      },
+      "pokemon2": {
+        "id": 10,
+        "name": "caterpie",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10.png"
+      },
+      "winner": {
+        "id": 8,
+        "name": "wartortle",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/8.png"
+      },
+      "date": "2025-04-17T05:37:21.083Z",
+      "id": 2
+    },
+    {
+      "pokemon1": {
+        "id": 10,
+        "name": "caterpie",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10.png"
+      },
+      "pokemon2": {
+        "id": 1,
+        "name": "bulbasaur",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png"
+      },
+      "winner": {
+        "id": 1,
+        "name": "bulbasaur",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png"
+      },
+      "date": "2025-04-17T05:44:49.117Z",
+      "id": 3
+    },
+    {
+      "pokemon1": {
+        "id": 8,
+        "name": "wartortle",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/8.png"
+      },
+      "pokemon2": {
+        "id": 8,
+        "name": "wartortle",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/8.png"
+      },
+      "winner": {
+        "id": 8,
+        "name": "wartortle",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/8.png"
+      },
+      "date": "2025-04-17T05:44:59.215Z",
+      "id": 4
+    },
+    {
+      "pokemon1": {
+        "id": 10,
+        "name": "caterpie",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10.png"
+      },
+      "pokemon2": {
+        "id": 1,
+        "name": "bulbasaur",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png"
+      },
+      "winner": {
+        "id": 1,
+        "name": "bulbasaur",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png"
+      },
+      "date": "2025-04-17T05:46:17.207Z",
+      "id": 5
+    },
+    {
+      "pokemon1": {
+        "id": 10,
+        "name": "caterpie",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10.png"
+      },
+      "pokemon2": {
+        "id": 1,
+        "name": "bulbasaur",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png"
+      },
+      "winner": {
+        "id": 1,
+        "name": "bulbasaur",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png"
+      },
+      "date": "2025-04-17T05:49:10.167Z",
+      "rounds": {
+        "hp": "tie",
+        "attack": "bulbasaur",
+        "speed": "tie"
+      },
+      "scores": {
+        "pokemon1": 0,
+        "pokemon2": 1
+      },
+      "id": 6
+    },
+    {
+      "pokemon1": {
+        "id": 8,
+        "name": "wartortle",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/8.png"
+      },
+      "pokemon2": {
+        "id": 9,
+        "name": "blastoise",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/9.png"
+      },
+      "winner": {
+        "id": 9,
+        "name": "blastoise",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/9.png"
+      },
+      "date": "2025-04-17T05:49:47.449Z",
+      "rounds": {
+        "hp": "blastoise",
+        "attack": "blastoise",
+        "speed": "blastoise"
+      },
+      "scores": {
+        "pokemon1": 0,
+        "pokemon2": 3
+      },
+      "id": 7
+    },
+    {
+      "pokemon1": {
+        "id": 10,
+        "name": "caterpie",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10.png"
+      },
+      "pokemon2": {
+        "id": 1,
+        "name": "bulbasaur",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png"
+      },
+      "winner": {
+        "id": 1,
+        "name": "bulbasaur",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png"
+      },
+      "date": "2025-04-17T05:58:16.190Z",
+      "rounds": {
+        "hp": "tie",
+        "attack": "bulbasaur",
+        "speed": "tie"
+      },
+      "scores": {
+        "pokemon1": 0,
+        "pokemon2": 1
+      },
+      "id": 8
+    },
+    {
+      "id": "1745374282357",
+      "pokemon1": {
+        "id": 6,
+        "name": "charizard",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png"
+      },
+      "pokemon2": {
+        "id": 2,
+        "name": "ivysaur",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/2.png"
+      },
+      "winner": {
+        "id": 6,
+        "name": "charizard",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png"
+      },
+      "date": "2025-04-23T02:11:22.357Z",
+      "rounds": {
+        "hp": "charizard",
+        "attack": "charizard",
+        "defense": "charizard",
+        "speed": "charizard"
+      },
+      "scores": {
+        "pokemon1": 4,
+        "pokemon2": 0
+      }
+    },
+    {
+      "id": "1745374308599",
+      "pokemon1": {
+        "id": 6,
+        "name": "charizard",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png"
+      },
+      "pokemon2": {
+        "id": 2,
+        "name": "ivysaur",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/2.png"
+      },
+      "winner": {
+        "id": 6,
+        "name": "charizard",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png"
+      },
+      "date": "2025-04-23T02:11:48.599Z",
+      "rounds": {
+        "hp": "charizard",
+        "attack": "charizard",
+        "defense": "charizard",
+        "speed": "charizard"
+      },
+      "scores": {
+        "pokemon1": 4,
+        "pokemon2": 0
+      }
+    },
+    {
+      "id": "1745374322819",
+      "pokemon1": {
+        "id": 6,
+        "name": "charizard",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png"
+      },
+      "pokemon2": {
+        "id": 17,
+        "name": "pidgeotto",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/17.png"
+      },
+      "winner": {
+        "id": 6,
+        "name": "charizard",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png"
+      },
+      "date": "2025-04-23T02:12:02.819Z",
+      "rounds": {
+        "hp": "charizard",
+        "attack": "charizard",
+        "defense": "charizard",
+        "speed": "charizard"
+      },
+      "scores": {
+        "pokemon1": 4,
+        "pokemon2": 0
+      }
+    },
+    {
+      "id": "1745374368662",
+      "pokemon1": {
+        "id": 6,
+        "name": "charizard",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png"
+      },
+      "pokemon2": {
+        "id": 17,
+        "name": "pidgeotto",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/17.png"
+      },
+      "winner": {
+        "id": 6,
+        "name": "charizard",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png"
+      },
+      "date": "2025-04-23T02:12:48.662Z",
+      "rounds": {
+        "hp": "charizard",
+        "attack": "charizard",
+        "defense": "charizard",
+        "speed": "charizard"
+      },
+      "scores": {
+        "pokemon1": 4,
+        "pokemon2": 0
+      }
+    },
+    {
+      "id": "1745374769449",
+      "pokemon1": {
+        "id": 6,
+        "name": "charizard",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png"
+      },
+      "pokemon2": {
+        "id": 17,
+        "name": "pidgeotto",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/17.png"
+      },
+      "winner": {
+        "id": 6,
+        "name": "charizard",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png"
+      },
+      "date": "2025-04-23T02:19:29.449Z",
+      "rounds": {
+        "hp": "charizard",
+        "attack": "charizard",
+        "defense": "charizard",
+        "speed": "charizard"
+      },
+      "scores": {
+        "pokemon1": 4,
+        "pokemon2": 0
+      }
+    },
+    {
+      "id": "1745374855938",
+      "pokemon1": {
+        "id": 6,
+        "name": "charizard",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png"
+      },
+      "pokemon2": {
+        "id": 17,
+        "name": "pidgeotto",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/17.png"
+      },
+      "winner": {
+        "id": 6,
+        "name": "charizard",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png"
+      },
+      "date": "2025-04-23T02:20:55.938Z",
+      "rounds": {
+        "hp": "charizard",
+        "attack": "charizard",
+        "defense": "charizard",
+        "speed": "charizard"
+      },
+      "scores": {
+        "pokemon1": 4,
+        "pokemon2": 0
+      }
+    },
+    {
+      "id": "1745374922499",
+      "pokemon1": {
+        "id": 5,
+        "name": "charmeleon",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/5.png"
+      },
+      "pokemon2": {
+        "id": 17,
+        "name": "pidgeotto",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/17.png"
+      },
+      "winner": {
+        "id": 5,
+        "name": "charmeleon",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/5.png"
+      },
+      "date": "2025-04-23T02:22:02.499Z",
+      "rounds": {
+        "hp": "pidgeotto",
+        "attack": "charmeleon",
+        "defense": "charmeleon",
+        "speed": "charmeleon"
+      },
+      "scores": {
+        "pokemon1": 3,
+        "pokemon2": 1
+      }
+    },
+    {
+      "id": "1745375482496",
+      "pokemon1": {
+        "id": 6,
+        "name": "charizard",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png"
+      },
+      "pokemon2": {
+        "id": 2,
+        "name": "ivysaur",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/2.png"
+      },
+      "winner": {
+        "id": 6,
+        "name": "charizard",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png"
+      },
+      "date": "2025-04-23T02:31:22.496Z",
+      "rounds": {
+        "hp": "charizard",
+        "attack": "charizard",
+        "defense": "charizard",
+        "speed": "charizard"
+      },
+      "scores": {
+        "pokemon1": 4,
+        "pokemon2": 0
+      }
+    },
+    {
+      "id": "1745376645731",
+      "pokemon1": {
+        "id": 5,
+        "name": "charmeleon",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/5.png"
+      },
+      "pokemon2": {
+        "id": 2,
+        "name": "ivysaur",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/2.png"
+      },
+      "winner": {
+        "id": 5,
+        "name": "charmeleon",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/5.png"
+      },
+      "date": "2025-04-23T02:50:45.731Z",
+      "rounds": {
+        "hp": "ivysaur",
+        "attack": "charmeleon",
+        "defense": "ivysaur",
+        "speed": "charmeleon"
+      },
+      "scores": {
+        "pokemon1": 2,
+        "pokemon2": 2
+      }
+    },
+    {
+      "id": "1745376731131",
+      "pokemon1": {
+        "id": 2,
+        "name": "ivysaur",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/2.png"
+      },
+      "pokemon2": {
+        "id": 5,
+        "name": "charmeleon",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/5.png"
+      },
+      "winner": {
+        "id": 5,
+        "name": "charmeleon",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/5.png"
+      },
+      "date": "2025-04-23T02:52:11.131Z",
+      "rounds": {
+        "hp": "ivysaur",
+        "attack": "charmeleon",
+        "defense": "ivysaur",
+        "speed": "charmeleon"
+      },
+      "scores": {
+        "pokemon1": 2,
+        "pokemon2": 2
+      }
+    },
+    {
+      "id": "1745376873497",
+      "pokemon1": {
+        "id": 6,
+        "name": "charizard",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png"
+      },
+      "pokemon2": {
+        "id": 17,
+        "name": "pidgeotto",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/17.png"
+      },
+      "winner": {
+        "id": 6,
+        "name": "charizard",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png"
+      },
+      "date": "2025-04-23T02:54:33.497Z",
+      "rounds": {
+        "hp": "charizard",
+        "attack": "charizard",
+        "defense": "charizard",
+        "speed": "charizard"
+      },
+      "scores": {
+        "pokemon1": 4,
+        "pokemon2": 0
+      }
+    },
+    {
+      "id": "1745377020251",
+      "pokemon1": {
+        "id": 6,
+        "name": "charizard",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png"
+      },
+      "pokemon2": {
+        "id": 17,
+        "name": "pidgeotto",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/17.png"
+      },
+      "winner": {
+        "id": 6,
+        "name": "charizard",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png"
+      },
+      "date": "2025-04-23T02:57:00.251Z",
+      "rounds": {
+        "hp": "charizard",
+        "attack": "charizard",
+        "speed": "charizard"
+      },
+      "scores": {
+        "pokemon1": 3,
+        "pokemon2": 0
+      }
+    },
+    {
+      "id": "1745377039067",
+      "pokemon1": {
+        "id": 6,
+        "name": "charizard",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png"
+      },
+      "pokemon2": {
+        "id": 17,
+        "name": "pidgeotto",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/17.png"
+      },
+      "winner": {
+        "id": 6,
+        "name": "charizard",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png"
+      },
+      "date": "2025-04-23T02:57:19.067Z",
+      "rounds": {
+        "hp": "charizard",
+        "attack": "charizard",
+        "speed": "charizard"
+      },
+      "scores": {
+        "pokemon1": 3,
+        "pokemon2": 0
+      }
+    },
+    {
+      "id": "1745377077419",
+      "pokemon1": {
+        "id": 6,
+        "name": "charizard",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png"
+      },
+      "pokemon2": {
+        "id": 17,
+        "name": "pidgeotto",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/17.png"
+      },
+      "winner": {
+        "id": 6,
+        "name": "charizard",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png"
+      },
+      "date": "2025-04-23T02:57:57.419Z",
+      "rounds": {
+        "hp": "charizard",
+        "attack": "charizard",
+        "speed": "charizard"
+      },
+      "scores": {
+        "pokemon1": 3,
+        "pokemon2": 0
+      }
+    },
+    {
+      "id": "1745377144006",
+      "pokemon1": {
+        "id": 6,
+        "name": "charizard",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png"
+      },
+      "pokemon2": {
+        "id": 3,
+        "name": "venusaur",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/3.png"
+      },
+      "winner": {
+        "id": 6,
+        "name": "charizard",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png"
+      },
+      "date": "2025-04-23T02:59:04.006Z",
+      "rounds": {
+        "hp": "venusaur",
+        "attack": "charizard",
+        "speed": "charizard"
+      },
+      "scores": {
+        "pokemon1": 2,
+        "pokemon2": 1
+      }
+    },
+    {
+      "id": "1745377474503",
+      "pokemon1": {
+        "id": 6,
+        "name": "charizard",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png"
+      },
+      "pokemon2": {
+        "id": 17,
+        "name": "pidgeotto",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/17.png"
+      },
+      "winner": {
+        "id": 6,
+        "name": "charizard",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png"
+      },
+      "date": "2025-04-23T03:04:34.503Z",
+      "rounds": {
+        "hp": "charizard",
+        "attack": "charizard",
+        "speed": "charizard"
+      },
+      "scores": {
+        "pokemon1": 3,
+        "pokemon2": 0
+      }
+    },
+    {
+      "id": "1745377753872",
+      "pokemon1": {
+        "id": 6,
+        "name": "charizard",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png"
+      },
+      "pokemon2": {
+        "id": 17,
+        "name": "pidgeotto",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/17.png"
+      },
+      "winner": {
+        "id": 6,
+        "name": "charizard",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png"
+      },
+      "date": "2025-04-23T03:09:13.872Z",
+      "rounds": {
+        "hp": "charizard",
+        "attack": "charizard",
+        "speed": "charizard"
+      },
+      "scores": {
+        "pokemon1": 3,
+        "pokemon2": 0
+      }
+    },
+    {
+      "id": "1745377810073",
+      "pokemon1": {
+        "id": 6,
+        "name": "charizard",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png"
+      },
+      "pokemon2": {
+        "id": 4,
+        "name": "charmander",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/4.png"
+      },
+      "winner": {
+        "id": 6,
+        "name": "charizard",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png"
+      },
+      "date": "2025-04-23T03:10:10.073Z",
+      "rounds": {
+        "hp": "charizard",
+        "attack": "charizard",
+        "speed": "charizard"
+      },
+      "scores": {
+        "pokemon1": 3,
+        "pokemon2": 0
+      }
+    },
+    {
+      "id": "1745378117370",
+      "pokemon1": {
+        "id": 5,
+        "name": "charmeleon",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/5.png"
+      },
+      "pokemon2": {
+        "id": 17,
+        "name": "pidgeotto",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/17.png"
+      },
+      "winner": {
+        "id": 5,
+        "name": "charmeleon",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/5.png"
+      },
+      "date": "2025-04-23T03:15:17.370Z",
+      "rounds": {
+        "hp": "pidgeotto",
+        "attack": "charmeleon",
+        "speed": "charmeleon"
+      },
+      "scores": {
+        "pokemon1": 2,
+        "pokemon2": 1
+      }
+    },
+    {
+      "id": "1745378271312",
+      "pokemon1": {
+        "id": 6,
+        "name": "charizard",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png"
+      },
+      "pokemon2": {
+        "id": 17,
+        "name": "pidgeotto",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/17.png"
+      },
+      "winner": {
+        "id": 6,
+        "name": "charizard",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png"
+      },
+      "date": "2025-04-23T03:17:51.312Z",
+      "rounds": {
+        "hp": "charizard",
+        "attack": "charizard",
+        "speed": "charizard"
+      },
+      "scores": {
+        "pokemon1": 3,
+        "pokemon2": 0
+      }
+    },
+    {
+      "id": "1745379119170",
+      "pokemon1": {
+        "id": 4,
+        "name": "charmander",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/4.png"
+      },
+      "pokemon2": {
+        "id": 17,
+        "name": "pidgeotto",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/17.png"
+      },
+      "winner": {
+        "id": 17,
+        "name": "pidgeotto",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/17.png"
+      },
+      "date": "2025-04-23T03:31:59.170Z",
+      "rounds": {
+        "hp": "pidgeotto",
+        "attack": "pidgeotto",
+        "speed": "pidgeotto"
+      },
+      "scores": {
+        "pokemon1": 0,
+        "pokemon2": 3
+      }
+    },
+    {
+      "id": "1745382658440",
+      "pokemon1": {
+        "id": 17,
+        "name": "pidgeotto",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/17.png"
+      },
+      "pokemon2": {
+        "id": 10,
+        "name": "caterpie",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10.png"
+      },
+      "winner": {
+        "id": 17,
+        "name": "pidgeotto",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/17.png"
+      },
+      "date": "2025-04-23T04:30:58.440Z",
+      "rounds": {
+        "hp": "pidgeotto",
+        "attack": "pidgeotto",
+        "speed": "pidgeotto"
+      },
+      "scores": {
+        "pokemon1": 3,
+        "pokemon2": 0
+      }
+    },
+    {
+      "id": "1745384580348",
+      "pokemon1": {
+        "id": 9,
+        "name": "blastoise",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/9.png"
+      },
+      "pokemon2": {
+        "id": 10,
+        "name": "caterpie",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10.png"
+      },
+      "winner": {
+        "id": 9,
+        "name": "blastoise",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/9.png"
+      },
+      "date": "2025-04-23T05:03:00.348Z",
+      "rounds": {
+        "hp": "blastoise",
+        "attack": "blastoise",
+        "speed": "blastoise"
+      },
+      "scores": {
+        "pokemon1": 3,
+        "pokemon2": 0
+      }
+    },
+    {
+      "id": "1745384804321",
+      "pokemon1": {
+        "id": 9,
+        "name": "blastoise",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/9.png"
+      },
+      "pokemon2": {
+        "id": 3,
+        "name": "venusaur",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/3.png"
+      },
+      "winner": {
+        "id": 3,
+        "name": "venusaur",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/3.png"
+      },
+      "date": "2025-04-23T05:06:44.321Z",
+      "rounds": {
+        "hp": "venusaur",
+        "attack": "blastoise",
+        "speed": "venusaur"
+      },
+      "scores": {
+        "pokemon1": 1,
+        "pokemon2": 2
+      }
+    },
+    {
+      "id": "1745384895603",
+      "pokemon1": {
+        "id": 9,
+        "name": "blastoise",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/9.png"
+      },
+      "pokemon2": {
+        "id": 10,
+        "name": "caterpie",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10.png"
+      },
+      "winner": {
+        "id": 9,
+        "name": "blastoise",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/9.png"
+      },
+      "date": "2025-04-23T05:08:15.604Z",
+      "rounds": {
+        "hp": "blastoise",
+        "attack": "blastoise",
+        "speed": "blastoise"
+      },
+      "scores": {
+        "pokemon1": 3,
+        "pokemon2": 0
+      }
+    },
+    {
+      "id": "1745384968091",
+      "pokemon1": {
+        "id": 8,
+        "name": "wartortle",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/8.png"
+      },
+      "pokemon2": {
+        "id": 10,
+        "name": "caterpie",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10.png"
+      },
+      "winner": {
+        "id": 8,
+        "name": "wartortle",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/8.png"
+      },
+      "date": "2025-04-23T05:09:28.091Z",
+      "rounds": {
+        "hp": "wartortle",
+        "attack": "wartortle",
+        "speed": "wartortle"
+      },
+      "scores": {
+        "pokemon1": 3,
+        "pokemon2": 0
+      }
+    },
+    {
+      "id": "1745385067505",
+      "pokemon1": {
+        "id": 9,
+        "name": "blastoise",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/9.png"
+      },
+      "pokemon2": {
+        "id": 10,
+        "name": "caterpie",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10.png"
+      },
+      "winner": {
+        "id": 9,
+        "name": "blastoise",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/9.png"
+      },
+      "date": "2025-04-23T05:11:07.505Z",
+      "rounds": {
+        "hp": "blastoise",
+        "attack": "blastoise",
+        "speed": "blastoise"
+      },
+      "scores": {
+        "pokemon1": 3,
+        "pokemon2": 0
+      }
+    },
+    {
+      "id": "1745385104771",
+      "pokemon1": {
+        "id": 9,
+        "name": "blastoise",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/9.png"
+      },
+      "pokemon2": {
+        "id": 10,
+        "name": "caterpie",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10.png"
+      },
+      "winner": {
+        "id": 9,
+        "name": "blastoise",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/9.png"
+      },
+      "date": "2025-04-23T05:11:44.771Z",
+      "rounds": {
+        "hp": "blastoise",
+        "attack": "blastoise",
+        "speed": "blastoise"
+      },
+      "scores": {
+        "pokemon1": 3,
+        "pokemon2": 0
+      }
+    },
+    {
+      "id": "1745385474564",
+      "pokemon1": {
+        "id": 9,
+        "name": "blastoise",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/9.png"
+      },
+      "pokemon2": {
+        "id": 4,
+        "name": "charmander",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/4.png"
+      },
+      "winner": {
+        "id": 9,
+        "name": "blastoise",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/9.png"
+      },
+      "date": "2025-04-23T05:17:54.564Z",
+      "rounds": {
+        "hp": "blastoise",
+        "attack": "blastoise",
+        "speed": "blastoise"
+      },
+      "scores": {
+        "pokemon1": 3,
+        "pokemon2": 0
+      }
+    },
+    {
+      "id": "1745388062745",
+      "pokemon1": {
+        "id": 10,
+        "name": "caterpie",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10.png"
+      },
+      "pokemon2": {
+        "id": 9,
+        "name": "blastoise",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/9.png"
+      },
+      "winner": {
+        "id": 9,
+        "name": "blastoise",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/9.png"
+      },
+      "date": "2025-04-23T06:01:02.745Z",
+      "rounds": {
+        "hp": "blastoise",
+        "attack": "blastoise",
+        "speed": "blastoise"
+      },
+      "scores": {
+        "pokemon1": 0,
+        "pokemon2": 3
+      }
+    }
+  ]
+}
