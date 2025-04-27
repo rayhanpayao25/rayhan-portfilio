@@ -2,7 +2,7 @@
 import { useState } from "react"
 import { motion } from "framer-motion"
 import "./Projects.css"
-import { GitlabIcon as GitHub, ExternalLink, Code } from "lucide-react"
+import { GitlabIcon, ExternalLink, Code } from "lucide-react"
 
 const projectsData = [
   {
@@ -16,7 +16,6 @@ const projectsData = [
     liveLink: "https://ryeecinelect.onrender.com/",
     category: "ai",
   },
-
   {
     id: 2,
     title: "RyeeeCalculator",
@@ -28,7 +27,6 @@ const projectsData = [
     liveLink: "https://ryeecalculator.netlify.app/",
     category: "web",
   },
-
   {
     id: 3,
     title: "RyeePokédex",
@@ -149,14 +147,18 @@ const Projects = () => {
                 transition={{ duration: 0.3 }}
               >
                 <div className="project-links">
-                  <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="project-link">
-                    <GitHub size={20} />
-                    <span>Code</span>
-                  </a>
-                  <a href={project.liveLink} target="_blank" rel="noopener noreferrer" className="project-link">
-                    <ExternalLink size={20} />
-                    <span>Live</span>
-                  </a>
+                  {project.githubLink && (
+                    <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="project-link">
+                      <GitlabIcon size={20} />
+                      <span>Code</span>
+                    </a>
+                  )}
+                  {project.liveLink && (
+                    <a href={project.liveLink} target="_blank" rel="noopener noreferrer" className="project-link">
+                      <ExternalLink size={20} />
+                      <span>Live</span>
+                    </a>
+                  )}
                 </div>
               </motion.div>
             </div>

@@ -4,7 +4,7 @@ import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Menu, X } from "lucide-react"
 import "./Navbar.css"
-import logo from "../../assets/logo.jpg"
+
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
@@ -102,8 +102,7 @@ export default function Navbar() {
       animate={{ y: 0 }}
       transition={{ type: "spring", stiffness: 120, damping: 20 }}
     >
-      <motion.img src={logo} alt="Logo" className="logo" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} />
-
+    
       <div className="mobile-menu-button">
         <button onClick={() => setIsOpen(!isOpen)} aria-label="Toggle menu">
           {isOpen ? <X size={24} /> : <Menu size={24} />}
