@@ -19,24 +19,21 @@ export default function Navbar() {
       }
     }
 
-   
     checkScreenSize()
 
     window.addEventListener("resize", checkScreenSize)
 
-
     const handleScroll = () => {
-      const sections = ["hero", "about-me", "programs", "contact"]
+      const sections = ["hero", "about-me", "contact", "programs",  "projects"]
 
       for (const sectionId of sections) {
         const section = document.getElementById(sectionId)
         if (section) {
           const rect = section.getBoundingClientRect()
-         
+
           if (rect.top <= 100 && rect.bottom >= 100) {
             setActiveSection(sectionId)
 
-     
             const path = sectionId === "hero" ? "/" : `/${sectionId}`
             if (window.location.pathname !== path) {
               window.history.pushState(null, "", path)
@@ -49,24 +46,21 @@ export default function Navbar() {
 
     window.addEventListener("scroll", handleScroll)
 
-   
     const handleInitialPath = () => {
       const path = window.location.pathname
       if (path === "/") {
         scrollToSection("hero", false)
       } else {
         const sectionId = path.substring(1)
-        const validSections = ["hero", "about-me", "programs", "contact"]
+        const validSections = ["hero", "about-me", "contact", "projects" , "programs"]
         if (validSections.includes(sectionId)) {
           scrollToSection(sectionId, false)
         }
       }
     }
 
-  
     handleInitialPath()
 
- 
     return () => {
       window.removeEventListener("resize", checkScreenSize)
       window.removeEventListener("scroll", handleScroll)
@@ -76,14 +70,14 @@ export default function Navbar() {
   const navItems = [
     { name: "Home", to: "hero", path: "/" },
     { name: "About Me", to: "about-me", path: "/about-me" },
-    { name: "Program", to: "programs", path: "/programs" },
     { name: "Contact Me", to: "contact", path: "/contact" },
+    { name: "Projects", to: "projects", path: "/projects" },
+    { name: "Program", to: "programs", path: "/programs" },
   ]
 
   const scrollToSection = (sectionId, updateUrl = true) => {
     const section = document.getElementById(sectionId)
     if (section) {
- 
       setIsOpen(false)
 
       if (updateUrl) {
@@ -92,7 +86,7 @@ export default function Navbar() {
       }
 
       setTimeout(() => {
-        const yOffset = -70
+        const yOffset = -80 // Increased offset to account for navbar height
         const y = section.getBoundingClientRect().top + window.scrollY + yOffset
         window.scrollTo({ top: y, behavior: "smooth" })
       }, 100)
@@ -183,4 +177,3 @@ export default function Navbar() {
     </motion.nav>
   )
 }
-
