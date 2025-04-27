@@ -2,18 +2,26 @@
 import { useState } from "react"
 import { motion } from "framer-motion"
 import "./Projects.css"
-import { GitlabIcon, ExternalLink, Code } from "lucide-react"
+import { GitlabIcon as GitHub, ExternalLink, Code } from "lucide-react"
+
+// Import images correctly
+import meowImage from "../../assets/meow.png"
+import calculatorImage from "../../assets/calculator.png"
+import pokedexImage from "../../assets/pokedox.png"
+import cswcdImage from "../../assets/cswcd.png"
+import langhubImage from "../../assets/langhub.png"
+import cinelectImage from "../../assets/cinelect.png"
 
 const projectsData = [
   {
     id: 1,
-    title: "Machine Learning - Cinelect",
+    title: "Meowcat AI",
     description:
-      "Tool that leverages machine learning to generate blog posts, social media content, and marketing copy.",
-    image: "../src/assets/cinelect.png",
-    technologies: ["Python", "Django"],
-    githubLink: "https://github.com/rayhanpayao25/machine_learning",
-    liveLink: "https://ryeecinelect.onrender.com/",
+      "An interactive web application that uses simulated machine learning to identify cat breeds from uploaded photos.",
+    image: meowImage,
+    technologies: ["React", "JavaScript", "Next.js", "Tailwind CSS ", "HTML/CSS"],
+    githubLink: "https://github.com/rayhanpayao25/meowcat",
+    liveLink: "https://ryeeemeow.netlify.app/",
     category: "ai",
   },
   {
@@ -21,7 +29,7 @@ const projectsData = [
     title: "RyeeeCalculator",
     description:
       "Real-time cryptocurrency portfolio tracker with price alerts, historical data, and performance analytics.",
-    image: "../src/assets/calculator.png",
+    image: calculatorImage,
     technologies: ["JavaScript", "React", "CSS", "Vite"],
     githubLink: "https://github.com/rayhanpayao25/rayhan-portfilio/tree/Calculator",
     liveLink: "https://ryeecalculator.netlify.app/",
@@ -31,7 +39,7 @@ const projectsData = [
     id: 3,
     title: "RyeePokédex",
     description: "IoT dashboard for monitoring and controlling smart home devices with real-time data visualization.",
-    image: "../src/assets/pokedox.png",
+    image: pokedexImage,
     technologies: ["Vue.js", "TypeScript", "Socket.io", "D3.js"],
     githubLink: "https://github.com/rayhanpayao25/rayhan-portfilio/tree/pokemon",
     liveLink: "https://ryeeeepokemon.netlify.app/",
@@ -42,7 +50,7 @@ const projectsData = [
     title: "Action Plan Generator - CSWCD",
     description:
       "A comprehensive online learning platform with course management, video streaming, and interactive quizzes.",
-    image: "../src/assets/cswcd.png",
+    image: cswcdImage,
     technologies: ["React", "Node.js", "MongoDB", "Express"],
     liveLink: "https://eixaax1.pythonanywhere.com/#contacts-cont",
     category: "web",
@@ -52,21 +60,21 @@ const projectsData = [
     title: "LangHub",
     description:
       "A mobile application that Integrated Language Support System for Chinese, Mandarin, and Spanish, aims to bridge communication gaps and foster cultural understanding by providing an intuitive and comprehensive platform for language learning and translation.",
-    image: "../src/assets/langhub.png",
-    technologies: ["Java", "Firebase", "	Kotlin ", "Android Studio", "xml", "Sqlite"],
+    image: langhubImage,
+    technologies: ["Java", "Firebase", "Kotlin", "Android Studio", "xml", "Sqlite"],
     githubLink: "https://github.com/rayhanpayao25/langhub",
     liveLink: "https://github.com/rayhanpayao25/langhub",
     category: "mobile",
   },
   {
     id: 6,
-    title: "Meowcat AI",
+    title: "Machine Learning - Cinelect",
     description:
-      "An interactive web application that uses simulated machine learning to identify cat breeds from uploaded photos.",
-    image: "../src/assets/meow.png",
-    technologies: ["React", "JavaScript", "Next.js", "Tailwind CSS ", "HTML/CSS"],
-    githubLink: "https://github.com/rayhanpayao25/meowcat",
-    liveLink: "https://ryeeemeow.netlify.app/",
+      "Tool that leverages machine learning to generate blog posts, social media content, and marketing copy.",
+    image: cinelectImage,
+    technologies: ["Python", "Django"],
+    githubLink: "https://github.com/rayhanpayao25/machine_learning",
+    liveLink: "https://ryeecinelect.onrender.com/",
     category: "ai",
   },
 ]
@@ -137,7 +145,7 @@ const Projects = () => {
             onMouseLeave={() => setHoveredProject(null)}
           >
             <div className="project-image-container">
-              <img src={project.image || "/placeholder.svg"} alt={project.title} className="project-image" />
+              <img src={project.image} alt={project.title} className="project-image" />
               <motion.div
                 className="project-overlay"
                 initial={{ opacity: 0 }}
@@ -147,18 +155,14 @@ const Projects = () => {
                 transition={{ duration: 0.3 }}
               >
                 <div className="project-links">
-                  {project.githubLink && (
-                    <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="project-link">
-                      <GitlabIcon size={20} />
-                      <span>Code</span>
-                    </a>
-                  )}
-                  {project.liveLink && (
-                    <a href={project.liveLink} target="_blank" rel="noopener noreferrer" className="project-link">
-                      <ExternalLink size={20} />
-                      <span>Live</span>
-                    </a>
-                  )}
+                  <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="project-link">
+                    <GitHub size={20} />
+                    <span>Code</span>
+                  </a>
+                  <a href={project.liveLink} target="_blank" rel="noopener noreferrer" className="project-link">
+                    <ExternalLink size={20} />
+                    <span>Live</span>
+                  </a>
                 </div>
               </motion.div>
             </div>
