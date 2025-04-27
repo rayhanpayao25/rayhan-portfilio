@@ -6,32 +6,51 @@ import "./AboutMe.css"
 
 export default function AboutMe() {
   const [isVisible, setIsVisible] = useState(false)
+  const [isMobile, setIsMobile] = useState(false)
 
   useEffect(() => {
-    setIsVisible(true)
+    // Set a small timeout to ensure animations work properly
+    const timer = setTimeout(() => {
+      setIsVisible(true)
+    }, 100)
+
+    return () => clearTimeout(timer)
   }, [])
 
-  const skills = [
-    
-  ]
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768)
+    }
+
+    checkMobile()
+    window.addEventListener("resize", checkMobile)
+
+    return () => window.removeEventListener("resize", checkMobile)
+  }, [])
+
+  const skills = []
 
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.3,
-        delayChildren: 0.2,
+        staggerChildren: isMobile ? 0.1 : 0.3,
+        delayChildren: isMobile ? 0.1 : 0.2,
       },
     },
   }
 
   const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
+    hidden: { y: isMobile ? 10 : 20, opacity: 0 },
     visible: {
       y: 0,
       opacity: 1,
-      transition: { type: "spring", stiffness: 100 },
+      transition: {
+        type: "spring",
+        stiffness: isMobile ? 50 : 100,
+        duration: isMobile ? 0.3 : 0.5,
+      },
     },
   }
 
@@ -106,33 +125,6 @@ export default function AboutMe() {
         </motion.p>
       </motion.div>
 
-      {/* Entered Contest Section */}
-      <motion.div
-        className="section"
-        variants={containerVariants}
-        initial="hidden"
-        animate={isVisible ? "visible" : "hidden"}
-      >
-        <motion.h3 variants={itemVariants}>Entered Contests</motion.h3>
-        <motion.div className="contest-grid" variants={itemVariants}>
-          <div className="contest-card">
-            <div className="contest-badge">🏆 Winner</div>
-            <h4>Web Innovation Hackathon 2023</h4>
-            <p>Created an AI-powered accessibility tool that won first place among 200+ participants.</p>
-          </div>
-          <div className="contest-card">
-            <div className="contest-badge">🥈 Runner-up</div>
-            <h4>CSS Design Awards 2022</h4>
-            <p>Designed an interactive portfolio that was recognized for its innovative use of animations.</p>
-          </div>
-          <div className="contest-card">
-            <div className="contest-badge">🏅 Finalist</div>
-            <h4>JavaScript Coding Challenge 2021</h4>
-            <p>Developed a real-time collaborative coding environment in just 48 hours.</p>
-          </div>
-        </motion.div>
-      </motion.div>
-
       {/* Skills & Expertise Section */}
       <motion.div
         className="section"
@@ -182,8 +174,6 @@ export default function AboutMe() {
         </motion.div>
       </motion.div>
 
-      
-
       {/* Current Work Section */}
       <motion.div
         className="section"
@@ -191,13 +181,13 @@ export default function AboutMe() {
         initial="hidden"
         animate={isVisible ? "visible" : "hidden"}
       >
-        <motion.h3 variants={itemVariants}>What I'm Currently Working On</motion.h3>
+        <motion.h3 variants={itemVariants}>What I'm Currently Working As</motion.h3>
         <motion.div className="current-work" variants={itemVariants}>
           <div className="work-image">
-            <img src="https://via.placeholder.com/400x300" alt="Current Project" />
+            <img src="../src/assets/qa.jpg" alt="Current Project" />
           </div>
           <div className="work-content">
-            <h4>AI-Powered Design System</h4>
+            <h4>QUALITY ASSURANCE SPECIALIST</h4>
             <p>
               I'm currently leading the development of an innovative design system that uses AI to adapt to user
               preferences and accessibility needs in real-time.
@@ -258,6 +248,42 @@ export default function AboutMe() {
         </motion.div>
       </motion.div>
 
+      {/* Sports */}
+      <motion.div
+        className="section"
+        variants={containerVariants}
+        initial="hidden"
+        animate={isVisible ? "visible" : "hidden"}
+      >
+        <motion.h3 variants={itemVariants}>Sports</motion.h3>
+        <motion.div className="contest-grid" variants={itemVariants}>
+          <div className="contest-card">
+            <div className="contest-image">
+              <img src="../src/assets/v1.jpg" alt="Volleyball Championship" />
+            </div>
+            <div className="contest-badge">🏆 Champion</div>
+            <h4>Wmsu Pathfit Championship</h4>
+            <p>2021-2022 Wmsu Pathfit Championship </p>
+          </div>
+          <div className="contest-card">
+            <div className="contest-image">
+              <img src="../src/assets/mlbb.jpg" alt="Web Innovation Hackathon 2023" />
+            </div>
+            <div className="contest-badge">🏆 Champion</div>
+            <h4>SpookFest MLBB Tournament Champions</h4>
+            <p>E-sports Champion 2021 BSIT 4A</p>
+          </div>
+          <div className="contest-card">
+            <div className="contest-image">
+              <img src="../src/assets/v2.jpg" alt="Volleyball Tournament" />
+            </div>
+            <div className="contest-badge">🥉 Runner-up</div>
+            <h4>Wmsu Palaro - Volleyball </h4>
+            <p>2022-2023 Wmsu Palaro Woman Volleyball - College of Computing Studies</p>
+          </div>
+        </motion.div>
+      </motion.div>
+
       {/* Personal Touch Section */}
       <motion.div
         className="section"
@@ -299,8 +325,6 @@ export default function AboutMe() {
           </div>
         </motion.div>
       </motion.div>
-
-        
     </div>
   )
 }

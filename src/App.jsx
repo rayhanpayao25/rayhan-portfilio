@@ -26,15 +26,17 @@ const App = () => {
         <ContactMe />
       </AnimatedSection>
 
+     
+      
+      <AnimatedSection id="projects" className="container">
+        <Projects />
+      </AnimatedSection>
+
       <AnimatedSection id="programs" className="container">
         <Title subTitle="GDSC Program" title="My GDSC Projects" />
         <Programs />
       </AnimatedSection>
       
-      
-      <AnimatedSection id="projects" className="container">
-        <Projects />
-      </AnimatedSection>
     </motion.div>
   )
 }

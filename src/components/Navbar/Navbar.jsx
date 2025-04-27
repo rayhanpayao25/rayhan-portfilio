@@ -24,7 +24,7 @@ export default function Navbar() {
     window.addEventListener("resize", checkScreenSize)
 
     const handleScroll = () => {
-      const sections = ["hero", "about-me", "contact", "projects", "programs"]
+      const sections = ["hero", "about-me", "contact", "programs",  "projects"]
 
       for (const sectionId of sections) {
         const section = document.getElementById(sectionId)
@@ -52,7 +52,7 @@ export default function Navbar() {
         scrollToSection("hero", false)
       } else {
         const sectionId = path.substring(1)
-        const validSections = ["hero", "about-me", "contact", "programs", "projects"]
+        const validSections = ["hero", "about-me", "contact", "projects" , "programs"]
         if (validSections.includes(sectionId)) {
           scrollToSection(sectionId, false)
         }
@@ -71,8 +71,8 @@ export default function Navbar() {
     { name: "Home", to: "hero", path: "/" },
     { name: "About Me", to: "about-me", path: "/about-me" },
     { name: "Contact Me", to: "contact", path: "/contact" },
-    { name: "Program", to: "programs", path: "/programs" },
     { name: "Projects", to: "projects", path: "/projects" },
+    { name: "Program", to: "programs", path: "/programs" },
   ]
 
   const scrollToSection = (sectionId, updateUrl = true) => {

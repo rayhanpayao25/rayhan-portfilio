@@ -4,9 +4,9 @@
 .contact-section {
   margin: 5rem 0;
   padding: 3rem 2rem;
-  background: linear-gradient(135deg, #111, #1a1a1a);
+  background: #fff;
   border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 10px 30px rgba(236, 72, 153, 0.1);
   text-align: center;
   min-height: 60vh; /* Increased height to ensure it's visible */
   display: flex;
@@ -22,6 +22,7 @@
   display: inline-block;
   padding-bottom: 0.5rem;
   align-self: center;
+  color: #d946ef;
 }
 
 .contact-section h3::after {
@@ -32,14 +33,14 @@
   transform: translateX(-50%);
   width: 80px;
   height: 3px;
-  background: linear-gradient(to right, #ff4d4d, #f9cb28);
+  background: linear-gradient(to right, #ec4899, #d946ef);
 }
 
 .cta-text {
   font-size: 1.2rem;
   max-width: 700px;
   margin: 0 auto 2rem;
-  color: #ccc;
+  color: #666;
 }
 
 .cta-buttons {
@@ -60,20 +61,20 @@
 }
 
 .cta-button.primary {
-  background: linear-gradient(to right, #ff4d4d, #f9cb28);
-  color: #000;
-  box-shadow: 0 5px 15px rgba(255, 77, 77, 0.3);
+  background: linear-gradient(to right, #ec4899, #d946ef);
+  color: #fff;
+  box-shadow: 0 5px 15px rgba(236, 72, 153, 0.3);
 }
 
 .cta-button.secondary {
   background: transparent;
-  border: 2px solid #ff4d4d;
-  color: #fff;
+  border: 2px solid #ec4899;
+  color: #ec4899;
 }
 
 .cta-button:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(255, 77, 77, 0.4);
+  box-shadow: 0 8px 20px rgba(236, 72, 153, 0.4);
 }
 
 .contact-info {
@@ -89,11 +90,11 @@
   align-items: center;
   gap: 0.5rem;
   margin-bottom: 1rem;
-  color: #ccc;
+  color: #666;
 }
 
 .contact-info i {
-  color: #ff4d4d;
+  color: #ec4899;
   font-size: 1.2rem;
 }
 
@@ -111,17 +112,17 @@
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background: #1a1a1a;
-  color: #fff;
+  background: #fce7f3;
+  color: #ec4899;
   font-size: 1.5rem;
   transition: all 0.3s ease;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 5px 15px rgba(236, 72, 153, 0.15);
 }
 
 .social-link:hover {
   transform: translateY(-5px);
-  background: linear-gradient(to right, #ff4d4d, #f9cb28);
-  color: #000;
+  background: linear-gradient(to right, #ec4899, #d946ef);
+  color: #fff;
 }
 
 /* Responsive styles */

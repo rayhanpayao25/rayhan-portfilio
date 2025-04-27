@@ -9,8 +9,8 @@ body {
 
 nav {
   width: 100%;
-  background-color: black;
-  color: #fff;
+  background-color: #fff;
+  color: #333;
   padding: 12px 20px;
   position: fixed;
   top: 0;
@@ -21,11 +21,36 @@ nav {
   z-index: 1000;
   flex-wrap: wrap;
   box-sizing: border-box;
+  box-shadow: 0 2px 10px rgba(236, 72, 153, 0.1);
+  transition: all 0.3s ease;
+}
+
+nav.scrolled {
+  padding: 8px 20px;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
 }
 
 .logo {
   width: 70px;
   height: auto;
+  display: flex;
+  align-items: center;
+}
+
+.logo-icon {
+  font-size: 24px;
+  margin-right: 8px;
+  color: #ec4899;
+}
+
+.logo-text {
+  font-weight: 700;
+  font-size: 20px;
+  background: linear-gradient(to right, #ec4899, #d946ef);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .desktop-menu {
@@ -48,7 +73,8 @@ nav {
   cursor: pointer;
   background: none;
   border: none;
-  color: white;
+  color: #333;
+  font-size: 24px;
 }
 
 .mobile-menu {
@@ -57,8 +83,15 @@ nav {
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: black;
+  background-color: #fff;
   z-index: 999;
+  box-shadow: 0 4px 10px rgba(236, 72, 153, 0.1);
+  max-height: 0;
+  transition: max-height 0.3s ease-in-out;
+}
+
+.mobile-menu.open {
+  max-height: 300px;
 }
 
 .mobile-menu ul {
@@ -103,7 +136,7 @@ nav {
   height: 2px;
   bottom: -4px;
   left: 50%;
-  background-color: #1861c1;
+  background: linear-gradient(to right, #ec4899, #d946ef);
   transition: all 0.3s ease-in-out;
   transform: translateX(-50%);
 }
@@ -115,7 +148,7 @@ nav {
 
 .nav-link:hover,
 .nav-link.active {
-  color: #1861c1;
+  color: #ec4899;
 }
 
 .nav-link:focus {
@@ -123,19 +156,41 @@ nav {
 }
 
 .btn {
-  background-color: #fff;
-  color: black;
+  background: linear-gradient(to right, #ec4899, #d946ef);
+  color: white;
   padding: 8px 16px;
-  border-radius: 4px;
+  border-radius: 30px;
   border: none;
   cursor: pointer;
   font-weight: bold;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(236, 72, 153, 0.3);
 }
 
 .btn:hover {
-  background-color: #1861c1;
-  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(236, 72, 153, 0.4);
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  color: #333;
+  cursor: pointer;
+  font-size: 20px;
+  margin-left: 15px;
+  padding: 5px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+  background-color: #fce7f3;
+  color: #ec4899;
 }
 
 @media (max-width: 768px) {
@@ -152,7 +207,7 @@ nav {
   }
 
   .mobile-menu {
-    margin-top: 10px;
+    margin-top: 0;
   }
 }
 
@@ -162,7 +217,10 @@ nav {
   }
 
   .logo {
-    width: 82px;
+    width: auto;
+  }
+
+  .logo-text {
+    font-size: 18px;
   }
 }
-

@@ -7,38 +7,6 @@ import { GitlabIcon as GitHub, ExternalLink, Code } from "lucide-react"
 const projectsData = [
   {
     id: 1,
-    title: "Data Generator",
-    description:
-      "A comprehensive online learning platform with course management, video streaming, and interactive quizzes.",
-    image: "../src/assets/cinelect.png",
-    technologies: ["React", "Node.js", "MongoDB", "Express"],
-    githubLink: "https://github.com",
-    liveLink: "https://example.com",
-    category: "web",
-  },
-  {
-    id: 2,
-    title: "LangHub",
-    description:
-      "Mobile application for tracking fitness goals, nutrition, and health metrics with personalized recommendations.",
-    image: "../src/assets/p.png",
-    technologies: ["React Native", "Firebase", "Redux", "Chart.js"],
-    githubLink: "https://github.com",
-    liveLink: "https://example.com",
-    category: "mobile",
-  },
-  {
-    id: 3,
-    title: "RyeePokedox",
-    description: "IoT dashboard for monitoring and controlling smart home devices with real-time data visualization.",
-    image: "../src/assets/p1.png",
-    technologies: ["Vue.js", "TypeScript", "Socket.io", "D3.js"],
-    githubLink: "https://github.com",
-    liveLink: "https://example.com",
-    category: "web",
-  },
-  {
-    id: 4,
     title: "Machine Learning - Cinelect",
     description:
       "Tool that leverages machine learning to generate blog posts, social media content, and marketing copy.",
@@ -48,26 +16,60 @@ const projectsData = [
     liveLink: "https://ryeecinelect.onrender.com/",
     category: "ai",
   },
+
   {
-    id: 5,
+    id: 2,
     title: "RyeeeCalculator",
     description:
       "Real-time cryptocurrency portfolio tracker with price alerts, historical data, and performance analytics.",
     image: "../src/assets/calculator.png",
-    technologies: ["Next.js", "Tailwind CSS", "CoinGecko API", "Chart.js"],
+    technologies: ["JavaScript", "React", "CSS", "Vite"],
     githubLink: "https://github.com/rayhanpayao25/rayhan-portfilio/tree/Calculator",
     liveLink: "https://ryeecalculator.netlify.app/",
     category: "web",
   },
+
+  {
+    id: 3,
+    title: "RyeePokédex",
+    description: "IoT dashboard for monitoring and controlling smart home devices with real-time data visualization.",
+    image: "../src/assets/pokedox.png",
+    technologies: ["Vue.js", "TypeScript", "Socket.io", "D3.js"],
+    githubLink: "https://github.com/rayhanpayao25/rayhan-portfilio/tree/pokemon",
+    liveLink: "https://ryeeeepokemon.netlify.app/",
+    category: "web",
+  },
+  {
+    id: 4,
+    title: "Action Plan Generator - CSWCD",
+    description:
+      "A comprehensive online learning platform with course management, video streaming, and interactive quizzes.",
+    image: "../src/assets/cswcd.png",
+    technologies: ["React", "Node.js", "MongoDB", "Express"],
+    liveLink: "https://eixaax1.pythonanywhere.com/#contacts-cont",
+    category: "web",
+  },
+  {
+    id: 5,
+    title: "LangHub",
+    description:
+      "A mobile application that Integrated Language Support System for Chinese, Mandarin, and Spanish, aims to bridge communication gaps and foster cultural understanding by providing an intuitive and comprehensive platform for language learning and translation.",
+    image: "../src/assets/langhub.png",
+    technologies: ["Java", "Firebase", "	Kotlin ", "Android Studio", "xml", "Sqlite"],
+    githubLink: "https://github.com/rayhanpayao25/langhub",
+    liveLink: "https://github.com/rayhanpayao25/langhub",
+    category: "mobile",
+  },
   {
     id: 6,
-    title: "Augmented Reality Game",
-    description: "Mobile AR game that transforms your surroundings into an interactive gaming environment.",
-    image: "../src/assets/bg.jpg",
-    technologies: ["Unity", "ARKit", "C#", "Blender"],
-    githubLink: "https://github.com",
-    liveLink: "https://example.com",
-    category: "mobile",
+    title: "Meowcat AI",
+    description:
+      "An interactive web application that uses simulated machine learning to identify cat breeds from uploaded photos.",
+    image: "../src/assets/meow.png",
+    technologies: ["React", "JavaScript", "Next.js", "Tailwind CSS ", "HTML/CSS"],
+    githubLink: "https://github.com/rayhanpayao25/meowcat",
+    liveLink: "https://ryeeemeow.netlify.app/",
+    category: "ai",
   },
 ]
 
