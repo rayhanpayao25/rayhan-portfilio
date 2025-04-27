@@ -9,7 +9,6 @@ export default function AboutMe() {
   const [isMobile, setIsMobile] = useState(false)
 
   useEffect(() => {
-    // Set a small timeout to ensure animations work properly
     const timer = setTimeout(() => {
       setIsVisible(true)
     }, 100)
@@ -189,18 +188,21 @@ export default function AboutMe() {
           <div className="work-content">
             <h4>QUALITY ASSURANCE SPECIALIST</h4>
             <p>
-              I'm currently leading the development of an innovative design system that uses AI to adapt to user
-              preferences and accessibility needs in real-time.
+            I have over a year of experience as a Quality Assurance Specialist at Salary.com, working remotely. 
+            I use tools like Jira and DevOps to manage workflows, track issues, and ensure the quality of products. 
+            My responsibilities include testing, identifying bugs, and providing feedback to development teams to improve 
+            functionality.
             </p>
             <p>
-              This project combines my passion for frontend development with emerging AI technologies to create more
-              inclusive digital experiences.
+            As a QA Specialist, I work closely with cross-functional teams to ensure that all products meet the highest standards before release. With a strong focus on detail and efficiency, I help maintain smooth project timelines and ensure the final products meet customer expectations.
             </p>
             <div className="tech-stack">
-              <span>React</span>
-              <span>TypeScript</span>
-              <span>TensorFlow.js</span>
-              <span>WebGL</span>
+              <span>Javascript</span>
+              <span>Jira</span>
+              <span>Devops</span>
+              <span>Html</span>
+              <span>Css</span>
+              <span>Test plan</span>
             </div>
           </div>
         </motion.div>
