@@ -224,3 +224,19 @@ nav.scrolled {
     font-size: 18px;
   }
 }
+/* Add this to your Navbar.css file */
+.logo-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+/* On mobile, make the logo smaller */
+@media (max-width: 768px) {
+  .logo-img {
+    width: 32px;
+    height: 32px;
+  }
+}

@@ -1,6 +1,6 @@
 .title {
     text-align: center;
-    color: #ffffff;
+    color: #832d58;
     font-size: 45px;
     font-weight: 600;
     text-transform: uppercase;
@@ -12,7 +12,7 @@
   
   .title h2 {
     font-size: 32px;
-    color: #ffffff;
+    color: #821d7e;
     margin-top: 5px;
     text-transform: none;
     opacity: 0;
@@ -43,7 +43,7 @@
     height: 2px;
     bottom: -5px;
     left: 50%;
-    background-color: #ffffff;
+    background-color: #954040;
     transition: all 0.5s ease;
     transform: translateX(-50%);
     animation: expandLine 0.5s ease forwards 1s;

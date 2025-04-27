@@ -9,7 +9,7 @@ body {
     "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #ffffff;
+  background-color: #f6edf3;
   color: #333333;
 }
 
@@ -503,21 +503,43 @@ body {
   color: #666;
 }
 
-/* Mobile visibility fixes - scoped to AboutMe component only */
+/* Mobile visibility fixes - IMPORTANT CHANGES HERE */
 @media (max-width: 768px) {
-  .about-me-container .section {
-    opacity: 1 !important;
-    visibility: visible !important;
-  }
-
-  .about-me-container .hero-section,
+  /* Force all elements to be visible regardless of animation state */
   .about-me-container .section,
+  .about-me-container .hero-section,
+  .about-me-container .section *,
+  .about-me-container .hero-section *,
+  .about-me-container motion-div,
+  .about-me-container [data-motion],
+  .about-me-container div,
+  .about-me-container h1,
+  .about-me-container h2,
+  .about-me-container h3,
+  .about-me-container h4,
+  .about-me-container p,
   .about-me-container .expertise-grid,
   .about-me-container .goals-container,
   .about-me-container .contest-grid,
   .about-me-container .personal-grid {
-    will-change: opacity;
-    backface-visibility: hidden;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+    transition: none !important;
+    animation: none !important;
+  }
+
+  /* Ensure all Framer Motion elements are visible */
+  .about-me-container [style*="opacity"] {
+    opacity: 1 !important;
+  }
+
+  .about-me-container [style*="transform"] {
+    transform: none !important;
+  }
+
+  .about-me-container [style*="visibility"] {
+    visibility: visible !important;
   }
 
   .about-me-container .hero-section h1 {
@@ -554,17 +576,29 @@ body {
 }
 
 @media (max-width: 576px) {
-  .about-me-container .section,
-  .about-me-container .hero-section,
-  .about-me-container .section h3,
-  .about-me-container .section p,
-  .about-me-container .expertise-card,
-  .about-me-container .goal-card,
-  .about-me-container .contest-card,
-  .about-me-container .personal-card {
-    opacity: 1 !important;
-    transform: none !important;
-    transition: none !important;
+  .about-me-container {
+    padding: 1rem;
+  }
+
+  .about-me-container .section {
+    padding: 1.5rem;
+    margin: 3rem 0;
+  }
+
+  .about-me-container .hero-section {
+    padding: 2rem 0;
+  }
+
+  .about-me-container .hero-section h1 {
+    font-size: 2rem;
+  }
+
+  .about-me-container .hero-section h2 {
+    font-size: 1rem;
+  }
+
+  .about-me-container h3 {
+    font-size: 1.5rem;
   }
 
   .about-me-container .contact-info {
