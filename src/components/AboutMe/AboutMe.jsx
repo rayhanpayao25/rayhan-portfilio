@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { motion } from "framer-motion"
+import { motion, useReducedMotion } from "framer-motion"
 import "./AboutMe.css"
 
 // Import all images at the top of your file
@@ -14,6 +14,7 @@ import volleyballImage2 from "../../assets/v2.jpg"
 export default function AboutMe() {
   const [isVisible, setIsVisible] = useState(false)
   const [isMobile, setIsMobile] = useState(false)
+  const prefersReducedMotion = useReducedMotion()
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -36,77 +37,81 @@ export default function AboutMe() {
 
   const skills = []
 
+  // Simplified animation variants for better mobile performance
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: isMobile ? 0.1 : 0.3,
-        delayChildren: isMobile ? 0.1 : 0.2,
+        staggerChildren: 0.1,
+        delayChildren: 0.1,
       },
     },
   }
 
   const itemVariants = {
-    hidden: { y: isMobile ? 10 : 20, opacity: 0 },
+    hidden: { y: 10, opacity: 0 },
     visible: {
       y: 0,
       opacity: 1,
       transition: {
         type: "spring",
-        stiffness: isMobile ? 50 : 100,
-        duration: isMobile ? 0.3 : 0.5,
+        stiffness: 50,
+        duration: 0.3,
       },
     },
   }
+
+  // If user prefers reduced motion or is on mobile, use simpler animations
+  const shouldReduceMotion = prefersReducedMotion || isMobile
 
   return (
     <div className="about-me-container">
       {/* Hero Section with Introduction */}
       <motion.div
         className="hero-section"
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
+        initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, scale: 0.8 }}
+        animate={shouldReduceMotion ? { opacity: 1 } : { opacity: 1, scale: 1 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
         <div className="profile-image">
           <motion.div
             className="image-container"
-            initial={{ rotate: -10, scale: 0.8 }}
-            animate={{ rotate: 0, scale: 1 }}
+            initial={shouldReduceMotion ? { opacity: 1 } : { rotate: -10, scale: 0.8 }}
+            animate={shouldReduceMotion ? { opacity: 1 } : { rotate: 0, scale: 1 }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
           >
             <img src={profileImage || "/placeholder.svg"} alt="Profile" />
           </motion.div>
         </div>
         <motion.h1
-          initial={{ y: -50, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
+          initial={shouldReduceMotion ? { opacity: 1 } : { y: -50, opacity: 0 }}
+          animate={shouldReduceMotion ? { opacity: 1 } : { y: 0, opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.3 }}
         >
           Rayhan Payao
         </motion.h1>
         <motion.h2
-          initial={{ y: 50, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
+          initial={shouldReduceMotion ? { opacity: 1 } : { y: 50, opacity: 0 }}
+          animate={shouldReduceMotion ? { opacity: 1 } : { y: 0, opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.5 }}
         >
           Frontend Developer & UI Designer
         </motion.h2>
         <motion.div
           className="social-links"
-          initial={{ scale: 0, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
+          initial={shouldReduceMotion ? { opacity: 1 } : { scale: 0, opacity: 0 }}
+          animate={shouldReduceMotion ? { opacity: 1 } : { scale: 1, opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.7 }}
         >
-          <a href="#" className="social-icon">
+          <a href="https://github.com/rayhanpayao25/rayhan-portfilio/" className="social-icon">
             <i className="fab fa-github"></i>
           </a>
-          <a href="#" className="social-icon">
+          <a href="https://www.linkedin.com/in/rayhan-payao-747296354/" className="social-icon">
             <i className="fab fa-linkedin"></i>
           </a>
-          <a href="#" className="social-icon">
-            <i className="fab fa-twitter"></i>
+          <a href="https://www.facebook.com/rayray.pw" className="social-icon">
+            <i className="fab fa-facebook"></i>
           </a>
         </motion.div>
       </motion.div>
@@ -116,18 +121,18 @@ export default function AboutMe() {
         className="section"
         variants={containerVariants}
         initial="hidden"
-        animate={isVisible ? "visible" : "hidden"}
+        animate={isVisible || shouldReduceMotion ? "visible" : "hidden"}
       >
         <motion.h3 variants={itemVariants}>Introduction</motion.h3>
         <motion.p variants={itemVariants}>
-          I'm a passionate frontend developer with over 5 years of experience creating beautiful, responsive, and
-          user-friendly web applications. I specialize in React and modern JavaScript, with a strong focus on creating
-          engaging user experiences that blend aesthetics with functionality.
+          I'm a passionate frontend developer still early in my journey, but I've already spent a few years building
+          beautiful, responsive, and user-friendly web applications. I mainly work with React, Html/Css and modern
+          JavaScript, and I really love finding that sweet spot between good design and smooth functionality.
         </motion.p>
         <motion.p variants={itemVariants}>
-          My journey in tech began when I built my first website at 15, and I've been hooked ever since. I believe in
-          the power of technology to transform lives and businesses, and I'm committed to creating digital experiences
-          that make a difference.
+          I believe technology has the power to change lives, and I'm excited to keep growing, learning, and building
+          projects that actually make an impact. Every new challenge is an opportunity to innovate, create meaningful
+          solutions, and contribute to a better future through technology.
         </motion.p>
       </motion.div>
 
@@ -136,7 +141,7 @@ export default function AboutMe() {
         className="section"
         variants={containerVariants}
         initial="hidden"
-        animate={isVisible ? "visible" : "hidden"}
+        animate={isVisible || shouldReduceMotion ? "visible" : "hidden"}
       >
         <motion.h3 variants={itemVariants}>Skills & Expertise</motion.h3>
         <div className="skills-container">
@@ -175,7 +180,7 @@ export default function AboutMe() {
               <i className="fas fa-mobile-alt"></i>
             </div>
             <h4>Mobile Development</h4>
-            <p>Developing cross-platform mobile applications using React Native and other technologies.</p>
+            <p>Developing cross-platform mobile applications using Android studio, Flutter and other technologies.</p>
           </div>
         </motion.div>
       </motion.div>
@@ -185,9 +190,9 @@ export default function AboutMe() {
         className="section"
         variants={containerVariants}
         initial="hidden"
-        animate={isVisible ? "visible" : "hidden"}
+        animate={isVisible || shouldReduceMotion ? "visible" : "hidden"}
       >
-        <motion.h3 variants={itemVariants}>What I'm Currently Working As</motion.h3>
+        <motion.h3 variants={itemVariants}> I'm Currently Working As</motion.h3>
         <motion.div className="current-work" variants={itemVariants}>
           <div className="work-image">
             <img src={qaImage || "/placeholder.svg"} alt="Current Project" />
@@ -222,7 +227,7 @@ export default function AboutMe() {
         className="section"
         variants={containerVariants}
         initial="hidden"
-        animate={isVisible ? "visible" : "hidden"}
+        animate={isVisible || shouldReduceMotion ? "visible" : "hidden"}
       >
         <motion.h3 variants={itemVariants}>Career Goals</motion.h3>
         <motion.div className="goals-container" variants={itemVariants}>
@@ -232,8 +237,9 @@ export default function AboutMe() {
             </div>
             <h4>Short-term</h4>
             <p>
-              Expand my expertise in WebGL and 3D web technologies to create more immersive user experiences. Complete
-              advanced certification in AI integration with frontend applications.
+              After my graduation I want to Enhance my proficiency in ReactJs and 3D web technologies to craft more
+              engaging and interactive user experiences. Obtain an advanced certification in integrating AI with
+              frontend development.
             </p>
           </div>
           <div className="goal-card">
@@ -242,8 +248,9 @@ export default function AboutMe() {
             </div>
             <h4>Mid-term</h4>
             <p>
-              Lead a team of developers in creating innovative web solutions. Contribute to open-source projects that
-              focus on accessibility and inclusive design. Speak at major tech conferences.
+              As I have come this far, I want to manage a team of developers to build creative web solutions. Help with
+              open-source projects that focus on accessibility and inclusive design. Give talks at important tech
+              conferences.
             </p>
           </div>
           <div className="goal-card">
@@ -252,8 +259,9 @@ export default function AboutMe() {
             </div>
             <h4>Long-term</h4>
             <p>
-              Found a tech startup focused on creating tools that make web development more accessible to everyone.
-              Mentor the next generation of developers and contribute to advancing web standards.
+              I will build a tech company with a team of talented individuals from my alma mater, focused on creating
+              tools that make web development more accessible to everyone. I'll mentor the next generation of developers
+              and work towards advancing web standards.
             </p>
           </div>
         </motion.div>
@@ -264,7 +272,7 @@ export default function AboutMe() {
         className="section"
         variants={containerVariants}
         initial="hidden"
-        animate={isVisible ? "visible" : "hidden"}
+        animate={isVisible || shouldReduceMotion ? "visible" : "hidden"}
       >
         <motion.h3 variants={itemVariants}>Sports</motion.h3>
         <motion.div className="contest-grid" variants={itemVariants}>
@@ -300,7 +308,7 @@ export default function AboutMe() {
         className="section"
         variants={containerVariants}
         initial="hidden"
-        animate={isVisible ? "visible" : "hidden"}
+        animate={isVisible || shouldReduceMotion ? "visible" : "hidden"}
       >
         <motion.h3 variants={itemVariants}>Personal Touch</motion.h3>
         <motion.div className="personal-grid" variants={itemVariants}>
@@ -310,8 +318,9 @@ export default function AboutMe() {
             </div>
             <h4>Fun Fact</h4>
             <p>
-              I once coded an entire website while camping at the base of Mount Everest, using a solar-powered laptop
-              and satellite internet. The website won a design award later that year!
+              I love cramming because honestly, it's the only time I feel like a real academic weapon. All of my
+              creativity comes out and I become super motivated and focused when doing tasks. There's this one time I
+              once coded an website while in side the Tricycle.
             </p>
           </div>
           <div className="personal-card">
@@ -320,8 +329,9 @@ export default function AboutMe() {
             </div>
             <h4>Life-Changing Trip</h4>
             <p>
-              Backpacking through Southeast Asia for six months changed my perspective on design. I now incorporate
-              principles of minimalism and balance inspired by the temples and landscapes I encountered.
+              Backpacking through Luzon for 10 days for our Academic tour changed my perspective on design. I now
+              incorporate elements of natural beauty and cultural richness inspired by the mountains, buildings, and
+              historic towns I explored.
             </p>
           </div>
           <div className="personal-card">
@@ -330,8 +340,8 @@ export default function AboutMe() {
             </div>
             <h4>Hobbies</h4>
             <p>
-              When I'm not coding, you'll find me playing jazz guitar, practicing aerial yoga, or experimenting with
-              molecular gastronomy in my kitchen. I believe diverse interests fuel creativity in tech.
+              When I'm not coding, you'll find me playing guitar, playing piano, or playing mobile games. I believe
+              diverse interests fuel creativity in tech.
             </p>
           </div>
         </motion.div>

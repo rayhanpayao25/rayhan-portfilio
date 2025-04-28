@@ -47,7 +47,7 @@ const Footer = () => {
                 <Github size={20} />
               </a>
               <a
-                href="https://linkedin.com/in/rayhanpayao"
+                href="https://www.linkedin.com/in/rayhan-payao-747296354/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="social-link"
@@ -55,7 +55,7 @@ const Footer = () => {
               >
                 <Linkedin size={20} />
               </a>
-              <a href="mailto:contact@rayhanportfolio.com" className="social-link" aria-label="Email">
+              <a href="mailto:rayhanpyo2016@gmail.com" className="social-link" aria-label="Email">
                 <Mail size={20} />
               </a>
             </div>

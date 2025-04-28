@@ -1,7 +1,6 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { motion, AnimatePresence } from "framer-motion"
 import { Menu, X } from "lucide-react"
 import "./Navbar.css"
 
@@ -111,16 +110,11 @@ export default function Navbar() {
   }
 
   return (
-    <motion.nav
-      className={`container ${scrolled ? "scrolled" : ""}`}
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ type: "spring", stiffness: 120, damping: 20 }}
-    >
+    <nav className={`container ${scrolled ? "scrolled" : ""}`}>
       {/* Logo with image - using imported image */}
       <div className="logo" onClick={() => scrollToSection("hero")}>
         <img src={logoImage || "/placeholder.svg?height=40&width=40"} alt="Rayhan Logo" className="logo-img" />
-        <span className="logo-text">Rayhan</span>
+        <span className="logo-text">Portfolio</span>
       </div>
 
       <div className="mobile-menu-button">
@@ -131,69 +125,42 @@ export default function Navbar() {
 
       <ul className="desktop-menu">
         {navItems.map((item, index) => (
-          <motion.li
-            key={item.name}
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: index * 0.1 }}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.95 }}
-          >
+          <li key={item.name}>
             <button
               onClick={() => scrollToSection(item.to)}
               className={`nav-link ${activeSection === item.to ? "active" : ""}`}
             >
               {item.name}
             </button>
-          </motion.li>
+          </li>
         ))}
-        <motion.li initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }}>
-          <motion.button
-            className="btn"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            onClick={navigateToBlogpost}
-          >
+        <li>
+          <button className="btn" onClick={navigateToBlogpost}>
             Blogpost
-          </motion.button>
-        </motion.li>
+          </button>
+        </li>
       </ul>
 
-      {/* Mobile menu with fixed positioning */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            className="mobile-menu"
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3 }}
-          >
-            <ul>
-              {navItems.map((item, index) => (
-                <motion.li
-                  key={item.name}
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: index * 0.1 }}
-                >
-                  <button
-                    onClick={() => scrollToSection(item.to)}
-                    className={`nav-link ${activeSection === item.to ? "active" : ""}`}
-                  >
-                    {item.name}
-                  </button>
-                </motion.li>
-              ))}
-              <motion.li initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.4 }}>
-                <button className="btn mobile-btn" onClick={navigateToBlogpost}>
-                  Blogpost
-                </button>
-              </motion.li>
-            </ul>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </motion.nav>
+      {/* Mobile menu without framer-motion */}
+      <div className={`mobile-menu ${isOpen ? "open" : ""}`}>
+        <ul>
+          {navItems.map((item) => (
+            <li key={item.name}>
+              <button
+                onClick={() => scrollToSection(item.to)}
+                className={`nav-link ${activeSection === item.to ? "active" : ""}`}
+              >
+                {item.name}
+              </button>
+            </li>
+          ))}
+          <li>
+            <button className="btn mobile-btn" onClick={navigateToBlogpost}>
+              Blogpost
+            </button>
+          </li>
+        </ul>
+      </div>
+    </nav>
   )
 }

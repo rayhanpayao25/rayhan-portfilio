@@ -560,6 +560,18 @@ body {
     visibility: visible !important;
   }
 
+  /* Force Framer Motion elements to be visible */
+  .about-me-container motion-div,
+  .about-me-container [data-framer-motion-initial],
+  .about-me-container [data-framer-motion-animate],
+  .about-me-container [data-motion],
+  .about-me-container .motion-div {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+  }
+
   .about-me-container {
     padding: 1.5rem;
   }
