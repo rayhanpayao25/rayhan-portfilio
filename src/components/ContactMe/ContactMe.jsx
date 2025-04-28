@@ -53,89 +53,58 @@ export default function ContactMe() {
   }
 
   return (
-    <motion.div
-      className="contact-section"
-      variants={containerVariants}
-      initial="hidden"
-      animate={isVisible ? "visible" : "hidden"}
-      ref={contactRef}
-    >
-      <motion.h3 variants={itemVariants}>Let's Connect</motion.h3>
-      <motion.p className="cta-text" variants={itemVariants}>
-        I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
-      </motion.p>
-      <motion.div className="cta-buttons" variants={itemVariants}>
-        <motion.button
-          className="cta-button primary"
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          onClick={() => window.open("/portfolio", "_blank")}
-        >
-          View My Portfolio
-        </motion.button>
-        <motion.button
-          className="cta-button secondary"
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          onClick={() => (window.location.href = "mailto:rayhanpyo2016@gmail.com")}
-        >
-          Contact Me
-        </motion.button>
-      </motion.div>
-      <motion.div className="contact-info" variants={itemVariants}>
-        <p>
-          <i className="fas fa-envelope"></i> rayhanpyo2016@gmail.com
-        </p>
-        <p>
-          <i className="fas fa-phone"></i> +63 (123) 456-789
-        </p>
-        <p>
-          <i className="fas fa-map-marker-alt"></i> Zamboanga City, PH
-        </p>
-      </motion.div>
+    <div id="contact" className="contact-container">
+      <motion.div
+        className="contact-card"
+        variants={containerVariants}
+        initial="hidden"
+        animate={isVisible ? "visible" : "hidden"}
+        ref={contactRef}
+      >
+        <motion.h2 className="contact-title" variants={itemVariants}>
+          Let's Connect
+        </motion.h2>
+        <motion.div className="contact-underline" variants={itemVariants}></motion.div>
 
-      <motion.div className="social-links" variants={itemVariants}>
-        <motion.a
-          href="https://github.com/rayhanpayao25/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="social-link"
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-        >
-          <i className="fab fa-github"></i>
-        </motion.a>
-        <motion.a
-          href="https://linkedin.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="social-link"
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-        >
-          <i className="fab fa-linkedin-in"></i>
-        </motion.a>
-        <motion.a
-          href="https://twitter.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="social-link"
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-        >
-          <i className="fab fa-twitter"></i>
-        </motion.a>
-        <motion.a
-          href="https://instagram.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="social-link"
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-        >
-          <i className="fab fa-instagram"></i>
-        </motion.a>
+        <motion.p className="contact-description" variants={itemVariants}>
+          I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+        </motion.p>
+
+        <motion.div className="contact-buttons" variants={itemVariants}>
+          <button className="portfolio-button">View My Portfolio</button>
+          <button className="contact-button">Contact Me</button>
+        </motion.div>
+
+        <motion.div className="contact-info" variants={itemVariants}>
+          <div className="info-item">
+            <i className="fas fa-envelope"></i>
+            <span>rayhanpyo2016@gmail.com</span>
+          </div>
+          <div className="info-item">
+            <i className="fas fa-phone"></i>
+            <span>+63 (123) 456-789</span>
+          </div>
+          <div className="info-item">
+            <i className="fas fa-map-marker-alt"></i>
+            <span>Zamboanga City, PH</span>
+          </div>
+        </motion.div>
+
+        <motion.div className="social-icons" variants={itemVariants}>
+          <a href="#" className="social-icon">
+            <i className="fab fa-github"></i>
+          </a>
+          <a href="#" className="social-icon">
+            <i className="fab fa-linkedin-in"></i>
+          </a>
+          <a href="#" className="social-icon">
+            <i className="fab fa-twitter"></i>
+          </a>
+          <a href="#" className="social-icon">
+            <i className="fab fa-instagram"></i>
+          </a>
+        </motion.div>
       </motion.div>
-    </motion.div>
+    </div>
   )
 }

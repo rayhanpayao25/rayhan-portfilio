@@ -12,6 +12,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
   const [isMobile, setIsMobile] = useState(false)
   const [activeSection, setActiveSection] = useState("hero")
+  const [scrolled, setScrolled] = useState(false)
 
   useEffect(() => {
     const checkScreenSize = () => {
@@ -26,6 +27,9 @@ export default function Navbar() {
     window.addEventListener("resize", checkScreenSize)
 
     const handleScroll = () => {
+      // Add scrolled state for styling
+      setScrolled(window.scrollY > 20)
+
       const sections = ["hero", "about-me", "contact", "programs", "projects"]
 
       for (const sectionId of sections) {
@@ -88,28 +92,27 @@ export default function Navbar() {
         window.history.pushState(null, "", path)
       }
 
-      setTimeout(() => {
-        const yOffset = -80 // Increased offset to account for navbar height
-        const y = section.getBoundingClientRect().top + window.scrollY + yOffset
-        window.scrollTo({ top: y, behavior: "smooth" })
-      }, 100)
+      // Use scrollIntoView with behavior: smooth instead of manual scrollTo
+      section.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      })
     } else {
       console.log(`Section with ID "${sectionId}" not found`)
     }
   }
 
-  // For Vite/React, we need to ensure the blogpost page exists in your routes
   const navigateToBlogpost = () => {
-    // Close the mobile menu if it's open
     setIsOpen(false)
 
-    // Navigate to the blogpost page
-    window.location.href = "/blogpost"
+    // Use relative path instead of absolute path
+    // This will work both on localhost and Netlify
+    window.location.href = "./blogpost"
   }
 
   return (
     <motion.nav
-      className="container"
+      className={`container ${scrolled ? "scrolled" : ""}`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ type: "spring", stiffness: 120, damping: 20 }}
@@ -156,6 +159,7 @@ export default function Navbar() {
         </motion.li>
       </ul>
 
+      {/* Mobile menu with fixed positioning */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
