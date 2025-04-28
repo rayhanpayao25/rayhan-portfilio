@@ -6,7 +6,7 @@ import { Menu, X } from "lucide-react"
 import "./Navbar.css"
 
 // Import the logo image at the top of the file
-import logoImage from "../../assets/rayhan.png"
+import logoImage from "../../assets/rayray.jpg"
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)

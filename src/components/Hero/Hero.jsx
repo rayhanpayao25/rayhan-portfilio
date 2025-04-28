@@ -13,26 +13,30 @@ const Hero = () => {
   const buttonRef = useRef(null)
   const particlesRef = useRef(null)
   const videoRef = useRef(null)
+  const mobileVideoRef = useRef(null)
   const [isVideoPlaying, setIsVideoPlaying] = useState(false)
+  const [isMobileVideoPlaying, setIsMobileVideoPlaying] = useState(false)
 
   useEffect(() => {
     // Add animation classes after component mounts
     setTimeout(() => {
-      textRef.current.classList.add("animate-in")
+      if (textRef.current) textRef.current.classList.add("animate-in")
     }, 300)
 
     setTimeout(() => {
-      paragraphRef.current.classList.add("animate-in")
+      if (paragraphRef.current) paragraphRef.current.classList.add("animate-in")
     }, 800)
 
     setTimeout(() => {
-      buttonRef.current.classList.add("animate-in")
+      if (buttonRef.current) buttonRef.current.classList.add("animate-in")
     }, 1300)
 
     // Create particles
     const particlesContainer = particlesRef.current
-    for (let i = 0; i < 50; i++) {
-      createParticle(particlesContainer)
+    if (particlesContainer) {
+      for (let i = 0; i < 50; i++) {
+        createParticle(particlesContainer)
+      }
     }
 
     // Parallax effect on scroll
@@ -89,14 +93,25 @@ const Hero = () => {
     container.appendChild(particle)
   }
 
-  const toggleVideo = () => {
-    if (videoRef.current) {
-      if (isVideoPlaying) {
-        videoRef.current.pause()
-      } else {
-        videoRef.current.play()
+  const toggleVideo = (isMobile = false) => {
+    if (isMobile) {
+      if (mobileVideoRef.current) {
+        if (isMobileVideoPlaying) {
+          mobileVideoRef.current.pause()
+        } else {
+          mobileVideoRef.current.play()
+        }
+        setIsMobileVideoPlaying(!isMobileVideoPlaying)
       }
-      setIsVideoPlaying(!isVideoPlaying)
+    } else {
+      if (videoRef.current) {
+        if (isVideoPlaying) {
+          videoRef.current.pause()
+        } else {
+          videoRef.current.play()
+        }
+        setIsVideoPlaying(!isVideoPlaying)
+      }
     }
   }
 
@@ -139,19 +154,10 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="scroll-indicator">
-        <div className="mouse">
-          <div className="wheel"></div>
-        </div>
-        <div className="arrow-down">
-          <span></span>
-          <span></span>
-        </div>
-      </div>
+      {/* Video Section - Desktop View */}
+      <div className="video-section desktop-view">
+        <h2 className="section-title">Watch My Journey</h2>
 
-      {/* Video Section */}
-      <div className="video-section">
-        <h2 className="section-title">Watch My Introduction</h2>
         <div className="video-split-container">
           <div className="video-left-container">
             <div className="video-wrapper">
@@ -159,12 +165,15 @@ const Hero = () => {
                 ref={videoRef}
                 poster={portraitImage} // Use your portrait as the video poster
                 className="feature-video"
-                onClick={toggleVideo}
+                onClick={() => toggleVideo(false)}
+                controls
+                preload="metadata"
+                playsInline
               >
                 <source src={videoFile} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
-              <div className={`play-button ${isVideoPlaying ? "hidden" : ""}`} onClick={toggleVideo}>
+              <div className={`play-button ${isVideoPlaying ? "hidden" : ""}`} onClick={() => toggleVideo(false)}>
                 <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M8 5V19L19 12L8 5Z" fill="white" />
                 </svg>
@@ -249,50 +258,107 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Portfolio Gallery */}
-      <div className="portfolio-preview">
-        <h2 className="section-title">Featured Projects</h2>
-        <div className="image-gallery">
-          <div className="gallery-item">
-            <img src="/placeholder.svg?height=300&width=400" alt="Project 1" />
-            <div className="overlay">
-              <h3>E-Commerce Website</h3>
-              <p>React, Node.js, MongoDB</p>
-            </div>
-          </div>
-          <div className="gallery-item">
-            <img src="/placeholder.svg?height=300&width=400" alt="Project 2" />
-            <div className="overlay">
-              <h3>Portfolio Template</h3>
-              <p>HTML, CSS, JavaScript</p>
-            </div>
-          </div>
-          <div className="gallery-item">
-            <img src="/placeholder.svg?height=300&width=400" alt="Project 3" />
-            <div className="overlay">
-              <h3>Mobile App UI</h3>
-              <p>React Native, Firebase</p>
-            </div>
+      {/* Video Section - Mobile View */}
+      <div className="video-section mobile-view">
+        <h2 className="section-title">Watch My Introduction</h2>
+
+        {/* Mobile Video */}
+        <div className="mobile-video-container">
+          <video
+            ref={mobileVideoRef}
+            poster={portraitImage}
+            className="mobile-video"
+            onClick={() => toggleVideo(true)}
+            controls
+            preload="metadata"
+            playsInline
+          >
+            <source src={videoFile} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <div
+            className={`play-button mobile-play ${isMobileVideoPlaying ? "hidden" : ""}`}
+            onClick={() => toggleVideo(true)}
+          >
+            <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8 5V19L19 12L8 5Z" fill="white" />
+            </svg>
           </div>
         </div>
-      </div>
 
-      {/* Skills Section */}
-      <div className="second-section">
-        <div className="skills-showcase">
-          <h2 className="section-title">My Skills</h2>
-          <div className="skills-container">
-            <div className="skill-item">HTML5</div>
-            <div className="skill-item">CSS3</div>
-            <div className="skill-item">JavaScript</div>
-            <div className="skill-item">React</div>
-            <div className="skill-item">Vue</div>
-            <div className="skill-item">SASS</div>
-            <div className="skill-item">Tailwind</div>
-            <div className="skill-item">Git</div>
-            <div className="skill-item">Figma</div>
-            <div className="skill-item">Responsive Design</div>
+        {/* Mobile Why Work With Me Card */}
+        <div className="mobile-card">
+          <h3>Why Work With Me</h3>
+          <div className="card-content">
+            <div className="card-item">
+              <div className="card-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M20 6L9 17L4 12"
+                    stroke="#e83e8c"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </div>
+              <div className="card-text">
+                <h4>Creative Solutions</h4>
+                <p>
+                  I approach each project with fresh ideas and innovative thinking to create unique digital experiences.
+                </p>
+              </div>
+            </div>
+
+            <div className="card-item">
+              <div className="card-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M20 6L9 17L4 12"
+                    stroke="#e83e8c"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </div>
+              <div className="card-text">
+                <h4>Attention to Detail</h4>
+                <p>I focus on the small details that make a big difference in user experience and visual appeal.</p>
+              </div>
+            </div>
+
+            <div className="card-item">
+              <div className="card-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M20 6L9 17L4 12"
+                    stroke="#e83e8c"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </div>
+              <div className="card-text">
+                <h4>Responsive Design</h4>
+                <p>All my projects are fully responsive, ensuring a seamless experience across all devices.</p>
+              </div>
+            </div>
           </div>
+
+          <button className="learn-more-button" onClick={handleLearnMoreClick}>
+            Learn More About My Process
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M5 12H19M19 12L12 5M19 12L12 19"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </button>
         </div>
       </div>
     </div>
