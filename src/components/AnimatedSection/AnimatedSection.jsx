@@ -35,7 +35,7 @@ const AnimatedSection = ({ children, className, fromLeft, fromRight, id }) => {
       id={id}
       initial={initial.current}
       animate={controls}
-      transition={{ duration: 0.8, ease: "easeOut" }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
       className={className}
     >
       {children}

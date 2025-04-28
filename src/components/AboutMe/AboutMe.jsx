@@ -4,6 +4,13 @@ import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
 import "./AboutMe.css"
 
+// Import all images at the top of your file
+import profileImage from "../../assets/rayray.jpg"
+import qaImage from "../../assets/qa.jpg"
+import volleyballImage1 from "../../assets/v1.jpg"
+import mlbbImage from "../../assets/mlbb.jpg"
+import volleyballImage2 from "../../assets/v2.jpg"
+
 export default function AboutMe() {
   const [isVisible, setIsVisible] = useState(false)
   const [isMobile, setIsMobile] = useState(false)
@@ -69,7 +76,7 @@ export default function AboutMe() {
             animate={{ rotate: 0, scale: 1 }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
           >
-            <img src="../src/assets/rayhan.png" alt="Profile" />
+            <img src={profileImage || "/placeholder.svg"} alt="Profile" />
           </motion.div>
         </div>
         <motion.h1
@@ -183,18 +190,20 @@ export default function AboutMe() {
         <motion.h3 variants={itemVariants}>What I'm Currently Working As</motion.h3>
         <motion.div className="current-work" variants={itemVariants}>
           <div className="work-image">
-            <img src="../src/assets/qa.jpg" alt="Current Project" />
+            <img src={qaImage || "/placeholder.svg"} alt="Current Project" />
           </div>
           <div className="work-content">
             <h4>QUALITY ASSURANCE SPECIALIST</h4>
             <p>
-            I have over a year of experience as a Quality Assurance Specialist at Salary.com, working remotely. 
-            I use tools like Jira and DevOps to manage workflows, track issues, and ensure the quality of products. 
-            My responsibilities include testing, identifying bugs, and providing feedback to development teams to improve 
-            functionality.
+              I have over a year of experience as a Quality Assurance Specialist at Salary.com, working remotely. I use
+              tools like Jira and DevOps to manage workflows, track issues, and ensure the quality of products. My
+              responsibilities include testing, identifying bugs, and providing feedback to development teams to improve
+              functionality.
             </p>
             <p>
-            As a QA Specialist, I work closely with cross-functional teams to ensure that all products meet the highest standards before release. With a strong focus on detail and efficiency, I help maintain smooth project timelines and ensure the final products meet customer expectations.
+              As a QA Specialist, I work closely with cross-functional teams to ensure that all products meet the
+              highest standards before release. With a strong focus on detail and efficiency, I help maintain smooth
+              project timelines and ensure the final products meet customer expectations.
             </p>
             <div className="tech-stack">
               <span>Javascript</span>
@@ -261,7 +270,7 @@ export default function AboutMe() {
         <motion.div className="contest-grid" variants={itemVariants}>
           <div className="contest-card">
             <div className="contest-image">
-              <img src="../src/assets/v1.jpg" alt="Volleyball Championship" />
+              <img src={volleyballImage1 || "/placeholder.svg"} alt="Volleyball Championship" />
             </div>
             <div className="contest-badge">🏆 Champion</div>
             <h4>Wmsu Pathfit Championship</h4>
@@ -269,7 +278,7 @@ export default function AboutMe() {
           </div>
           <div className="contest-card">
             <div className="contest-image">
-              <img src="../src/assets/mlbb.jpg" alt="Web Innovation Hackathon 2023" />
+              <img src={mlbbImage || "/placeholder.svg"} alt="Web Innovation Hackathon 2023" />
             </div>
             <div className="contest-badge">🏆 Champion</div>
             <h4>SpookFest MLBB Tournament Champions</h4>
@@ -277,7 +286,7 @@ export default function AboutMe() {
           </div>
           <div className="contest-card">
             <div className="contest-image">
-              <img src="../src/assets/v2.jpg" alt="Volleyball Tournament" />
+              <img src={volleyballImage2 || "/placeholder.svg"} alt="Volleyball Tournament" />
             </div>
             <div className="contest-badge">🥉 Runner-up</div>
             <h4>Wmsu Palaro - Volleyball </h4>
