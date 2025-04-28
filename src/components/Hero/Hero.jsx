@@ -156,19 +156,18 @@ const Hero = () => {
 
       {/* Video Section - Desktop View */}
       <div className="video-section desktop-view">
-        <h2 className="section-title">Watch My Journey</h2>
-
         <div className="video-split-container">
           <div className="video-left-container">
-            <div className="video-wrapper">
+            <h2 className="section-title video-title">Watch My Journey</h2>
+            <div className="video-wrapper" style={{ maxWidth: "100%" }}>
               <video
                 ref={videoRef}
-                poster={portraitImage} // Use your portrait as the video poster
                 className="feature-video"
                 onClick={() => toggleVideo(false)}
                 controls
                 preload="metadata"
                 playsInline
+                style={{ maxHeight: "450px" }}
               >
                 <source src={videoFile} type="video/mp4" />
                 Your browser does not support the video tag.
@@ -179,6 +178,20 @@ const Hero = () => {
                 </svg>
               </div>
             </div>
+
+            {/* Education Tour Button - Desktop */}
+            <button className="education-tour-button" onClick={handleLearnMoreClick}>
+              View More About My Education Tour - 2025
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M5 12H19M19 12L12 5M19 12L12 19"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </button>
           </div>
 
           <div className="video-right-card">
@@ -236,42 +249,47 @@ const Hero = () => {
                   </svg>
                 </div>
                 <div className="card-text">
+                  <h4>User-Centered Focus</h4>
+                  <p>I prioritize the needs and preferences of users, designing with empathy to ensure intuitive and enjoyable experiences.</p>
+                </div>
+              </div>
+
+              <div className="card-item">
+                <div className="card-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M20 6L9 17L4 12"
+                      stroke="#e83e8c"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </div>
+                <div className="card-text">
                   <h4>Responsive Design</h4>
                   <p>All my projects are fully responsive, ensuring a seamless experience across all devices.</p>
                 </div>
               </div>
             </div>
-
-            <button className="learn-more-button" onClick={handleLearnMoreClick}>
-              Learn More About My Process
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M5 12H19M19 12L12 5M19 12L12 19"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </button>
           </div>
         </div>
       </div>
 
       {/* Video Section - Mobile View */}
       <div className="video-section mobile-view">
-        <h2 className="section-title">Watch My Introduction</h2>
+        <h2 className="section-title video-title">Watch My Journey</h2>
 
         {/* Mobile Video */}
         <div className="mobile-video-container">
           <video
             ref={mobileVideoRef}
-            poster={portraitImage}
             className="mobile-video"
             onClick={() => toggleVideo(true)}
             controls
             preload="metadata"
             playsInline
+            style={{ maxHeight: "350px" }}
           >
             <source src={videoFile} type="video/mp4" />
             Your browser does not support the video tag.
@@ -285,6 +303,20 @@ const Hero = () => {
             </svg>
           </div>
         </div>
+
+        {/* Education Tour Button - Mobile */}
+        <button className="education-tour-button mobile-tour-button" onClick={handleLearnMoreClick}>
+          View More About My Education Tour - 2025
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M5 12H19M19 12L12 5M19 12L12 19"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+        </button>
 
         {/* Mobile Why Work With Me Card */}
         <div className="mobile-card">
@@ -342,23 +374,10 @@ const Hero = () => {
               </div>
               <div className="card-text">
                 <h4>Responsive Design</h4>
-                <p>All my projects are fully responsive, ensuring a seamless experience across all devices.</p>
+                <p>All my projects are responsive, ensuring a seamless experience across all devices.</p>
               </div>
             </div>
           </div>
-
-          <button className="learn-more-button" onClick={handleLearnMoreClick}>
-            Learn More About My Process
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M5 12H19M19 12L12 5M19 12L12 19"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </button>
         </div>
       </div>
     </div>
