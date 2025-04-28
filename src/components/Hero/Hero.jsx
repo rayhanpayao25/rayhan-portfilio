@@ -105,6 +105,10 @@ const Hero = () => {
     window.location.href = "/#contact"
   }
 
+  function handleLearnMoreClick() {
+    window.location.href = "/blogpost"
+  }
+
   return (
     <div className="hero-container" ref={heroRef}>
       <div className="particles-container" ref={particlesRef}></div>
@@ -148,22 +152,99 @@ const Hero = () => {
       {/* Video Section */}
       <div className="video-section">
         <h2 className="section-title">Watch My Introduction</h2>
-        <div className="video-container">
-          <div className="video-wrapper">
-            <video
-              ref={videoRef}
-              poster={portraitImage} // Use your portrait as the video poster
-              className="feature-video"
-              onClick={toggleVideo}
-            >
-              <source src={videoFile} type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-            <div className={`play-button ${isVideoPlaying ? "hidden" : ""}`} onClick={toggleVideo}>
-              <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M8 5V19L19 12L8 5Z" fill="white" />
-              </svg>
+        <div className="video-split-container">
+          <div className="video-left-container">
+            <div className="video-wrapper">
+              <video
+                ref={videoRef}
+                poster={portraitImage} // Use your portrait as the video poster
+                className="feature-video"
+                onClick={toggleVideo}
+              >
+                <source src={videoFile} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+              <div className={`play-button ${isVideoPlaying ? "hidden" : ""}`} onClick={toggleVideo}>
+                <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8 5V19L19 12L8 5Z" fill="white" />
+                </svg>
+              </div>
             </div>
+          </div>
+
+          <div className="video-right-card">
+            <h3>Why Work With Me</h3>
+            <div className="card-content">
+              <div className="card-item">
+                <div className="card-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M20 6L9 17L4 12"
+                      stroke="#e83e8c"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </div>
+                <div className="card-text">
+                  <h4>Creative Solutions</h4>
+                  <p>
+                    I approach each project with fresh ideas and innovative thinking to create unique digital
+                    experiences.
+                  </p>
+                </div>
+              </div>
+
+              <div className="card-item">
+                <div className="card-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M20 6L9 17L4 12"
+                      stroke="#e83e8c"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </div>
+                <div className="card-text">
+                  <h4>Attention to Detail</h4>
+                  <p>I focus on the small details that make a big difference in user experience and visual appeal.</p>
+                </div>
+              </div>
+
+              <div className="card-item">
+                <div className="card-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M20 6L9 17L4 12"
+                      stroke="#e83e8c"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </div>
+                <div className="card-text">
+                  <h4>Responsive Design</h4>
+                  <p>All my projects are fully responsive, ensuring a seamless experience across all devices.</p>
+                </div>
+              </div>
+            </div>
+
+            <button className="learn-more-button" onClick={handleLearnMoreClick}>
+              Learn More About My Process
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M5 12H19M19 12L12 5M19 12L12 19"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </button>
           </div>
         </div>
       </div>

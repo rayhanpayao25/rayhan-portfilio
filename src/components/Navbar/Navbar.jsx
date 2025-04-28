@@ -2,8 +2,11 @@
 
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { Menu, X } from 'lucide-react'
+import { Menu, X } from "lucide-react"
 import "./Navbar.css"
+
+// Import the logo image at the top of the file
+import logoImage from "../../assets/rayhan.png"
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
@@ -47,14 +50,15 @@ export default function Navbar() {
 
     // Handle initial hash or pathname on page load or refresh
     const handleInitialPath = () => {
-      const path = window.location.pathname + window.location.hash
-      const sectionId = path.split('#')[1] || "hero"; // Get sectionId from hash or fallback to "hero"
-      
-      const validSections = ["hero", "about-me", "contact-me", "projects", "programs"]
-      if (validSections.includes(sectionId)) {
-        scrollToSection(sectionId, false)
+      // Get the hash from the URL (without the #)
+      const hash = window.location.hash.replace("#", "")
+
+      // If there's a hash and it's a valid section, scroll to it
+      if (hash && ["hero", "about-me", "contact", "projects", "programs"].includes(hash)) {
+        scrollToSection(hash, false)
       } else {
-        scrollToSection("hero", false) // If no valid section, scroll to hero
+        // If no valid hash, scroll to hero
+        scrollToSection("hero", false)
       }
     }
 
@@ -68,10 +72,10 @@ export default function Navbar() {
 
   const navItems = [
     { name: "Home", to: "hero", path: "/" },
-    { name: "About Me", to: "about-me", path: "/about-me" },
-    { name: "Contact Me", to: "contact", path: "/contact" },
-    { name: "Projects", to: "projects", path: "/projects" },
-    { name: "Program", to: "programs", path: "/programs" },
+    { name: "About Me", to: "about-me", path: "/#about-me" },
+    { name: "Contact Me", to: "contact", path: "/#contact" },
+    { name: "Projects", to: "projects", path: "/#projects" },
+    { name: "Program", to: "programs", path: "/#programs" },
   ]
 
   const scrollToSection = (sectionId, updateUrl = true) => {
@@ -94,9 +98,13 @@ export default function Navbar() {
     }
   }
 
-  // Handle Blogpost navigation
+  // For Vite/React, we need to ensure the blogpost page exists in your routes
   const navigateToBlogpost = () => {
-    window.location.href = "/blogpost"; // Navigate to the blogpost page in the same tab
+    // Close the mobile menu if it's open
+    setIsOpen(false)
+
+    // Navigate to the blogpost page
+    window.location.href = "/blogpost"
   }
 
   return (
@@ -106,16 +114,12 @@ export default function Navbar() {
       animate={{ y: 0 }}
       transition={{ type: "spring", stiffness: 120, damping: 20 }}
     >
-      {/* Logo with image */}
+      {/* Logo with image - using imported image */}
       <div className="logo" onClick={() => scrollToSection("hero")}>
-        <img 
-          src="../src/assets/rayhan.png" 
-          alt="Rayhan Logo" 
-          className="logo-img" 
-        />
+        <img src={logoImage || "/placeholder.svg?height=40&width=40"} alt="Rayhan Logo" className="logo-img" />
         <span className="logo-text">Rayhan</span>
       </div>
-      
+
       <div className="mobile-menu-button">
         <button onClick={() => setIsOpen(!isOpen)} aria-label="Toggle menu">
           {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -145,7 +149,7 @@ export default function Navbar() {
             className="btn"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            onClick={navigateToBlogpost} // Navigate to the Blogpost page in the same tab
+            onClick={navigateToBlogpost}
           >
             Blogpost
           </motion.button>
@@ -178,7 +182,7 @@ export default function Navbar() {
                 </motion.li>
               ))}
               <motion.li initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.4 }}>
-                <button className="btn mobile-btn" onClick={navigateToBlogpost}> {/* Navigate in the same tab */}
+                <button className="btn mobile-btn" onClick={navigateToBlogpost}>
                   Blogpost
                 </button>
               </motion.li>
