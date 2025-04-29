@@ -6,6 +6,8 @@ import "./Hero.css"
 import portraitImage from "../../assets/rayhanpayao.jpg"
 import videoFile from "../../assets/rayhan.mov.mov"
 
+import resumePDF from "../../assets/Rayhan.pdf"
+
 const Hero = () => {
   const heroRef = useRef(null)
   const textRef = useRef(null)
@@ -111,7 +113,13 @@ const Hero = () => {
   }
 
   const handleDownloadCV = () => {
-    window.open("../Rayhan.pdf", "_blank")
+    // Use the imported PDF file
+    if (resumePDF) {
+      window.open(resumePDF, "_blank")
+    } else {
+      // Fallback to the static path if import doesn't work
+      window.open("/../assets/Rayhan.pdf", "_blank")
+    }
   }
 
   const handleViewCertificates = () => {
@@ -144,7 +152,7 @@ const Hero = () => {
               <span className="button-glow"></span>
             </button>
             <button className="secondary-button" onClick={handleDownloadCV}>
-              Download CV
+              View CV
             </button>
             <button className="secondary-button" onClick={handleViewCertificates}>
               View Certificates

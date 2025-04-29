@@ -3,6 +3,31 @@
 import { useEffect, useRef, useState } from "react"
 import "./Certificate.css"
 
+import cybersecurity from "../../assets/cybersecurity.jpg"
+import frontenddev from "../../assets/frontend.jpg"
+import webdev from "../../assets/webdev.jpg"
+import datascience from "../../assets/datascience.jpg"
+import ist from "../../assets/ist.png"
+import est from "../../assets/est.png"
+import pm from "../../assets/pm.jpg"
+import computernetworking from "../../assets/computernetworking.jpg"
+import cloudcomputing from "../../assets/cloudcomputing.jpg"
+
+
+
+import Cybersecuritypdf from "../../assets/certificate/3736_8196935.pdf"
+import frontenddevpdf from "../../assets/certificate/4511_8266560.pdf"
+import webdevpdf from "../../assets/certificate/6051_8249690.pdf"
+import datasciencepdf from "../../assets/certificate/4227_8245098.pdf"
+import projectmanagement from "../../assets/certificate/6032_8197863.pdf"
+import computernetworkingpdf from "../../assets/certificate/7219_8203529.pdf"
+import cloudcomputingpdf from "../../assets/certificate/3971_8197280.pdf"
+import istPDF from "../../assets/certificate/Rayhan Payao - 2024-02-01.pdf"
+import estPDF from "../../assets/certificate/Rayhan.Payao- 2024-02-01.pdf"
+
+
+
+
 const Certificate = () => {
   const certificatesRef = useRef(null)
   const titleRef = useRef(null)
@@ -16,51 +41,90 @@ const Certificate = () => {
     {
       id: 1,
       title: "Front-End Web Development",
-      issuer: "Udemy",
-      date: "January 2023",
-      image: "/placeholder.svg?height=600&width=800",
-      description: "Comprehensive course covering HTML, CSS, JavaScript, and React fundamentals.",
+      issuer: "Simple Learn",
+      date: "April 2025",
+      image: frontenddev,
+      pdf: frontenddevpdf,
+      pdfName: "4511_8266560.pdf",
     },
+
     {
       id: 2,
-      title: "React.js Advanced Concepts",
-      issuer: "Coursera",
-      date: "March 2023",
-      image: "/placeholder.svg?height=600&width=800",
-      description: "Advanced React patterns, hooks, context API, and performance optimization techniques.",
+      title: "Web Development",
+      issuer: "Simple Learn",
+      date: "April 2025",
+      image: webdev,
+      pdf: webdevpdf,
+      pdfName: "6051_8249690.pdf",
     },
+    
     {
       id: 3,
-      title: "UI/UX Design Principles",
-      issuer: "Google",
-      date: "June 2023",
-      image: "/placeholder.svg?height=600&width=800",
-      description: "User interface design, user experience principles, and design thinking methodologies.",
+      title: "Introduction to Data Science",
+      issuer: "Simple Learn",
+      date: "April 2025",
+      image: datascience,
+      pdf: datasciencepdf,
+      pdfName: "4227_8245098.pdf",
     },
+
     {
       id: 4,
-      title: "Responsive Web Design",
-      issuer: "freeCodeCamp",
-      date: "August 2023",
-      image: "/placeholder.svg?height=600&width=800",
-      description: "Creating responsive layouts, media queries, and mobile-first design approaches.",
+      title: "Project Management 101", 
+      issuer: "Simple Learn",
+      date: "April 2025",
+      image: pm,
+      pdf: projectmanagement,
+      pdfName: "6032_8197863.pdf",
     },
     {
       id: 5,
-      title: "JavaScript Algorithms and Data Structures",
-      issuer: "freeCodeCamp",
-      date: "October 2023",
-      image: "/placeholder.svg?height=600&width=800",
-      description: "Problem-solving with JavaScript, algorithms, and data structures implementation.",
+      title: "Introduction to Computer Networking",
+      issuer: "Simple Learn",
+      date: "April 2025",
+      image: computernetworking,
+      pdf: computernetworkingpdf,
+      pdfName: "7219_8203529.pdf",
     },
     {
       id: 6,
-      title: "Next.js & Server-Side Rendering",
-      issuer: "Vercel",
-      date: "December 2023",
-      image: "/placeholder.svg?height=600&width=800",
-      description: "Building performant web applications with Next.js and server-side rendering techniques.",
+      title: "Introduction to Cloud Computing",
+      issuer: "Simple Learn",
+      date: "April 2025",
+      image: cloudcomputing,
+      pdf: cloudcomputingpdf,
+      pdfName: "3971_8197280,pfd",
     },
+
+    {
+      id: 7,
+      title: "Introduction to Cybersecurity",
+      issuer: "Simple Learn",
+      date: "April 2025",
+      image: cybersecurity,
+      pdf: Cybersecuritypdf,
+      pdfName: "Rayhan Payao - 2024-02-01.pdf",
+    },
+    {
+      id: 8,
+      title: "Information Security Training",
+      issuer: "Salary.com Learning Lab",
+      date: "April 2024",
+      image: ist,
+      pdf: istPDF,
+      pdfName: "Rayhan Payao - 2024-02-01.pdf",
+    },
+    {
+      id: 9,
+      title: "Email Security Training",
+      issuer: "Salary.com Learning Lab",
+      date: "April 2023",
+      image: est,
+      pdf: estPDF,
+      pdfName: "Rayhan.Payao- 2024-02-01.pdf",
+    
+    },
+
   ]
 
   useEffect(() => {
@@ -131,8 +195,39 @@ const Certificate = () => {
     setSelectedCertificate(null)
   }
 
-  const handleBackClick = () => {
-    window.history.back()
+  const handleDownloadCertificate = () => {
+    if (selectedCertificate) {
+      if (selectedCertificate.pdf) {
+        const link = document.createElement("a")
+        link.href = selectedCertificate.pdf
+        link.open = selectedCertificate.pdfName || "certificate.pdf"
+        document.body.appendChild(link)
+        link.click()
+        document.body.removeChild(link)
+      } else {
+        
+        const image = new Image()
+        image.crossOrigin = "anonymous"
+        image.src = selectedCertificate.image
+
+        image.onload = () => {
+          const canvas = document.createElement("canvas")
+          canvas.width = image.width
+          canvas.height = image.height
+          const ctx = canvas.getContext("2d")
+          ctx.drawImage(image, 0, 0)
+
+        
+          const dataURL = canvas.toDataURL("image/png")
+          const link = document.createElement("a")
+          link.href = dataURL
+          link.download = selectedCertificate.pdfName || `${selectedCertificate.title.replace(/\s+/g, "-")}.png`
+          document.body.appendChild(link)
+          link.click()
+          document.body.removeChild(link)
+        }
+      }
+    }
   }
 
   return (
@@ -140,24 +235,11 @@ const Certificate = () => {
       <div className="certificate-particles-container" ref={particlesRef}></div>
 
       <div className="certificates-header">
-        <button className="back-button" onClick={handleBackClick}>
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M19 12H5M5 12L12 19M5 12L12 5"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-          Back
-        </button>
         <h1 ref={titleRef} className="certificates-title">
           My <span className="highlight">Certificates</span>
         </h1>
         <p ref={descriptionRef} className="certificates-description">
-          These certificates represent my commitment to continuous learning and professional development in the field of
-          web development and design. Each certification has equipped me with valuable skills that I apply to my
+        These are the collection of my certificates that showcase my dedication to continuous learning and skill development in the field of technology. Through platforms like Simple Learn and Salary.com Learning Lab. Each certification has equipped me with valuable skills that I apply to my
           projects.
         </p>
       </div>
@@ -215,23 +297,11 @@ const Certificate = () => {
               </div>
               <p className="certificate-modal-description">{selectedCertificate.description}</p>
               <div className="certificate-modal-buttons">
-                <button className="certificate-download-button">
-                  Download Certificate
+                <button className="certificate-download-button" onClick={handleDownloadCertificate}>
+                  View Certificate
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                       d="M12 4V16M12 16L7 11M12 16L17 11M5 20H19"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </button>
-                <button className="certificate-verify-button">
-                  Verify Certificate
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"
                       stroke="currentColor"
                       strokeWidth="2"
                       strokeLinecap="round"
