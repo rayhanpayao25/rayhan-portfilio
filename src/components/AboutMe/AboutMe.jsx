@@ -120,7 +120,10 @@ const AboutMe = () => {
               <span className="tech-tag">Devops</span>
               <span className="tech-tag">Html</span>
               <span className="tech-tag">Css</span>
-              <span className="tech-tag">Test plan</span>
+              <span className="tech-tag">Test Planning</span>
+              <span className="tech-tag">Manual Planning</span>
+              <span className="tech-tag">Test Automation</span>
+              <span className="tech-tag">Functional Testing</span>
             </div>
           </div>
         </div>
