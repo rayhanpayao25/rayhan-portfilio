@@ -1,6 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
-@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css");
-
 body {
   margin: 0;
   padding: 0;
@@ -12,45 +9,36 @@ body {
   color: #333333;
 }
 
-/* AboutMe specific styles - scoped to avoid affecting other components */
 .about-me-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem;
-  overflow-x: hidden;
-}
-
-.about-me-container .hero-section {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  padding: 4rem 0;
-  min-height: 80vh;
+  min-height: 100vh;
+  padding: 2rem 1rem;
+  background-color: #fef3f3;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+    "Helvetica Neue", sans-serif;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
-.about-me-container .profile-image {
+.profile-image {
+  width: 170px;
+  height: 170px;
   margin-bottom: 2rem;
-  position: relative;
 }
 
-.about-me-container .image-container {
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  overflow: hidden;
-  border: 4px solid #fff;
-  box-shadow: 0 0 25px rgba(236, 72, 153, 0.2);
-}
-
-.about-me-container .image-container img {
+.profile-image img {
   width: 100%;
   height: 100%;
+  border-radius: 50%;
   object-fit: cover;
+  box-shadow: 0 4px 15px rgba(232, 62, 140, 0.2);
 }
 
-.about-me-container .hero-section h1 {
+.name {
   font-size: 3.5rem;
   margin-bottom: 0.5rem;
   background: linear-gradient(to right, #ec4899, #d946ef);
@@ -58,775 +46,735 @@ body {
   background-clip: text;
   color: transparent;
   font-weight: 700;
+  text-align: center;
 }
 
-.about-me-container .hero-section h2 {
+.title {
+  margin: 0;
   font-size: 1.5rem;
   font-weight: 400;
-  color: #666;
+  color: #6c757d;
   margin-bottom: 2rem;
+  text-align: center;
 }
 
-.about-me-container .social-links {
+.social-links {
   display: flex;
-  gap: 1.5rem;
+  gap: 2rem;
+  margin-top: 1rem;
 }
 
-.about-me-container .social-icon {
+.social-icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 50px;
-  height: 50px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
-  background-color: #fce7f3;
-  color: #ec4899;
-  font-size: 1.5rem;
-  transition: all 0.3s ease;
+  background-color: #f8f9fa;
+  color: #e83e8c;
+  transition: all 0.2s ease-in-out;
 }
 
-.about-me-container .social-icon:hover {
-  transform: translateY(-5px);
-  background-color: #fbcfe8;
-  box-shadow: 0 5px 15px rgba(236, 72, 153, 0.2);
+.social-icon:hover {
+  background-color: #e83e8c;
+  color: white;
+  transform: translateY(-3px);
 }
 
-.about-me-container .section {
-  margin: 5rem 0;
+.introduction-section {
+  margin-top: 4rem;
+  max-width: 1200px;
+  background-color: white;
   padding: 2rem;
-  background-color: #fff;
-  border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(236, 72, 153, 0.1);
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(232, 62, 140, 0.1);
+  width: 100%;
+  box-sizing: border-box;
 }
 
-.about-me-container h3 {
+.intro-title {
+  color: #e83e8c;
   font-size: 2rem;
+  font-weight: 600;
   margin-bottom: 1.5rem;
   position: relative;
-  display: inline-block;
   padding-bottom: 0.5rem;
-  color: #d946ef;
 }
 
-.about-me-container h3::after {
+.intro-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 80px;
+  height: 4px;
+  background-color: #e83e8c;
+}
+
+.intro-text {
+  color: #6c757d;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+}
+
+.skill-section {
+  margin-top: 4rem;
+  max-width: 1200px;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(232, 62, 140, 0.1);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.skill-title {
+  color: #e83e8c;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 2.5rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.skill-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 80px;
+  height: 4px;
+  background-color: #e83e8c;
+}
+
+.skill-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  width: 100%;
+}
+
+.skill-card {
+  background-color: #fff5f8;
+  padding: 2rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(236, 72, 153, 0.15);
+}
+
+.skill-icon {
+  color: #e83e8c;
+  margin-bottom: 0.5rem;
+}
+
+.skill-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+.skill-description {
+  color: #6c757d;
+  line-height: 1.6;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.current-work-section {
+  margin-top: 4rem;
+  max-width: 1200px;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(232, 62, 140, 0.1);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.current-work-title {
+  color: #e83e8c;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+  display: inline-block;
+}
+
+.current-work-title::after {
   content: "";
   position: absolute;
   bottom: 0;
   left: 0;
   width: 50px;
   height: 3px;
-  background: linear-gradient(to right, #ec4899, #d946ef);
+  background-color: #e83e8c;
 }
 
-.about-me-container h4 {
-  font-size: 1.3rem;
-  margin-bottom: 1rem;
+.current-work-content {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.current-work-image {
+  width: 45%;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.current-work-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+.current-work-details {
+  flex: 1;
+}
+
+.current-work-position {
+  font-size: 1.5rem;
+  font-weight: 700;
   color: #333;
-}
-
-.about-me-container p {
+  margin-top: 0;
   margin-bottom: 1rem;
-  color: #666;
 }
 
-/* Skills & Expertise Section */
-.about-me-container .skills-tags {
+.current-work-text {
+  color: #6c757d;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+.tech-stack {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
-  margin-bottom: 2rem;
-  width: 100%;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
 }
 
-.about-me-container .skill-tag {
+.tech-tag {
   background-color: #fce7f3;
+  color: #e83e8c;
   padding: 0.5rem 1rem;
   border-radius: 2rem;
-  font-size: 1rem;
-  color: #ec4899;
-  display: flex;
-  align-items: center;
-  transition: all 0.3s ease;
+  font-size: 0.9rem;
 }
 
-.about-me-container .skill-tag:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(236, 72, 153, 0.2);
+.goal-section {
+  margin-top: 4rem;
+  max-width: 1200px;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(232, 62, 140, 0.1);
+  width: 100%;
+  box-sizing: border-box;
 }
 
-.about-me-container .skill-bracket {
-  color: #d946ef;
-  margin-right: 0.5rem;
-}
-
-.about-me-container .expertise-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
-  margin-top: 2rem;
-}
-
-.about-me-container .expertise-card {
-  background-color: #fdf2f8;
-  padding: 1.5rem;
-  border-radius: 10px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.about-me-container .expertise-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(236, 72, 153, 0.15);
-}
-
-.about-me-container .expertise-icon {
+.goal-title {
+  color: #e83e8c;
   font-size: 2rem;
-  color: #ec4899;
-  margin-bottom: 1rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+  display: inline-block;
 }
 
-/* Sports Section */
-.about-me-container .sports-grid {
+.goal-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background-color: #e83e8c;
+}
+
+.goal-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
-  margin-top: 2rem;
+  gap: 2rem;
+  width: 100%;
 }
 
-.about-me-container .sports-card {
-  background-color: #fff5f8;
-  border-radius: 12px;
-  overflow: hidden;
-  position: relative;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.goal-card {
+  background-color: #fdf2f8;
+  padding: 2rem;
+  border-radius: 1rem;
   display: flex;
   flex-direction: column;
+  gap: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.about-me-container .sports-card:hover {
+.goal-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(236, 72, 153, 0.1);
+  box-shadow: 0 10px 20px rgba(236, 72, 153, 0.15);
 }
 
-.about-me-container .sports-image {
+.goal-icon {
+  color: #e83e8c;
+  margin-bottom: 0.5rem;
+}
+
+.goal-term {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+.goal-description {
+  color: #6c757d;
+  line-height: 1.6;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.sports-section {
+  margin-top: 4rem;
+  max-width: 1200px;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(232, 62, 140, 0.1);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.sports-title {
+  color: #e83e8c;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+  display: inline-block;
+}
+
+.sports-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background-color: #e83e8c;
+}
+
+.sports-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  width: 100%;
+}
+
+.sports-card {
+  background-color: white;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(232, 62, 140, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sports-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(236, 72, 153, 0.15);
+}
+
+.sports-image {
+  position: relative;
   width: 100%;
   height: 200px;
   overflow: hidden;
-  position: relative;
 }
 
-.about-me-container .sports-image img {
+.sports-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.5s ease;
 }
 
-.about-me-container .sports-card:hover .sports-image img {
-  transform: scale(1.05);
-}
-
-.about-me-container .sports-badge {
+.sports-badge {
   position: absolute;
   top: 10px;
   right: 10px;
-  display: inline-flex;
-  align-items: center;
-  padding: 0.35rem 1rem;
-  border-radius: 50px;
+  background: linear-gradient(to right, #ec4899, #d946ef);
+  color: #fff;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
   font-weight: 600;
-  font-size: 0.875rem;
-  color: white;
-  background-color: #ec4899;
+  font-size: 0.9rem;
   z-index: 10;
 }
 
-.about-me-container .badge-icon {
-  width: 30px;
-  height: 25px;
-  margin-right: 0.5rem;
-  object-fit: contain;
+.sports-badge.champion {
+  background-color: #e83e8c;
 }
 
-.about-me-container .sports-card h4 {
+.sports-badge.runner-up {
+  background-color: #e83e8c;
+}
+
+.sports-content {
+  padding: 1.5rem;
+}
+
+.sports-name {
   font-size: 1.25rem;
   font-weight: 600;
-  margin: 1rem 1rem 0.5rem;
   color: #333;
+  margin: 0 0 0.5rem 0;
 }
 
-.about-me-container .sports-card p {
-  color: #666;
-  line-height: 1.5;
-  margin: 0 1rem 1rem;
-}
-
-/* Contest Section */
-.about-me-container .contest-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
-}
-
-.about-me-container .contest-card {
-  background-color: #fdf2f8;
-  border-radius: 10px;
-  position: relative;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  overflow: hidden;
-}
-
-.about-me-container .contest-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(236, 72, 153, 0.15);
-}
-
-.about-me-container .contest-image {
-  width: 100%;
-  height: 200px;
-  overflow: hidden;
-}
-
-.about-me-container .contest-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.5s ease;
-}
-
-.about-me-container .contest-card:hover .contest-image img {
-  transform: scale(1.05);
-}
-
-.about-me-container .contest-badge {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background: linear-gradient(to right, #ec4899, #d946ef);
-  color: #fff;
-  padding: 0.3rem 0.8rem;
-  border-radius: 20px;
-  font-weight: 600;
-  font-size: 0.9rem;
-  z-index: 10;
-}
-
-.about-me-container .contest-card h4 {
-  margin: 1.5rem 1rem 0.5rem;
-  font-size: 1.2rem;
-  font-weight: 600;
-}
-
-.about-me-container .contest-card p {
-  margin: 0 1rem 1rem;
-  color: #666;
+.sports-description {
+  color: #6c757d;
   font-size: 0.95rem;
   line-height: 1.5;
+  margin: 0;
 }
 
-/* Current Work Section */
-.about-me-container .current-work {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  align-items: center;
-}
-
-.about-me-container .work-image img {
+.personal-section {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  max-width: 1200px;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(232, 62, 140, 0.1);
   width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(236, 72, 153, 0.15);
+  box-sizing: border-box;
 }
 
-.about-me-container .tech-stack {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-top: 1rem;
-}
-
-.about-me-container .tech-stack span {
-  background-color: #fce7f3;
-  color: #ec4899;
-  padding: 0.3rem 0.8rem;
-  border-radius: 20px;
-  font-size: 0.8rem;
-}
-
-/* Career Goals Section */
-.about-me-container .goals-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
-}
-
-.about-me-container .goal-card {
-  background-color: #fdf2f8;
-  padding: 1.5rem;
-  border-radius: 10px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.about-me-container .goal-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(236, 72, 153, 0.15);
-}
-
-.about-me-container .goal-icon {
+.personal-title {
+  color: #e83e8c;
   font-size: 2rem;
-  color: #d946ef;
-  margin-bottom: 1rem;
-}
-
-/* Personal Touch Section */
-.about-me-container .personal-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
-}
-
-.about-me-container .personal-card {
-  background-color: #fdf2f8;
-  padding: 1.5rem;
-  border-radius: 10px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.about-me-container .personal-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(236, 72, 153, 0.15);
-}
-
-.about-me-container .personal-icon {
-  font-size: 2rem;
-  color: #ec4899;
-  margin-bottom: 1rem;
-}
-
-/* Call to Action Section */
-.about-me-container .cta-section {
-  text-align: center;
-  background: linear-gradient(135deg, #fdf2f8, #fce7f3);
-}
-
-.about-me-container .cta-text {
-  font-size: 1.2rem;
-  max-width: 700px;
-  margin: 0 auto 2rem;
-}
-
-.about-me-container .cta-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-  margin-bottom: 2rem;
-}
-
-.about-me-container .cta-button {
-  padding: 1rem 2rem;
-  border: none;
-  border-radius: 30px;
   font-weight: 600;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
+  margin-bottom: 2.5rem;
+  position: relative;
+  padding-bottom: 0.5rem;
 }
 
-.about-me-container .cta-button.primary {
-  background: linear-gradient(to right, #ec4899, #d946ef);
-  color: #fff;
-  box-shadow: 0 5px 15px rgba(236, 72, 153, 0.3);
+.personal-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 80px;
+  height: 4px;
+  background-color: #e83e8c;
 }
 
-.about-me-container .cta-button.secondary {
-  background: transparent;
-  border: 2px solid #ec4899;
-  color: #ec4899;
-}
-
-.about-me-container .cta-button:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(236, 72, 153, 0.4);
-}
-
-.about-me-container .contact-info {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+.personal-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
-  margin-top: 2rem;
+  width: 100%;
 }
 
-.about-me-container .contact-info p {
+.personal-card {
+  background-color: #fff5f8;
+  padding: 2rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.personal-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(236, 72, 153, 0.15);
+}
+
+.personal-icon {
+  color: #e83e8c;
+  margin-bottom: 0.5rem;
+}
+
+.icon-bg {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-}
-
-.about-me-container .contact-info i {
-  color: #ec4899;
-}
-
-/* Skills section */
-.about-me-container .skills-container {
-  margin-bottom: 2rem;
-}
-
-.about-me-container .skill-item {
-  display: flex;
-  align-items: center;
-  margin-bottom: 1rem;
-}
-
-.about-me-container .skill-name {
-  width: 120px;
-  font-weight: 500;
-}
-
-.about-me-container .skill-bar-container {
-  flex: 1;
-  height: 10px;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
   background-color: #fce7f3;
-  border-radius: 5px;
-  margin: 0 15px;
-  overflow: hidden;
+  color: #e83e8c;
 }
 
-.about-me-container .skill-bar {
-  height: 100%;
-  background: linear-gradient(to right, #ec4899, #d946ef);
-  border-radius: 5px;
+.personal-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
 }
 
-.about-me-container .skill-percentage {
-  font-size: 0.9rem;
-  color: #666;
+.personal-description {
+  color: #6c757d;
+  line-height: 1.6;
+  font-size: 1rem;
+  margin: 0;
 }
 
-/* Enhanced Mobile Responsiveness */
+@media (max-width: 1200px) {
+  .introduction-section,
+  .skill-section,
+  .current-work-section,
+  .goal-section,
+  .sports-section,
+  .personal-section {
+    max-width: 100%;
+  }
+}
+
 @media (max-width: 992px) {
-  .about-me-container .expertise-grid,
-  .about-me-container .sports-grid,
-  .about-me-container .contest-grid,
-  .about-me-container .goals-container,
-  .about-me-container .personal-grid {
+  .skill-container,
+  .goal-container,
+  .sports-container,
+  .personal-container {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .about-me-container .hero-section {
-    min-height: auto;
-    padding: 3rem 0;
+  .current-work-section {
+    padding: 1.5rem;
   }
 
-  .about-me-container .hero-section h1 {
-    font-size: 3rem;
+  .current-work-content {
+    gap: 1.5rem;
   }
 }
 
 @media (max-width: 768px) {
-  /* Force all elements to be visible regardless of animation state */
-  .about-me-container .section,
-  .about-me-container .hero-section,
-  .about-me-container .section *,
-  .about-me-container .hero-section *,
-  .about-me-container motion-div,
-  .about-me-container [data-motion],
-  .about-me-container div,
-  .about-me-container h1,
-  .about-me-container h2,
-  .about-me-container h3,
-  .about-me-container h4,
-  .about-me-container p,
-  .about-me-container .expertise-grid,
-  .about-me-container .goals-container,
-  .about-me-container .contest-grid,
-  .about-me-container .personal-grid {
-    opacity: 1 !important;
-    visibility: visible !important;
-    transform: none !important;
-    transition: none !important;
-    animation: none !important;
-  }
-
-  /* Ensure all Framer Motion elements are visible */
-  .about-me-container [style*="opacity"] {
-    opacity: 1 !important;
-  }
-
-  .about-me-container [style*="transform"] {
-    transform: none !important;
-  }
-
-  .about-me-container [style*="visibility"] {
-    visibility: visible !important;
-  }
-
-  /* Force Framer Motion elements to be visible */
-  .about-me-container motion-div,
-  .about-me-container [data-framer-motion-initial],
-  .about-me-container [data-framer-motion-animate],
-  .about-me-container [data-motion],
-  .about-me-container .motion-div {
-    display: block !important;
-    opacity: 1 !important;
-    visibility: visible !important;
-    transform: none !important;
-  }
-
   .about-me-container {
-    padding: 1.5rem;
+    padding: 1.5rem 1rem;
   }
 
-  .about-me-container .hero-section {
-    padding: 2.5rem 0;
-  }
-
-  .about-me-container .hero-section h1 {
+  .name {
     font-size: 2.5rem;
+    text-align: center;
   }
 
-  .about-me-container .hero-section h2 {
-    font-size: 1.2rem;
+  .title {
+    font-size: 1.1rem;
+    text-align: center;
   }
 
-  .about-me-container .image-container {
-    width: 150px;
-    height: 150px;
-  }
-
-  .about-me-container .section {
-    margin: 3rem 0;
-    padding: 1.5rem;
-  }
-
-  .about-me-container h3 {
-    font-size: 1.8rem;
-  }
-
-  .about-me-container .expertise-grid,
-  .about-me-container .sports-grid,
-  .about-me-container .contest-grid,
-  .about-me-container .goals-container,
-  .about-me-container .personal-grid {
-    grid-template-columns: 1fr;
-    gap: 1.25rem;
-  }
-
-  .about-me-container .current-work {
-    grid-template-columns: 1fr;
+  .social-links {
     gap: 1.5rem;
   }
 
-  .about-me-container .skill-item {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.5rem;
+  .social-icon {
+    width: 42px;
+    height: 42px;
   }
 
-  .about-me-container .skill-name {
-    width: auto;
-    margin-bottom: 0.3rem;
+  .introduction-section,
+  .skill-section,
+  .current-work-section,
+  .goal-section,
+  .sports-section,
+  .personal-section {
+    padding: 1.5rem;
+    margin-top: 3rem;
   }
 
-  .about-me-container .skill-bar-container {
+  
+  .intro-title,
+  .skill-title,
+  .current-work-title,
+  .goal-title,
+  .goal-icon,
+  .skill-icon,
+  .skill-term,
+  .skill-name,
+  .goal-term,
+  .sports-title,
+  .personal-title {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    padding-bottom: 0.75rem;
     width: 100%;
-    margin: 0.3rem 0;
   }
 
-  .about-me-container .skill-percentage {
-    align-self: flex-end;
+  .intro-title::after,
+  .skill-title::after,
+  .current-work-title::after,
+  .goal-title::after,
+  .sports-title::after,
+  .personal-title::after {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
   }
 
-  .about-me-container .cta-buttons {
-    flex-direction: column;
-    gap: 1rem;
-    width: 100%;
-    max-width: 300px;
-    margin-left: auto;
-    margin-right: auto;
+  .intro-text {
+    font-size: 1rem;
   }
 
-  .about-me-container .social-links {
-    gap: 1rem;
+  .skill-container,
+  .goal-container,
+  .sports-container,
+  .personal-container {
+    grid-template-columns: 1fr;
   }
 
-  .about-me-container .social-icon {
-    width: 45px;
-    height: 45px;
+  .skill-card,
+  .goal-card,
+  .personal-card {
+    padding: 1.5rem;
+  }
+
+  .skill-name,
+  .goal-term,
+  .personal-name {
     font-size: 1.3rem;
   }
 
-  /* Touch-friendly hover states */
-  .about-me-container .expertise-card:hover,
-  .about-me-container .sports-card:hover,
-  .about-me-container .contest-card:hover,
-  .about-me-container .goal-card:hover,
-  .about-me-container .personal-card:hover {
-    transform: none;
+  .skill-description,
+  .goal-description,
+  .personal-description {
+    font-size: 0.95rem;
   }
 
-  .about-me-container .expertise-card:active,
-  .about-me-container .sports-card:active,
-  .about-me-container .contest-card:active,
-  .about-me-container .goal-card:active,
-  .about-me-container .personal-card:active {
-    transform: translateY(-3px);
+  /* Change to vertical layout on mobile */
+  .current-work-content {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .current-work-image {
+    width: 100%;
+  }
+
+  .current-work-details {
+    width: 100%;
+  }
+
+  .current-work-position {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    margin-top: 0.5rem;
+  }
+
+  .current-work-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.2rem;
+  }
+
+  .tech-tag {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .sports-name {
+    font-size: 1.2rem;
+  }
+
+  .sports-description {
+    font-size: 0.9rem;
   }
 }
 
-@media (max-width: 576px) {
-  .about-me-container {
-    padding: 1rem;
+@media (max-width: 480px) {
+  .profile-image {
+    width: 140px;
+    height: 140px;
   }
 
-  .about-me-container .section {
-    padding: 1.25rem;
-    margin: 2.5rem 0;
-    border-radius: 12px;
-  }
-
-  .about-me-container .hero-section {
-    padding: 2rem 0;
-  }
-
-  .about-me-container .hero-section h1 {
+  .name {
     font-size: 2rem;
-    margin-bottom: 0.3rem;
   }
 
-  .about-me-container .hero-section h2 {
+  .title {
     font-size: 1rem;
-    margin-bottom: 1.5rem;
   }
 
-  .about-me-container .image-container {
-    width: 120px;
-    height: 120px;
-    border-width: 3px;
-  }
-
-  .about-me-container h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1.25rem;
-  }
-
-  .about-me-container h4 {
-    font-size: 1.1rem;
-    margin-bottom: 0.75rem;
-  }
-
-  .about-me-container p {
-    font-size: 0.95rem;
-    line-height: 1.5;
-  }
-
-  .about-me-container .contact-info {
-    flex-direction: column;
+  .social-links {
     gap: 1rem;
   }
 
-  .about-me-container .skills-tags {
-    gap: 0.75rem;
+  .social-icon {
+    width: 38px;
+    height: 38px;
   }
 
-  .about-me-container .skill-tag {
-    padding: 0.4rem 0.8rem;
+ 
+  .intro-title,
+  .skill-title,
+  .current-work-title,
+  .goal-title,
+  .sports-title,
+  .personal-title {
+    font-size: 1.5rem;
+  }
+
+  .intro-text,
+  .skill-description,
+  .current-work-text,
+  .goal-description,
+  .sports-description,
+  .personal-description {
     font-size: 0.9rem;
   }
 
-  .about-me-container .expertise-icon,
-  .about-me-container .goal-icon,
-  .about-me-container .personal-icon {
-    font-size: 1.75rem;
-    margin-bottom: 0.75rem;
+  .skill-name,
+  .goal-term,
+  .personal-name {
+    font-size: 1.2rem;
   }
 
-  .about-me-container .sports-image,
-  .about-me-container .contest-image {
+  .current-work-position {
+    font-size: 1.2rem;
+  }
+
+  .sports-image {
     height: 180px;
   }
 
-  .about-me-container .cta-button {
-    padding: 0.8rem 1.5rem;
-    font-size: 0.95rem;
-  }
-
-  .about-me-container .social-icon {
-    width: 40px;
-    height: 40px;
-    font-size: 1.2rem;
-  }
-}
-
-@media (max-width: 400px) {
-  .about-me-container {
-    padding: 0.75rem;
-  }
-
-  .about-me-container .section {
-    padding: 1rem;
-    margin: 2rem 0;
-  }
-
-  .about-me-container .hero-section h1 {
-    font-size: 1.75rem;
-  }
-
-  .about-me-container .hero-section h2 {
-    font-size: 0.9rem;
-  }
-
-  .about-me-container .image-container {
-    width: 100px;
-    height: 100px;
-  }
-
-  .about-me-container .skills-tags {
-    gap: 0.5rem;
-  }
-
-  .about-me-container .skill-tag {
-    padding: 0.3rem 0.7rem;
-    font-size: 0.85rem;
-  }
-
-  .about-me-container .expertise-card,
-  .about-me-container .goal-card,
-  .about-me-container .personal-card {
-    padding: 1.25rem;
-  }
-
-  .about-me-container .sports-image,
-  .about-me-container .contest-image {
-    height: 160px;
-  }
-
-  .about-me-container .sports-badge,
-  .about-me-container .contest-badge {
+  .sports-badge {
     font-size: 0.8rem;
     padding: 0.25rem 0.7rem;
   }
 
-  .about-me-container .tech-stack span {
+  .sports-content {
+    padding: 1.2rem;
+  }
+
+  .sports-name {
+    font-size: 1.1rem;
+  }
+
+  .sports-description {
+    font-size: 0.85rem;
+  }
+
+  .tech-tag {
     font-size: 0.75rem;
-    padding: 0.25rem 0.6rem;
+    padding: 0.35rem 0.7rem;
   }
-}
 
-/* Fix for iOS Safari 100vh issue */
-@supports (-webkit-touch-callout: none) {
-  .about-me-container .hero-section {
-    min-height: -webkit-fill-available;
-  }
-}
-
-/* Prefers-reduced-motion accessibility */
-@media (prefers-reduced-motion: reduce) {
-  .about-me-container *,
-  .about-me-container *::before,
-  .about-me-container *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
+  .icon-bg {
+    width: 40px;
+    height: 40px;
   }
 }

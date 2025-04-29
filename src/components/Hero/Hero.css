@@ -1,14 +1,12 @@
-/* Hero Container */
 .hero-container {
   height: auto;
   min-height: 100vh;
   width: 100%;
   position: relative;
-  background: linear-gradient(135deg, #f5f0f1 0%, #fbf1f3 100%);
+  background-color: #fef3f3;
   overflow: hidden;
 }
 
-/* Particles Animation */
 .particles-container {
   position: absolute;
   width: 100%;
@@ -38,7 +36,6 @@
   }
 }
 
-/* Hero Split Layout */
 .hero-split {
   display: flex;
   min-height: 100vh;
@@ -47,7 +44,6 @@
   padding: 2rem 0;
 }
 
-/* Hero Content */
 .hero-content {
   flex: 1;
   display: flex;
@@ -113,14 +109,13 @@
   transform: translateY(0);
 }
 
-/* Portrait Container */
 .portrait-container {
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
-  margin-top: 5rem; /* Changed from 10rem to 0 */
+  margin-top: 5rem;
 }
 
 .portrait-frame {
@@ -130,7 +125,7 @@
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-  transform: translateY(0); /* Changed from 20px to 0 */
+  transform: translateY(0);
   animation: float-portrait 6s ease-in-out infinite;
 }
 
@@ -155,7 +150,22 @@
   transform: scale(1.05);
 }
 
-/* Hire Me Button */
+/* Buttons Container */
+.buttons-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.buttons-container.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hire Button */
 .hire-button {
   position: relative;
   padding: 1rem 3rem;
@@ -168,18 +178,28 @@
   cursor: pointer;
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  opacity: 0;
-  transform: translateY(30px);
   z-index: 2;
-  align-self: flex-start;
-}
-
-.hire-button.animate-in {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 .hire-button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(232, 62, 140, 0.3);
+}
+
+/* Secondary Buttons */
+.secondary-button {
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #e83e8c;
+  background: transparent;
+  border: 2px solid #e83e8c;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.secondary-button:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(232, 62, 140, 0.3);
 }
@@ -200,6 +220,12 @@
   animation: rotate 2s linear infinite;
 }
 
+
+.secondary-button:hover .button-glow {
+  opacity: 1;
+  animation: rotate 2s linear infinite;
+}
+
 @keyframes rotate {
   from {
     transform: rotate(0deg);
@@ -209,7 +235,8 @@
   }
 }
 
-/* Education Tour Button */
+
+
 .education-tour-button {
   display: flex;
   align-items: center;
@@ -226,6 +253,7 @@
   margin: 1.5rem auto 0;
   max-width: 350px;
   width: 100%;
+  margin-top: 5rem;
 }
 
 .education-tour-button:hover {
@@ -239,7 +267,6 @@
   margin: 1rem auto 2rem;
 }
 
-/* Video Section - Desktop View */
 .desktop-view {
   display: block;
   padding: 4rem 2rem;
@@ -249,7 +276,6 @@
   margin-top: 2rem;
 }
 
-/* Mobile View */
 .mobile-view {
   display: none;
   padding: 2rem 1rem;
@@ -292,7 +318,6 @@
   align-items: flex-start;
 }
 
-/* Video Split Container - Side by side on desktop */
 .video-split-container {
   display: flex;
   max-width: 1200px;
@@ -303,7 +328,7 @@
 
 .video-left-container {
   flex: 1;
-  min-width: 0; /* Prevents flex item from overflowing */
+  min-width: 0;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -329,12 +354,12 @@
 
 .video-wrapper {
   position: relative;
-  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+  padding-bottom: 56.25%;
   height: 0;
   overflow: hidden;
   border-radius: 10px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-  background-color: #000; /* Black background for video */
+  background-color: #000;
   width: 100%;
 }
 
@@ -377,11 +402,10 @@
   pointer-events: none;
 }
 
-/* Mobile Video */
 .mobile-video-container {
   position: relative;
-  width: 90%; /* Reduced from 100% to 90% */
-  max-width: 350px; /* Added max-width */
+  width: 90%;
+  max-width: 350px;
   margin: 0 auto 1rem auto;
   border-radius: 10px;
   overflow: hidden;
@@ -407,7 +431,6 @@
   height: 30px;
 }
 
-/* Card styling - Desktop */
 .video-right-card {
   flex: 1;
   background: white;
@@ -418,7 +441,7 @@
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  min-width: 0; /* Prevents flex item from overflowing */
+  min-width: 0;
 }
 
 .video-right-card h3 {
@@ -438,7 +461,6 @@
   left: 0;
 }
 
-/* Mobile Card */
 .mobile-card {
   background: white;
   border-radius: 15px;
@@ -468,7 +490,6 @@
   left: 0;
 }
 
-/* Common Card Content Styling */
 .card-content {
   display: flex;
   flex-direction: column;
@@ -499,7 +520,7 @@
 }
 
 .card-text p {
-  font-size: 1rem;
+  font-size: 0.8rem;
   color: #666;
   line-height: 1.6;
 }
@@ -527,7 +548,6 @@
   box-shadow: 0 5px 15px rgba(232, 62, 140, 0.3);
 }
 
-/* Responsive Design */
 @media (max-width: 992px) {
   .hero-split {
     flex-direction: column;
@@ -541,8 +561,8 @@
     text-align: center;
   }
 
-  .hire-button {
-    align-self: center;
+  .buttons-container {
+    justify-content: center;
   }
 
   .portrait-container {
@@ -569,9 +589,17 @@
     font-size: 1rem;
   }
 
-  .hire-button {
+  .buttons-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hire-button,
+  .secondary-button {
     padding: 0.8rem 2rem;
     font-size: 1rem;
+    width: 100%;
+    max-width: 200px;
   }
 
   .section-title {
@@ -583,7 +611,6 @@
     height: 375px;
   }
 
-  /* Switch to mobile view */
   .desktop-view {
     display: none;
   }
@@ -604,15 +631,14 @@
     font-size: 0.9rem;
   }
 
-  /* Updated video wrapper for smaller screens */
   .video-wrapper {
-    padding-bottom: 52%; /* Reduce the aspect ratio slightly */
+    padding-bottom: 52%;
     max-width: 90%;
     margin: 0 auto;
   }
 
   .feature-video {
-    object-fit: cover; /* Ensure video doesn't stretch */
+    object-fit: cover;
   }
 
   .education-tour-button {
@@ -646,6 +672,16 @@
     margin-bottom: 2rem;
   }
 
+  .buttons-container {
+    gap: 0.8rem;
+  }
+
+  .hire-button,
+  .secondary-button {
+    padding: 0.7rem 1.5rem;
+    font-size: 0.85rem;
+  }
+
   .portrait-frame {
     width: 200px;
     height: 300px;
@@ -672,7 +708,6 @@
     justify-content: center;
   }
 
-  /* Additional styles for very small screens */
   .mobile-video-container {
     width: 85%;
     max-width: 280px;

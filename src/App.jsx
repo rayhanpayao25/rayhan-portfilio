@@ -10,12 +10,14 @@ import Projects from "./components/Projects/Projects";
 import AnimatedSection from "./components/AnimatedSection/AnimatedSection";
 import Footer from "./components/Footer/Footer";
 import Blogpost from "./components/Blogpost/Blogpost";  
+import Certificate from "./components/Certificate/Certificate"; 
+
 
 const App = () => {
   return (
     <Router>
       <Routes>
-        {/* Home Page Route */}
+      
         <Route path="/" element={
           <>
             <Navbar />
@@ -23,7 +25,7 @@ const App = () => {
               <Hero />
             </AnimatedSection>
 
-            <AnimatedSection id="about-me" className="container">
+            <AnimatedSection id="about-me">
               <AboutMe />
             </AnimatedSection>
 
@@ -46,7 +48,10 @@ const App = () => {
 
         {}
         <Route path="/blogpost" element={<Blogpost />} /> {}
+        <Route path="/certificates" element={<Certificate />} /> {}
       </Routes>
+
+      
     </Router>
   );
 };

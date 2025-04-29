@@ -4,7 +4,6 @@ import { useState, useEffect } from "react"
 import { Menu, X } from "lucide-react"
 import "./Navbar.css"
 
-// Import the logo image at the top of the file
 import logoImage from "../../assets/rayray.jpg"
 
 export default function Navbar() {
@@ -26,7 +25,6 @@ export default function Navbar() {
     window.addEventListener("resize", checkScreenSize)
 
     const handleScroll = () => {
-      // Add scrolled state for styling
       setScrolled(window.scrollY > 20)
 
       const sections = ["hero", "about-me", "contact", "programs", "projects"]
@@ -39,7 +37,7 @@ export default function Navbar() {
           if (rect.top <= 100 && rect.bottom >= 100) {
             setActiveSection(sectionId)
 
-            const path = sectionId === "hero" ? "/" : `/#${sectionId}` // Add # for specific sections
+            const path = sectionId === "hero" ? "/" : `/#${sectionId}`
             if (window.location.pathname !== path) {
               window.history.pushState(null, "", path)
             }
@@ -51,16 +49,12 @@ export default function Navbar() {
 
     window.addEventListener("scroll", handleScroll)
 
-    // Handle initial hash or pathname on page load or refresh
     const handleInitialPath = () => {
-      // Get the hash from the URL (without the #)
       const hash = window.location.hash.replace("#", "")
 
-      // If there's a hash and it's a valid section, scroll to it
       if (hash && ["hero", "about-me", "contact", "projects", "programs"].includes(hash)) {
         scrollToSection(hash, false)
       } else {
-        // If no valid hash, scroll to hero
         scrollToSection("hero", false)
       }
     }
@@ -87,14 +81,17 @@ export default function Navbar() {
       setIsOpen(false)
 
       if (updateUrl) {
-        const path = sectionId === "hero" ? "/" : `/#${sectionId}` // Add # for specific sections
+        const path = sectionId === "hero" ? "/" : `/#${sectionId}`
         window.history.pushState(null, "", path)
       }
 
-      // Use scrollIntoView with behavior: smooth instead of manual scrollTo
-      section.scrollIntoView({
+      // Add offset for navbar height to prevent title from being covered
+      const navbarHeight = 80 // Adjust this value based on your actual navbar height
+      const sectionPosition = section.getBoundingClientRect().top + window.pageYOffset - navbarHeight
+
+      window.scrollTo({
+        top: sectionPosition,
         behavior: "smooth",
-        block: "start",
       })
     } else {
       console.log(`Section with ID "${sectionId}" not found`)
@@ -103,15 +100,11 @@ export default function Navbar() {
 
   const navigateToBlogpost = () => {
     setIsOpen(false)
-
-    // Use relative path instead of absolute path
-    // This will work both on localhost and Netlify
     window.location.href = "./blogpost"
   }
 
   return (
     <nav className={`container ${scrolled ? "scrolled" : ""}`}>
-      {/* Logo with image - using imported image */}
       <div className="logo" onClick={() => scrollToSection("hero")}>
         <img src={logoImage || "/placeholder.svg?height=40&width=40"} alt="Rayhan Logo" className="logo-img" />
         <span className="logo-text">Portfolio</span>
@@ -141,7 +134,6 @@ export default function Navbar() {
         </li>
       </ul>
 
-      {/* Mobile menu without framer-motion */}
       <div className={`mobile-menu ${isOpen ? "open" : ""}`}>
         <ul>
           {navItems.map((item) => (
