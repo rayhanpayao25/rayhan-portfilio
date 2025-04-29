@@ -188,7 +188,7 @@
   font-weight: 500;
 }
 
-/* Responsive styles */
+ 
 @media (max-width: 768px) {
   .projects-title {
     font-size: 2rem;

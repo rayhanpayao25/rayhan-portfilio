@@ -4,13 +4,13 @@ import { useEffect, useRef, useState } from "react"
 import "./Hero.css"
 
 import portraitImage from "../../assets/rayhanpayao.jpg"
-import videoFile from "../../assets/rayhan.mov.mov" // Import the video file
+import videoFile from "../../assets/rayhan.mov.mov"
 
 const Hero = () => {
   const heroRef = useRef(null)
   const textRef = useRef(null)
   const paragraphRef = useRef(null)
-  const buttonRef = useRef(null)
+  const buttonsContainerRef = useRef(null)
   const particlesRef = useRef(null)
   const videoRef = useRef(null)
   const mobileVideoRef = useRef(null)
@@ -18,7 +18,6 @@ const Hero = () => {
   const [isMobileVideoPlaying, setIsMobileVideoPlaying] = useState(false)
 
   useEffect(() => {
-    // Add animation classes after component mounts
     setTimeout(() => {
       if (textRef.current) textRef.current.classList.add("animate-in")
     }, 300)
@@ -28,10 +27,9 @@ const Hero = () => {
     }, 800)
 
     setTimeout(() => {
-      if (buttonRef.current) buttonRef.current.classList.add("animate-in")
+      if (buttonsContainerRef.current) buttonsContainerRef.current.classList.add("animate-in")
     }, 1300)
 
-    // Create particles
     const particlesContainer = particlesRef.current
     if (particlesContainer) {
       for (let i = 0; i < 50; i++) {
@@ -39,19 +37,17 @@ const Hero = () => {
       }
     }
 
-    // Parallax effect on scroll
     const handleScroll = () => {
       const scrollPosition = window.scrollY
       if (heroRef.current) {
         heroRef.current.style.backgroundPositionY = `${scrollPosition * 0.5}px`
       }
 
-      // Fade out elements as user scrolls down
       const opacity = Math.max(1 - scrollPosition / 500, 0)
-      if (textRef.current && paragraphRef.current && buttonRef.current) {
+      if (textRef.current && paragraphRef.current && buttonsContainerRef.current) {
         textRef.current.style.opacity = opacity
         paragraphRef.current.style.opacity = opacity
-        buttonRef.current.style.opacity = opacity
+        buttonsContainerRef.current.style.opacity = opacity
       }
     }
 
@@ -66,20 +62,15 @@ const Hero = () => {
     const particle = document.createElement("div")
     particle.classList.add("particle")
 
-    // Random position
     const posX = Math.random() * 100
     const posY = Math.random() * 100
 
-    // Random size
     const size = Math.random() * 15 + 5
 
-    // Random animation duration
     const duration = Math.random() * 20 + 10
 
-    // Random delay
     const delay = Math.random() * 5
 
-    // Random opacity
     const opacity = Math.random() * 0.5 + 0.1
 
     particle.style.left = `${posX}%`
@@ -115,12 +106,19 @@ const Hero = () => {
     }
   }
 
-  // Function to handle the hire button click
   const handleHireClick = () => {
     window.location.href = "/#contact"
   }
 
-  function handleLearnMoreClick() {
+  const handleDownloadCV = () => {
+    window.open("../Rayhan.pdf", "_blank")
+  }
+
+  const handleViewCertificates = () => {
+    window.location.href = "/certificates"
+  }
+
+  const handleLearnMoreClick = () => {
     window.location.href = "/blogpost"
   }
 
@@ -128,7 +126,6 @@ const Hero = () => {
     <div className="hero-container" ref={heroRef}>
       <div className="particles-container" ref={particlesRef}></div>
 
-      {/* Main Hero Content */}
       <div className="hero-split">
         <div className="hero-content">
           <h1 ref={textRef} className="hero-title">
@@ -141,10 +138,18 @@ const Hero = () => {
             look around, explore, and feel free to reach out if you want to create something awesome together!
           </p>
 
-          <button ref={buttonRef} className="hire-button" onClick={handleHireClick}>
-            Hire Me
-            <span className="button-glow"></span>
-          </button>
+          <div className="buttons-container" ref={buttonsContainerRef}>
+            <button className="hire-button" onClick={handleHireClick}>
+              Hire Me
+              <span className="button-glow"></span>
+            </button>
+            <button className="secondary-button" onClick={handleDownloadCV}>
+              Download CV
+            </button>
+            <button className="secondary-button" onClick={handleViewCertificates}>
+              View Certificates
+            </button>
+          </div>
         </div>
 
         <div className="portrait-container">
@@ -154,7 +159,6 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Video Section - Desktop View */}
       <div className="video-section desktop-view">
         <div className="video-split-container">
           <div className="video-left-container">
@@ -179,7 +183,6 @@ const Hero = () => {
               </div>
             </div>
 
-            {/* Education Tour Button - Desktop */}
             <button className="education-tour-button" onClick={handleLearnMoreClick}>
               View More About My Education Tour - 2025
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -250,7 +253,10 @@ const Hero = () => {
                 </div>
                 <div className="card-text">
                   <h4>User-Centered Focus</h4>
-                  <p>I prioritize the needs and preferences of users, designing with empathy to ensure intuitive and enjoyable experiences.</p>
+                  <p>
+                    I prioritize the needs and preferences of users, designing with empathy to ensure intuitive and
+                    enjoyable experiences.
+                  </p>
                 </div>
               </div>
 
@@ -276,11 +282,9 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Video Section - Mobile View */}
       <div className="video-section mobile-view">
         <h2 className="section-title video-title">Watch My Journey</h2>
 
-        {/* Mobile Video */}
         <div className="mobile-video-container">
           <video
             ref={mobileVideoRef}
@@ -304,7 +308,6 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Education Tour Button - Mobile */}
         <button className="education-tour-button mobile-tour-button" onClick={handleLearnMoreClick}>
           View More About My Education Tour - 2025
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -318,7 +321,6 @@ const Hero = () => {
           </svg>
         </button>
 
-        {/* Mobile Why Work With Me Card */}
         <div className="mobile-card">
           <h3>Why Work With Me</h3>
           <div className="card-content">

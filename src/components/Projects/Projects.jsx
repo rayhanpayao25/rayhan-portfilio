@@ -3,8 +3,7 @@ import { useState } from "react"
 import { motion } from "framer-motion"
 import "./Projects.css"
 import { GitlabIcon as GitHub, ExternalLink, Code } from "lucide-react"
-
-// Import images correctly
+ 
 import meowImage from "../../assets/meow.png"
 import calculatorImage from "../../assets/calculator.png"
 import pokedexImage from "../../assets/pokedox.png"

@@ -11,7 +11,7 @@ export default function ContactMe() {
   useEffect(() => {
     setIsVisible(true)
 
-    // This helps ensure the section is properly registered for scrolling
+    
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -71,8 +71,14 @@ export default function ContactMe() {
         </motion.p>
 
         <motion.div className="contact-buttons" variants={itemVariants}>
-          <button className="portfolio-button">View My Portfolio</button>
-          <button className="contact-button">Contact Me</button>
+        
+            
+        <button className="portfolio-button" onClick={() => (window.location.href = "/#projects")}>
+        View My Projects
+      </button>
+          <button className="contact-button" onClick={() => (window.location.href = "mailto:rayhanpyo2016@gmail.com")}>
+      Contact Me
+    </button>
         </motion.div>
 
         <motion.div className="contact-info" variants={itemVariants}>
@@ -91,17 +97,14 @@ export default function ContactMe() {
         </motion.div>
 
         <motion.div className="social-icons" variants={itemVariants}>
-          <a href="#" className="social-icon">
+          <a href="https://https//github.com/rayhanpayao25/" className="social-icon">
             <i className="fab fa-github"></i>
           </a>
-          <a href="#" className="social-icon">
+          <a href="https://www.linkedin.com/in/rayhan-payao-747296354/" className="social-icon">
             <i className="fab fa-linkedin-in"></i>
           </a>
-          <a href="#" className="social-icon">
-            <i className="fab fa-twitter"></i>
-          </a>
-          <a href="#" className="social-icon">
-            <i className="fab fa-instagram"></i>
+          <a href="https://www.facebook.com/rayraysoo.25/" className="social-icon">
+            <i className="fab fa-facebook"></i>
           </a>
         </motion.div>
       </motion.div>

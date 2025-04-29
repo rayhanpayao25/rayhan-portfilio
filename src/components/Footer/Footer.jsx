@@ -13,13 +13,13 @@ const Footer = () => {
       setIsMobile(window.innerWidth < 768)
     }
 
-    // Set initial value
+    
     checkScreenSize()
 
-    // Add event listener
+ 
     window.addEventListener("resize", checkScreenSize)
 
-    // Clean up
+   
     return () => {
       window.removeEventListener("resize", checkScreenSize)
     }
