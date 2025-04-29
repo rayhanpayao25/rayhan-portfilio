@@ -113,11 +113,10 @@ const Hero = () => {
   }
 
   const handleDownloadCV = () => {
-    // Use the imported PDF file
     if (resumePDF) {
       window.open(resumePDF, "_blank")
     } else {
-      // Fallback to the static path if import doesn't work
+  
       window.open("/../assets/Rayhan.pdf", "_blank")
     }
   }
