@@ -132,13 +132,11 @@ const AboutMe = () => {
         <div className="goal-container">
           <div className="goal-card">
             <div className="goal-icon">
-              <GraduationCap size={32} />
+   
             </div>
-            <h3 className="goal-term">Short-term</h3>
+          
             <p className="goal-description">
-              After my graduation I want to Enhance my proficiency in ReactJs and 3D web technologies to craft more
-              engaging and interactive user experiences. Obtain an advanced certification in integrating AI with
-              frontend development.
+            I want to Enhance my proficiency in using ReactJS and 3D web tools to make websites more fun and interactive. I also plan to earn a certification in using AI with frontend development to build smarter and more responsive apps. I’m also exploring new design trends, improving my UI/UX skills, and working on real-world projects to apply what I’ve learned. My goal is to become a well-rounded frontend developer who can create modern, innovative, and user-friendly web experiences.
             </p>
           </div>
 

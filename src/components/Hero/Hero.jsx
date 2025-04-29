@@ -111,7 +111,7 @@ const Hero = () => {
   }
 
   const handleDownloadCV = () => {
-    window.open("../Rayhan.pdf", "_blank")
+    window.open("/resume/Rayhan.pdf", "_blank")
   }
 
   const handleViewCertificates = () => {
@@ -144,7 +144,7 @@ const Hero = () => {
               <span className="button-glow"></span>
             </button>
             <button className="secondary-button" onClick={handleDownloadCV}>
-              Download CV
+              View CV
             </button>
             <button className="secondary-button" onClick={handleViewCertificates}>
               View Certificates

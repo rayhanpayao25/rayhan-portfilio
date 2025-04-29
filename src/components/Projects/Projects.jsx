@@ -39,7 +39,7 @@ const projectsData = [
     title: "RyeePokédex",
     description: "IoT dashboard for monitoring and controlling smart home devices with real-time data visualization.",
     image: pokedexImage,
-    technologies: ["Vue.js", "TypeScript", "Socket.io", "D3.js"],
+    technologies: ["React", "HTML/CSS", "Json", "JavaScript"],
     githubLink: "https://github.com/rayhanpayao25/rayhan-portfilio/tree/pokemon",
     liveLink: "https://ryeeeepokemon.netlify.app/",
     category: "web",
@@ -50,8 +50,9 @@ const projectsData = [
     description:
       "A comprehensive online learning platform with course management, video streaming, and interactive quizzes.",
     image: cswcdImage,
-    technologies: ["React", "Node.js", "MongoDB", "Express"],
+    technologies: ["Phyton", "Django", "CSS", "HTML", "Java"],
     liveLink: "https://eixaax1.pythonanywhere.com/#contacts-cont",
+    githubLink: " https://github.com/Eixaax/cswcd-rprt-generator",
     category: "web",
   },
   {
@@ -71,7 +72,7 @@ const projectsData = [
     description:
       "Tool that leverages machine learning to generate blog posts, social media content, and marketing copy.",
     image: cinelectImage,
-    technologies: ["Python", "Django"],
+    technologies: ["Python", "Django", "HTML", "CSS" , "JS"],
     githubLink: "https://github.com/rayhanpayao25/machine_learning",
     liveLink: "https://ryeecinelect.onrender.com/",
     category: "ai",
