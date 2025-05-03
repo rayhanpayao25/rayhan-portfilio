@@ -41,7 +41,7 @@ const Certificate = () => {
     {
       id: 1,
       title: "Front-End Web Development",
-      issuer: "Simple Learn",
+      issuer: "SimpliLearn",
       date: "April 2025",
       image: frontenddev,
       pdf: frontenddevpdf,
@@ -51,7 +51,7 @@ const Certificate = () => {
     {
       id: 2,
       title: "Web Development",
-      issuer: "Simple Learn",
+      issuer: "SimpliLearn",
       date: "April 2025",
       image: webdev,
       pdf: webdevpdf,
@@ -61,7 +61,7 @@ const Certificate = () => {
     {
       id: 3,
       title: "Introduction to Data Science",
-      issuer: "Simple Learn",
+      issuer: "SimpliLearn",
       date: "April 2025",
       image: datascience,
       pdf: datasciencepdf,
@@ -71,7 +71,7 @@ const Certificate = () => {
     {
       id: 4,
       title: "Project Management 101", 
-      issuer: "Simple Learn",
+      issuer: "SimpliLearn",
       date: "April 2025",
       image: pm,
       pdf: projectmanagement,
@@ -80,7 +80,7 @@ const Certificate = () => {
     {
       id: 5,
       title: "Introduction to Computer Networking",
-      issuer: "Simple Learn",
+      issuer: "SimpliLearn",
       date: "April 2025",
       image: computernetworking,
       pdf: computernetworkingpdf,
@@ -89,7 +89,7 @@ const Certificate = () => {
     {
       id: 6,
       title: "Introduction to Cloud Computing",
-      issuer: "Simple Learn",
+      issuer: "SimpliLearn",
       date: "April 2025",
       image: cloudcomputing,
       pdf: cloudcomputingpdf,
@@ -99,7 +99,7 @@ const Certificate = () => {
     {
       id: 7,
       title: "Introduction to Cybersecurity",
-      issuer: "Simple Learn",
+      issuer: "SimpliLearn",
       date: "April 2025",
       image: cybersecurity,
       pdf: Cybersecuritypdf,
@@ -239,7 +239,7 @@ const Certificate = () => {
           My <span className="highlight">Certificates</span>
         </h1>
         <p ref={descriptionRef} className="certificates-description">
-        These are the collection of my certificates that showcase my dedication to continuous learning and skill development in the field of technology. Through platforms like Simple Learn and Salary.com Learning Lab. Each certification has equipped me with valuable skills that I apply to my
+        These are the collection of my certificates that showcase my dedication to continuous learning and skill development in the field of technology. Through platforms like SimpliLearn and Salary.com Learning Lab. Each certification has equipped me with valuable skills that I apply to my
           projects.
         </p>
       </div>
