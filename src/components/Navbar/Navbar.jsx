@@ -98,9 +98,9 @@ export default function Navbar() {
     }
   }
 
-  const navigateToBlogpost = () => {
+  const navigateToBloghome = () => {
     setIsOpen(false)
-    window.location.href = "./blogpost"
+    window.location.href = "./bloghome"
   }
 
   return (
@@ -128,8 +128,8 @@ export default function Navbar() {
           </li>
         ))}
         <li>
-          <button className="btn" onClick={navigateToBlogpost}>
-            Blogpost
+          <button className="btn" onClick={navigateToBloghome}>
+            Blog Post
           </button>
         </li>
       </ul>
@@ -147,8 +147,8 @@ export default function Navbar() {
             </li>
           ))}
           <li>
-            <button className="btn mobile-btn" onClick={navigateToBlogpost}>
-              Blogpost
+            <button className="btn mobile-btn" onClick={navigateToBloghome}>
+            bloghome
             </button>
           </li>
         </ul>

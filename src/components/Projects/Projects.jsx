@@ -27,7 +27,7 @@ const projectsData = [
     id: 2,
     title: "RyeeeCalculator",
     description:
-      "Real-time cryptocurrency portfolio tracker with price alerts, historical data, and performance analytics.",
+      "A clean and interactive scientific calculator. It allows users to perform both basic and advanced mathematical operations.",
     image: calculatorImage,
     technologies: ["JavaScript", "React", "CSS", "Vite"],
     githubLink: "https://github.com/rayhanpayao25/rayhan-portfilio/tree/Calculator",
@@ -37,7 +37,7 @@ const projectsData = [
   {
     id: 3,
     title: "RyeePokédex",
-    description: "IoT dashboard for monitoring and controlling smart home devices with real-time data visualization.",
+    description: "RyeePokédex lets you browse Pokémon, create custom teams, and battle against others to become the best Pokémon trainer.",
     image: pokedexImage,
     technologies: ["React", "HTML/CSS", "Json", "JavaScript"],
     githubLink: "https://github.com/rayhanpayao25/rayhan-portfilio/tree/pokemon",
@@ -48,7 +48,7 @@ const projectsData = [
     id: 4,
     title: "Action Plan Generator - CSWCD",
     description:
-      "A comprehensive online learning platform with course management, video streaming, and interactive quizzes.",
+      "Developed as a comprehensive system, this innovative tool streamlines the process of creating, managing, and analyzing case studies, empowering faculty, and researchers at CSWCD to dig into real-world scenarios with unparalleled efficiency.",
     image: cswcdImage,
     technologies: ["Phyton", "Django", "CSS", "HTML", "Java"],
     liveLink: "https://eixaax1.pythonanywhere.com/#contacts-cont",
@@ -70,7 +70,7 @@ const projectsData = [
     id: 6,
     title: "Machine Learning - Cinelect",
     description:
-      "Tool that leverages machine learning to generate blog posts, social media content, and marketing copy.",
+      "A website uses machine learning to provide personalized movie recommendations. It analyzes user preferences and viewing history to suggest films and TV shows tailored to individual tastes.",
     image: cinelectImage,
     technologies: ["Python", "Django", "HTML", "CSS" , "JS"],
     githubLink: "https://github.com/rayhanpayao25/machine_learning",
