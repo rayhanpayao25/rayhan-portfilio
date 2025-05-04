@@ -62,11 +62,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="footer-divider"></div>
-
-        <div className="footer-bottom">
-          <p>&copy; {currentYear} Rayhan Portfolio. All rights reserved.</p>
-        </div>
+      
       </div>
     </footer>
   )

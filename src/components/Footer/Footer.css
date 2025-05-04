@@ -60,19 +60,10 @@
   transform: translateY(-3px);
 }
 
-.footer-divider {
-  height: 1px;
-  background-color: #333333;
-  margin: 2rem 0;
-}
+
 
 .footer-bottom {
   text-align: center;
-}
-
-.footer-bottom p {
-  color: #999999;
-  font-size: 0.9rem;
 }
 
  
