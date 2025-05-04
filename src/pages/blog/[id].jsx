@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion"
 import { ArrowLeft, ArrowRight, Calendar, Share2, Bookmark, ThumbsUp } from "lucide-react"
 import "../../components/Bloghome/Bloghome.css"
 
-// Import images from assets folder
+
 import tourDay1Image from "../../assets/tourDay1Image.jpg"
 import tourDay2Image from "../../assets/gallery4Day2.jpg"
 import tourDay3Image from "../../assets/naturalmuseum.jpg"
@@ -14,7 +14,7 @@ import tourDay5Image from "../../assets/lrt.jpg"
 import tourDay7Image from "../../assets/baguio2.jpg"
 import tourDay6Image from "../../assets/baguio1s.jpg"
 
-// Import gallery images
+
 import gallery1Day1 from "../../assets/gallery1Day1.jpg"
 import gallery2Day1 from "../../assets/gallery2Day1.jpg"
 import gallery3Day1 from "../../assets/gallery3Day1.jpg"
@@ -526,7 +526,7 @@ export default function BlogPost() {
   const [savedPosts, setSavedPosts] = useState([])
 
   useEffect(() => {
-    // Get the post ID from the URL
+   
     const pathSegments = window.location.pathname.split("/")
     const id = Number.parseInt(pathSegments[pathSegments.length - 1])
 
@@ -536,7 +536,7 @@ export default function BlogPost() {
       if (foundPost) {
         setPost(foundPost)
       } else {
-        // Redirect to home if post not found
+       
         window.location.href = "/"
       }
 

@@ -2827,7 +2827,7 @@ section {
   }
 }
 
-/* Base Styles */
+
 :root {
   --primary-color: #ff6b6b;
   --secondary-color: #4ecdc4;
@@ -2887,7 +2887,6 @@ img {
   min-height: 100vh;
 }
 
-/* Header Styles */
 .header-wrapper {
   position: sticky;
   top: 0;
@@ -2956,7 +2955,6 @@ img {
   color: var(--text-color);
 }
 
-/* Blog Section */
 .blog-section {
   padding: 2rem 0;
   background-color: var(--light-bg);
@@ -2967,8 +2965,6 @@ img {
   margin: 0 auto;
   padding: 0 20px;
 }
-
-/* Blog Post Detail */
 .blog-post-detail {
   max-width: 800px;
   margin: 0 auto;
@@ -3047,7 +3043,6 @@ img {
   color: white;
 }
 
-/* Gallery Styles */
 .blog-post-gallery {
   margin: 3rem 0;
 }
@@ -3173,7 +3168,6 @@ img {
   opacity: 1;
 }
 
-/* Blog Navigation */
 .blog-navigation {
   display: flex;
   justify-content: space-between;
@@ -3200,7 +3194,6 @@ img {
   transform: translateX(5px);
 }
 
-/* Loading State */
 .blog-loading {
   display: flex;
   flex-direction: column;
@@ -3228,7 +3221,7 @@ img {
   }
 }
 
-/* Responsive Styles */
+
 @media (max-width: 992px) {
   .blog-post-detail h1 {
     font-size: 2.2rem;

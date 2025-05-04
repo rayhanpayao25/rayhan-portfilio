@@ -6,7 +6,6 @@ import { Calendar, X, Menu, Play, Pause, Volume2, VolumeX, Maximize } from "luci
 import "./Bloghome.css"
 import profileImage from "../../assets/rayray.jpg"
 
-// Import images from assets folder
 import tourDay1Image from "../../assets/tourDay1Image.jpg"
 import tourDay2Image from "../../assets/gallery4Day2.jpg"
 import tourDay3Image from "../../assets/naturalmuseum.jpg"
@@ -29,7 +28,6 @@ import lazerarena from "../../assets/lazer.mov"
 import burnham from "../../assets/burnham.mov"
 import bgc from "../../assets/bgc.mov"
 
-// Import thumbnail images - these should be actual image files in your assets folder
 import fortsantiagothumbnail from "../../assets/fortsantiagothumbnail.jpg"
 import subicbaythumbnail from "../../assets/subicbaythumbnail.jpg"
 import nationalmuseumthumbnail from "../../assets/nationalmuseumthumbnail.jpg"
@@ -57,7 +55,6 @@ export default function Bloghome() {
   const modalVideoRef = useRef(null)
   const progressRef = useRef(null)
 
-  // Toggle play/pause for main video
   const togglePlay = () => {
     if (videoRef.current) {
       if (isPlaying) {
@@ -69,7 +66,6 @@ export default function Bloghome() {
     }
   }
 
-  // Toggle mute/unmute for main video
   const toggleMute = () => {
     if (videoRef.current) {
       videoRef.current.muted = !videoRef.current.muted
@@ -77,7 +73,7 @@ export default function Bloghome() {
     }
   }
 
-  // Update progress bar for main video
+
   useEffect(() => {
     const video = videoRef.current
     if (!video) return
@@ -96,7 +92,7 @@ export default function Bloghome() {
     }
   }, [])
 
-  // Handle click on progress bar
+
   const handleProgressClick = (e) => {
     if (!videoRef.current) return
 
@@ -110,23 +106,21 @@ export default function Bloghome() {
     }
   }
 
-  // Open video modal
+
   const openVideoModal = (video) => {
     setSelectedVideo(video)
     setIsModalOpen(true)
-    document.body.style.overflow = "hidden" // Prevent scrolling when modal is open
+    document.body.style.overflow = "hidden" 
   }
 
-  // Close video modal
   const closeVideoModal = () => {
     if (modalVideoRef.current) {
       modalVideoRef.current.pause()
     }
     setIsModalOpen(false)
-    document.body.style.overflow = "" // Re-enable scrolling
+    document.body.style.overflow = "" 
   }
 
-  // Recent videos data
   const recentVideos = [
     {
       id: 1,
@@ -261,12 +255,11 @@ export default function Bloghome() {
   ]
 
   const filteredPosts = blogPosts.filter((post) => {
-    // Filter by category if not "all"
+
     if (activeFilter !== "all" && post.category !== activeFilter) {
       return false
     }
 
-    // Filter by search query if present
     if (searchQuery) {
       const query = searchQuery.toLowerCase()
       return (
@@ -291,7 +284,7 @@ export default function Bloghome() {
   }
 
   const handlePostClick = (post) => {
-    // Open in a new tab with the correct URL format
+
     window.open(`/blog/${post.id}`, "_blank", "noopener,noreferrer")
   }
 
@@ -365,7 +358,7 @@ export default function Bloghome() {
         </header>
       </div>
 
-      {/* Hero Banner */}
+  
       <section className="hero-banner">
         <div className="hero-content">
           <motion.h1
@@ -412,7 +405,7 @@ export default function Bloghome() {
         </div>
       </section>
 
-      {/* Blog Post Section */}
+    
       <section id="blog" className="blog-section">
         <div className="blog-container">
           <div className="blog-header">
@@ -477,7 +470,7 @@ export default function Bloghome() {
         </div>
       </section>
 
-      {/* Video Journey Section */}
+   
       <section id="journey" className="video-journey-section">
         <div className="video-container">
           <div className="video-header">
@@ -529,7 +522,7 @@ export default function Bloghome() {
         </div>
       </section>
 
-      {/* Recent Videos Section */}
+   
       <section id="videos" className="recent-videos-section">
         <div className="container">
           <div className="section-header">
@@ -557,7 +550,7 @@ export default function Bloghome() {
         </div>
       </section>
 
-      {/* Video Modal */}
+
       {isModalOpen && selectedVideo && (
         <div className="video-modal-overlay" onClick={closeVideoModal}>
           <div className="video-modal-content" onClick={(e) => e.stopPropagation()}>
