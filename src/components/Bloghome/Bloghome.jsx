@@ -425,7 +425,7 @@ export default function Bloghome() {
                   whileHover={{ y: -10, transition: { duration: 0.2 } }}
                 >
                   <a
-                    href={`http://localhost:5174/blog/${post.id}`}
+                    href={`/blog/${post.id}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="blog-card-image"
@@ -442,7 +442,7 @@ export default function Bloghome() {
                         {post.date}
                       </span>
                     </div>
-                    <a href={`http://localhost:5174/blog/${post.id}`} target="_blank" rel="noopener noreferrer">
+                    <a href={`/blog/${post.id}`} target="_blank" rel="noopener noreferrer">
                       <h3>{post.title}</h3>
                     </a>
                     <p>{post.excerpt}</p>
