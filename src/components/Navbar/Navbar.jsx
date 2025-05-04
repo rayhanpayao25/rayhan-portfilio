@@ -100,7 +100,7 @@ export default function Navbar() {
 
   const navigateToBloghome = () => {
     setIsOpen(false)
-    window.location.href = "./bloghome"
+    window.location.href = "https://ryeeeblogpost.netlify.app/"
   }
 
   return (

@@ -238,10 +238,7 @@ const Certificate = () => {
         <h1 ref={titleRef} className="certificates-title">
           My <span className="highlight">Certificates</span>
         </h1>
-        <p ref={descriptionRef} className="certificates-description">
-        These are the collection of my certificates that showcase my dedication to continuous learning and skill development in the field of technology. Through platforms like SimpliLearn and Salary.com Learning Lab. Each certification has equipped me with valuable skills that I apply to my
-          projects.
-        </p>
+      
       </div>
 
       <div className="certificates-grid" ref={certificatesContainerRef}>

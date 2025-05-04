@@ -9,9 +9,7 @@ import ContactMe from "./components/ContactMe/ContactMe";
 import Projects from "./components/Projects/Projects";
 import AnimatedSection from "./components/AnimatedSection/AnimatedSection";
 import Footer from "./components/Footer/Footer";
-/*import Blogpost from "./components/Blogpost/Blogpost";  */
 import Certificate from "./components/Certificate/Certificate"; 
-import Bloghome from "./components/Bloghome/Bloghome";
 
 
 const App = () => {
@@ -48,7 +46,6 @@ const App = () => {
         } />
 
         {}
-        <Route path="/bloghome" element={<Bloghome/>} /> {}
         <Route path="/certificates" element={<Certificate />} /> {}
       </Routes>
 
