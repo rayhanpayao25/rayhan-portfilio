@@ -1,15 +1,11 @@
-// src/App.jsx
-
-import React from "react";
-import Bloghome from "./components/Bloghome/Bloghome";
-import "./App.css";
+import Bloghome from "./components/Bloghome/Bloghome"
 
 function App() {
   return (
-    <div className="App">
+    <>
       <Bloghome />
-    </div>
-  );
+    </>
+  )
 }
 
-export default App;
+export default App
