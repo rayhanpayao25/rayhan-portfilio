@@ -241,8 +241,8 @@ export default function Bloghome() {
     {
       id: 6,
       title: "Baguio Tour - Day 1",
-      date: "April 11, 2025",
-      excerpt: "Fifth day of the educational tour in MMDA and Train Depot",
+      date: "April 12, 2025",
+      excerpt: "First day in Baguio City",
       coverImage: tourDay6Image || fallbackImage,
       tags: ["MMDA", "Train Depot", "Transportation", "Traffic Management", "Urban Planning"],
       category: "infrastructure",
@@ -250,8 +250,8 @@ export default function Bloghome() {
     {
       id: 7,
       title: "Baguio Tour - Day 2",
-      date: "April 11, 2025",
-      excerpt: "Fifth day of the educational tour in MMDA and Train Depot",
+      date: "April 13, 2025",
+      excerpt: "2nd day in Baguio City",
       coverImage: tourDay7Image || fallbackImage,
       tags: ["MMDA", "Train Depot", "Transportation", "Traffic Management", "Urban Planning"],
       category: "infrastructure",
@@ -610,9 +610,6 @@ export default function Bloghome() {
             </div>
            
           </div>
-        </div>
-        <div className="copyright">
-          <p>&copy; {new Date().getFullYear()} RA. All rights reserved.</p>
         </div>
       </footer>
     </div>

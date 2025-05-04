@@ -776,13 +776,6 @@ section {
   color: var(--primary-color);
 }
 
-.copyright {
-  text-align: center;
-  padding-top: 20px;
-  border-top: 1px solid #444;
-  color: #888;
-  font-size: 14px;
-}
 
 /* Blog Section Styles */
 .blog-section {
@@ -2284,16 +2277,6 @@ section {
   color: #fff;
 }
 
-.copyright {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding-top: 2rem;
-  margin-top: 3rem;
-  border-top: 1px solid #444;
-  text-align: center;
-  color: #777;
-  font-size: 0.9rem;
-}
 
 /* Responsive Styles */
 @media (max-width: 768px) {
