@@ -31,13 +31,13 @@ const AboutMe = () => {
       <h2 className="title">Frontend Developer & UI Designer</h2>
 
       <div className="social-links">
-        <a href="https://https://github.com/rayhanpayao25/" className="social-icon">
+        <a href="https://github.com/rayhanpayao25/" className="social-icon">
           <Github size={24} />
         </a>
         <a href="https://www.linkedin.com/in/rayhan-payao-747296354/" className="social-icon">
           <Linkedin size={24} />
         </a>
-        <a href="https://facebook.com" className="social-icon">
+        <a href="https://www.facebook.com/rayray.pw" className="social-icon">
           <Facebook size={24} />
         </a>
       </div>
