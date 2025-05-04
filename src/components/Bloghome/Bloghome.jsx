@@ -2,8 +2,9 @@
 
 import { useState, useRef, useEffect } from "react"
 import { motion } from "framer-motion"
-import { Calendar, Search, X, Menu, Play, Pause, Volume2, VolumeX, Maximize } from "lucide-react"
+import { Calendar, X, Menu, Play, Pause, Volume2, VolumeX, Maximize } from "lucide-react"
 import "./Bloghome.css"
+import profileImage from "../../assets/rayray.jpg"
 
 // Import images from assets folder
 import tourDay1Image from "../../assets/tourDay1Image.jpg"
@@ -309,54 +310,58 @@ export default function Bloghome() {
             <nav className={`vlog-nav ${mobileMenuOpen ? "mobile-open" : ""}`}>
               <ul>
                 <li>
-                  <a href="#blog" onClick={() => setMobileMenuOpen(false)}>
+                  <a
+                    href="#blog"
+                    onClick={(e) => {
+                      e.preventDefault()
+                      setMobileMenuOpen(false)
+                      document.getElementById("blog").scrollIntoView({ behavior: "smooth" })
+                    }}
+                  >
                     Blog
                   </a>
                 </li>
                 <li>
-                  <a href="#journey" onClick={() => setMobileMenuOpen(false)}>
+                  <a
+                    href="#journey"
+                    onClick={(e) => {
+                      e.preventDefault()
+                      setMobileMenuOpen(false)
+                      document.getElementById("journey").scrollIntoView({ behavior: "smooth" })
+                    }}
+                  >
                     My Journey
                   </a>
                 </li>
                 <li>
-                  <a href="#videos" onClick={() => setMobileMenuOpen(false)}>
+                  <a
+                    href="#videos"
+                    onClick={(e) => {
+                      e.preventDefault()
+                      setMobileMenuOpen(false)
+                      document.getElementById("videos").scrollIntoView({ behavior: "smooth" })
+                    }}
+                  >
                     Videos
                   </a>
                 </li>
-
                 <li>
-                  <a href="#about" onClick={() => setMobileMenuOpen(false)}>
+                  <a
+                    href="#about"
+                    onClick={(e) => {
+                      e.preventDefault()
+                      setMobileMenuOpen(false)
+                      document.getElementById("about").scrollIntoView({ behavior: "smooth" })
+                    }}
+                  >
                     About
                   </a>
                 </li>
               </ul>
             </nav>
           </div>
-          <div className="header-actions">
-            <button className="search-toggle" onClick={toggleSearch}>
-              <Search size={20} />
-            </button>
-          </div>
+          <div className="header-actions"></div>
         </header>
-        {showSearch && (
-          <div className="search-container">
-            <div className="search-wrapper">
-              <Search size={20} className="search-icon" />
-              <input
-                ref={searchInputRef}
-                type="text"
-                placeholder="Search blog posts..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-              />
-              {searchQuery && (
-                <button className="clear-search" onClick={() => setSearchQuery("")}>
-                  <X size={16} />
-                </button>
-              )}
-            </div>
-          </div>
-        )}
       </div>
 
       {/* Hero Banner */}
@@ -375,19 +380,31 @@ export default function Bloghome() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="hero-subtitle"
-          >
-       
-          </motion.p>
+          ></motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
             className="hero-buttons"
           >
-            <a href="#blog" className="primary-button">
+            <a
+              href="#blog"
+              onClick={(e) => {
+                e.preventDefault()
+                document.getElementById("blog").scrollIntoView({ behavior: "smooth" })
+              }}
+              className="primary-button"
+            >
               Read Blog
             </a>
-            <a href="#journey" className="secondary-button">
+            <a
+              href="#journey"
+              onClick={(e) => {
+                e.preventDefault()
+                document.getElementById("journey").scrollIntoView({ behavior: "smooth" })
+              }}
+              className="secondary-button"
+            >
               Watch Journey
             </a>
           </motion.div>
@@ -424,12 +441,7 @@ export default function Bloghome() {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   whileHover={{ y: -10, transition: { duration: 0.2 } }}
                 >
-                  <a
-                    href={`/blog/${post.id}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="blog-card-image"
-                  >
+                  <a href={`/blog/${post.id}`} target="_blank" rel="noopener noreferrer" className="blog-card-image">
                     <img src={post.coverImage || "/placeholder.svg"} alt={post.title} />
                     <div className="blog-card-overlay">
                       <span>Read Post</span>
@@ -459,21 +471,7 @@ export default function Bloghome() {
               ))}
             </div>
           ) : (
-            <div className="no-results">
-              <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
-                <h3>No posts found</h3>
-                <p>Try adjusting your search or filter criteria</p>
-                <button
-                  className="reset-filters"
-                  onClick={() => {
-                    setActiveFilter("all")
-                    setSearchQuery("")
-                  }}
-                >
-                  Reset Filters
-                </button>
-              </motion.div>
-            </div>
+            <div className="no-results"></div>
           )}
         </div>
       </section>
@@ -489,8 +487,7 @@ export default function Bloghome() {
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
-            >
-            </motion.p>
+            ></motion.p>
           </div>
 
           <motion.div
@@ -556,7 +553,6 @@ export default function Bloghome() {
               </div>
             ))}
           </div>
-
         </div>
       </section>
 
@@ -580,35 +576,55 @@ export default function Bloghome() {
         </div>
       )}
 
+      <section id="about" className="about-section">
+        <div className="container">
+          <div className="section-header">
+            <h2>About Me</h2>
+            <div className="accent-line"></div>
+          </div>
+
+          <div className="about-content">
+            <div className="about-image">
+              <img src={profileImage || "/placeholder.svg"} alt="Profile" className="profile-image" />
+            </div>
+            <div className="about-text">
+              <h3>Hello, I'm Ryee</h3>
+              <p>
+                Welcome to my blog! I'm a passionate explorer and storyteller documenting my educational journey and
+                adventures. Through this platform, I share my experiences from various educational tours, cultural
+                visits, and travel explorations.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <footer className="vlog-footer">
         <div className="footer-content">
           <div className="footer-logo">
             <h2>
               Ryee<span>Blog</span>
             </h2>
-            <p className="footer-tagline">Exploring the world, one adventure at a time</p>
+            <p className="footer-tagline">Educational Tour 2025 - BSIT</p>
           </div>
           <div className="footer-links">
-          
-           
             <div className="footer-section">
               <h4>Connect</h4>
               <ul>
                 <li>
-                  <a href="#">Instagram</a>
+                  <a href="https://www.linkedin.com/in/rayhan-payao-13b651360/">LinedkIn</a>
                 </li>
                 <li>
-                  <a href="#">YouTube</a>
+                  <a href="https://github.com/rayhanpayao25/">Github</a>
                 </li>
                 <li>
-                  <a href="#">Twitter</a>
+                  <a href="https://www.facebook.com/rayray.pw">Facebook</a>
                 </li>
                 <li>
-                  <a href="#">Facebook</a>
+                  <a href="mailto:rayhanpyo2016@gmail.com">Email</a>
                 </li>
               </ul>
             </div>
-           
           </div>
         </div>
       </footer>

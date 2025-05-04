@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { ArrowLeft, ArrowRight, Calendar, Share2, Bookmark, ThumbsUp } from "lucide-react"
+import { ArrowLeft, ArrowRight, Calendar, Share2, Bookmark, ThumbsUp } from 'lucide-react'
 import "../../components/Bloghome/Bloghome.css"
 
 // Import images from assets folder
@@ -72,8 +72,8 @@ const blogPosts = [
       },
       {
         src: gallery3Day1 || fallbackImage,
-        alt: "Fort Santiago – Rizal’s Prison Cell",
-        caption: "Fort Santiago – Rizal’s Prison Cell – The prison cell inside Fort Santiago where Dr. José Rizal was held before his execution in 1896, now preserved as a national heritage site.",
+        alt: "Fort Santiago – Rizal's Prison Cell",
+        caption: "Fort Santiago – Rizal's Prison Cell – The prison cell inside Fort Santiago where Dr. José Rizal was held before his execution in 1896, now preserved as a national heritage site.",
       },
       {
         src: gallery4Day1 || fallbackImage,
