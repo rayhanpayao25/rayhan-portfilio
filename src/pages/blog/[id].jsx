@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { ArrowLeft, ArrowRight, Calendar, Share2, Bookmark, ThumbsUp } from 'lucide-react'
+import { ArrowLeft, ArrowRight, Calendar, Share2, Bookmark, ThumbsUp } from "lucide-react"
 import "../../components/Bloghome/Bloghome.css"
 
 // Import images from assets folder
@@ -11,32 +11,72 @@ import tourDay2Image from "../../assets/gallery4Day2.jpg"
 import tourDay3Image from "../../assets/naturalmuseum.jpg"
 import tourDay4Image from "../../assets/hytec.jpg"
 import tourDay5Image from "../../assets/lrt.jpg"
+import tourDay7Image from "../../assets/baguio2.jpg"
+import tourDay6Image from "../../assets/baguio1s.jpg"
 
 // Import gallery images
 import gallery1Day1 from "../../assets/gallery1Day1.jpg"
-import gallery2Day1 from "../../assets/gallery1Day2.jpg"
-import gallery3Day1 from "../../assets/gallery1Day3.jpg"
-import gallery4Day1 from "../../assets/gallery1Day4.jpg"
-import gallery5Day1 from "../../assets/gallery1Day5.jpg"
+import gallery2Day1 from "../../assets/gallery2Day1.jpg"
+import gallery3Day1 from "../../assets/gallery3Day1.jpg"
+import gallery4Day1 from "../../assets/gallery4Day1.jpg"
+import gallery5Day1 from "../../assets/gallery5Day1.jpg"
+import gallery6Day1 from "../../assets/gallery6Day1.jpg"
+import gallery7Day1 from "../../assets/gallery7Day1.jpg"
+import gallery8Day1 from "../../assets/gallery8Day1.jpg"
 
 import gallery1Day2 from "../../assets/gallery1Day2s.jpg"
 import gallery2Day2 from "../../assets/gallery2Day2.jpg"
 import gallery3Day2 from "../../assets/gallery3Day2.jpg"
 import gallery4Day2 from "../../assets/gallery4Day2.jpg"
+import gallery5Day2 from "../../assets/gallery5Day2s.jpg"
 import gallery6Day2 from "../../assets/gallery6Day2.jpg"
+import gallery7Day2 from "../../assets/gallery7Day2s.jpg"
+import gallery8Day2 from "../../assets/gallery8Day2.jpg"
+
+import gallery1Day3 from "../../assets/gallery1Day3.jpg"
+import gallery2Day3 from "../../assets/gallery2Day3.jpg"
+import gallery3Day3 from "../../assets/gallery3Day3.jpg"
+import gallery4Day3 from "../../assets/gallery4Day3.jpg"
+import gallery5Day3 from "../../assets/gallery5Day3.jpg"
+import gallery6Day3 from "../../assets/gallery6Day3.jpg"
+import gallery7Day3 from "../../assets/gallery7Day3.jpg"
+import gallery8Day3 from "../../assets/gallery8Day3.jpg"
+
+import gallery1Day4 from "../../assets/gallery1Day4.jpg"
+import gallery2Day4 from "../../assets/gallery2Day4.jpg"
+import gallery3Day4 from "../../assets/gallery3Day4.jpg"
+import gallery4Day4 from "../../assets/gallery4Day4.jpg"
+import gallery5Day4 from "../../assets/gallery5Day4.jpg"
+import gallery6Day4 from "../../assets/gallery6Day4.jpg"
+import gallery7Day4 from "../../assets/gallery7Day4.jpg"
+import gallery8Day4 from "../../assets/gallery8Day4.jpg"
 
 
-import gallery1Day3 from "../../assets/rayhanpayao.jpg"
-import gallery2Day3 from "../../assets/rayhanpayao.jpg"
-import gallery3Day3 from "../../assets/rayhanpayao.jpg"
+import gallery1Day5 from "../../assets/gallery1Day5.jpg"
+import gallery2Day5 from "../../assets/gallery2Day5.jpg"
+import gallery3Day5 from "../../assets/gallery3Day5.jpg"
+import gallery4Day5 from "../../assets/gallery4Day5.jpg"
+import gallery5Day5 from "../../assets/gallery5Day5.jpg"
+import gallery6Day5 from "../../assets/gallery6Day5.jpg"
+import gallery7Day5 from "../../assets/gallery7Day5.jpg"
+import gallery8Day5 from "../../assets/gallery8Day5.jpg"
 
-import gallery1Day4 from "../../assets/rayhanpayao.jpg"
-import gallery2Day4 from "../../assets/rayhanpayao.jpg"
-import gallery3Day4 from "../../assets/rayhanpayao.jpg"
 
-import gallery1Day5 from "../../assets/rayhanpayao.jpg"
-import gallery2Day5 from "../../assets/rayhanpayao.jpg"
-import gallery3Day5 from "../../assets/rayhanpayao.jpg"
+import gallery1Day6 from "../../assets/gallery1Day6.jpg"
+import gallery2Day6 from "../../assets/gallery2Day6.jpg"
+import gallery3Day6 from "../../assets/gallery3Day6.jpg"
+import gallery4Day6 from "../../assets/gallery4Day6.jpg"
+import gallery5Day6 from "../../assets/gallery5Day6.jpg"
+import gallery6Day6 from "../../assets/gallery6Day6.jpg"
+import gallery7Day6 from "../../assets/gallery7Day6.jpg"
+import gallery8Day6 from "../../assets/gallery8Day6.jpg"
+
+
+import gallery1Day7 from "../../assets/gallery1Day7.jpg"
+import gallery2Day7 from "../../assets/gallery2Day7.jpg"
+import gallery3Day7 from "../../assets/gallery3Day7.jpg"
+import gallery4Day7 from "../../assets/gallery4Day7.jpg"
+import gallery5Day7 from "../../assets/gallery5Day7.jpg"
 
 const fallbackImage = "/placeholder.svg?height=300&width=500"
 
@@ -72,8 +112,8 @@ const blogPosts = [
       },
       {
         src: gallery3Day1 || fallbackImage,
-        alt: "Fort Santiago – Rizal's Prison Cell",
-        caption: "Fort Santiago – Rizal's Prison Cell – The prison cell inside Fort Santiago where Dr. José Rizal was held before his execution in 1896, now preserved as a national heritage site.",
+        alt: "Fort Santiago – Rizal’s Prison Cell",
+        caption: "Fort Santiago – Rizal’s Prison Cell – The prison cell inside Fort Santiago where Dr. José Rizal was held before his execution in 1896, now preserved as a national heritage site.",
       },
       {
         src: gallery4Day1 || fallbackImage,
@@ -85,6 +125,25 @@ const blogPosts = [
         alt: "Execution Site Marker",
         caption: "Execution Site Marker – The exact site in Luneta where José Rizal was executed, marked with a sculpture and plaques to commemorate his sacrifice for Philippine independence.",
       },
+
+      {
+        src: gallery6Day1 || fallbackImage,
+        alt: "",
+        caption: "",
+      },
+      {
+        src: gallery7Day1 || fallbackImage,
+        alt: "",
+        caption: "",
+      },
+      
+      {
+        src: gallery8Day1 || fallbackImage,
+        alt: "",
+        caption: "",
+      },
+      
+      
     ],
     tags: ["Exhibits", "Museum", "Pasig River", "Rizal's Trail", "Spanish-Era Ruins"],
     category: "history",
@@ -119,6 +178,12 @@ const blogPosts = [
         alt: "Historical Mural in Subic Freeport Zone",
         caption: "Historical Mural in Subic Freeport Zone – A colorful mural depicting important Filipino historical figures and events, found in a cultural or heritage site within the Subic Freeport Zone.",
       },
+
+      {
+        src: gallery5Day2 || fallbackImage,
+        alt: " ",
+        caption: "",
+      },
       {
         src: gallery2Day2 || fallbackImage,
         alt: "Intramuros Scale Model in Subic",
@@ -143,11 +208,17 @@ const blogPosts = [
         alt: "Briefing Room in Subic Freeport Zone ",
         caption: "Briefing Room  – A command or operations room used for training, simulations, or emergency management within the zone.",
       },
-  
+    
+        
+      {
+        src: gallery8Day2 || fallbackImage,
+        alt: "Group Photo",
+        caption: "Group Photo",
+     
+      },
 
     ],
     tags: ["Freeport Zone", "SBMA", "Baywalk", "Murals", "Infrastructure"],
-    category: "travel",
   },
   {
     id: 3,
@@ -179,22 +250,47 @@ const blogPosts = [
     images: [
       {
         src: gallery1Day3 || fallbackImage,
-        alt: "Research center tour",
-        caption: "Tour of the renewable energy research center",
+        alt: "Museum Architecture",
+        caption: "Museum Architecture - The design features sweeping curved supports and multiple levels connected by walkways. This central area is likely part of the Tree of Life structure that forms the core of the museum building",
       },
       {
         src: gallery2Day3 || fallbackImage,
-        alt: "Water purification experiment",
-        caption: "Conducting a water purification experiment",
+        alt: "LT Globe Model",
+        caption: "LT Globe Model - Ammonites were prehistoric marine mollusks related to today's octopus and squid. The globe has textured blue oceans and tan/brown landmasses to show where these ancient creatures were found. In Filipino, this would be called a modelo ng globo or globong pangkasaysayan. ",
       },
       {
         src: gallery3Day3 || fallbackImage,
-        alt: "Virtual reality experience",
-        caption: "Experiencing virtual reality at the technology park",
+        alt: "..",
+        caption: "",
+      },
+      {
+        src: gallery4Day3 || fallbackImage,
+        alt: "..",
+        caption: "",
+      },
+      {
+        src: gallery5Day3 || fallbackImage,
+        alt: "..",
+        caption: "",
+      },
+      {
+        src: gallery6Day3 || fallbackImage,
+        alt: "Presidential Vehicle and Bust",
+        caption: "Presidential Vehicle and Bust - This display features a vintage black car (appears to be from the 1930s-40s) that belonged to President Manuel L. Quezon, alongside a bronze bust of the president. This would be called a pangkasaysayang sasakyan (historical vehicle) and bust ni Pangulong Quezon.",
+      },
+      {
+        src: gallery7Day3 || fallbackImage,
+        alt: "Quezon Memorial Shrine",
+        caption: "Quezon Memorial Shrine - At the center of the Museo ni Manuel Quezon is the crypt of the president. After World War II, Quezón’s remains were returned to the Philippines on the 27th of July 1946, and buried at the North Cemetery in Manila. His body was transferred to the Quezon Memorial, on the 19th of August 1978, on the 100th Anniversary of Quezón’s birth.",
+      },
+
+      {
+        src: gallery8Day3 || fallbackImage,
+        alt: "group photo",
+        caption: "",
       },
     ],
     tags: ["Natural History", "Anthropology", "Fine Arts", "Tree of Life", "Filipino Heritage"],
-    category: "culture",
   },
   {
     id: 4,
@@ -218,22 +314,46 @@ const blogPosts = [
     images: [
       {
         src: gallery1Day4 || fallbackImage,
-        alt: "Art gallery tour",
-        caption: "Admiring paintings at the National Art Gallery",
+        alt: "Educational Robotics Kit",
+        caption: "Educational Robotics Kit- used for teaching programming and robotics concepts. These are often called Educational Robotics Trainers or Robotics Learning Kits in technical education.",
       },
       {
         src: gallery2Day4 || fallbackImage,
-        alt: "Painting demonstration",
-        caption: "Watching an oil painting demonstration",
+        alt: "Automation Control Panel",
+        caption: "Automation Control Panel - used to teach students about integrated building control systems.",
       },
       {
         src: gallery3Day4 || fallbackImage,
-        alt: "Cultural performance",
-        caption: "Enjoying the traditional cultural performance",
+        alt: "Simulation Training System",
+        caption: "Simulation Training System- This is a heavy equipment or vehicle simulator used for training operators without requiring actual machinery.",
+      },
+      {
+        src: gallery4Day4 || fallbackImage,
+        alt: "Robotics Training Area",
+        caption: "This area where different systems are demonstrated to students.",
+      },
+      {
+        src: gallery5Day4 || fallbackImage,
+        alt: "",
+        caption: "",
+      },
+      {
+        src: gallery6Day4 || fallbackImage,
+        alt: "",
+        caption: "",
+      },
+      {
+        src: gallery7Day4 || fallbackImage,
+        alt: "AI Training System",
+        caption: "AI Training System - Used to teach concepts of home automation, IoT (Internet of Things), and basic AI applications.",
+      },
+      {
+        src: gallery8Day4 || fallbackImage,
+        alt: "Group Photo",
+        caption: "Group Photo",
       },
     ],
     tags: ["Robotics", "Technical Education", "Automation", "Engineering", "Vocational Training"],
-    category: "technology",
   },
   {
     id: 5,
@@ -258,102 +378,143 @@ const blogPosts = [
     images: [
       {
         src: gallery1Day5 || fallbackImage,
-        alt: "Botanical Gardens entrance",
-        caption: "The beautiful entrance to the Botanical Gardens",
+        alt: "",
+        caption: "",
       },
       {
         src: gallery2Day5 || fallbackImage,
-        alt: "Tropical rainforest section",
-        caption: "Exploring the tropical rainforest section",
+        alt: "Rail Maintenance Vehicle",
+        caption: "Rail Maintenance Vehicle - A specialized vehicle used for maintaining and repairing railway tracks. It is equipped with tools and machinery to ensure the safety and efficiency of train operations.",
       },
       {
         src: gallery3Day5 || fallbackImage,
-        alt: "Seed planting workshop",
-        caption: "Students participating in the seed planting workshop",
+        alt: "Train Wheel Maintenance Area",
+        caption: "Train Wheel Maintenance Area - A dedicated space for inspecting and maintaining train wheels, ensuring they are in optimal condition for safe travel.",
+      },
+      {
+        src: gallery4Day5 || fallbackImage,
+        alt: "",
+        caption: "",
+      },
+      {
+        src: gallery5Day5 || fallbackImage,
+        alt: "LRT Train Interior Tour",
+        caption: "LRT Train Interior Tour - The train features the standard stainless steel interior with handrails, passenger seats, and bright lighting typical of Manila's light rail vehicles. This appears to be part of an educational tour.",
+      },
+      {
+        src: gallery6Day5 || fallbackImage,
+        alt: "MMDA Traffic Monitoring Center",
+        caption: "MMDA Traffic Monitoring Center - The MMDA's main control room, where traffic conditions are monitored in real-time. The large screens display live feeds from various traffic cameras across Metro Manila.",
+      },
+      {
+        src: gallery7Day5 || fallbackImage,
+        alt: "Briefing Session at MMDA",
+        caption: "Briefing Session at MMDA - Students listening to a briefing about traffic management and the role of the MMDA in maintaining order in Metro Manila. The officer is explaining the importance of traffic rules and regulations.",
+      },
+      {
+        src: gallery8Day5 || fallbackImage,
+        alt: "Group Photo",
+        caption: "Group Photo",
       },
     ],
     tags: ["MMDA", "Train Depot", "Transportation", "Traffic Management", "Urban Planning"],
-    category: "infrastructure",
   },
   {
     id: 6,
-    title: "Educational Tour - Day 5",
-    date: "April 11, 2025",
-    excerpt: "Fifth day of the educational tour in MMDA and Train Depot",
-    coverImage: tourDay5Image || fallbackImage,
+    title: "Baguio Tour - Day 1",
+    date: "April 12, 2025",
+    excerpt: "6th day in Baguio City",
+    coverImage: tourDay6Image || fallbackImage,
     content: `
-    <p>Our final day of the educational tour we left at 8:00 AM to visit a train facility and the MMDA (Metropolitan Manila 
-    Development Authority).When we arrived at the train site, we were given safety equipment like helmets and reflective vests. 
-    We explored the train depot and observed how the trains are cleaned, repaired, and prepared for daily operations. We even had 
-    the opportunity to go inside the trains and take photos. It was fascinating to see how much work goes on behind the scenes to 
-    make sure trains are safe and efficient for passengers.",</p>
-
-    <p>After the train visit, we proceeded to the MMDA office. Inside, we were shown the main control room where live traffic feeds 
-    from across Metro Manila are displayed on large screens. An officer explained how they monitor traffic, respond to emergencies, 
-    and help reduce congestion in busy areas. We realized how important traffic management is in keeping the city organized.</p>
-
-    <p>the day was full of learning and new experiences. We gained a better understanding of how transportation systems and traffic 
-    management work, and we appreciated the effort of the people behind them. </p>
+    <p>Our first tour day in Baguio. We left Quezon City around 1 AM and arrived in Baguio by 5 AM. The first place we visited was the Strawberry Farm. We bought souvenirs and some local food there.</p>
+    <p>After that, we visited the Philippine Military Academy (PMA), the premier military school in the Philippines where future officers of the Armed Forces of the Philippines are trained. The academy has a large, scenic campus with historical displays, military tanks, and monuments that showcase the history and discipline of the armed forces. </p>
+    <p>The last place we visited was Mines View Park. We also wore traditional Igorot costumes, which made the experience even more authentic and enjoyable. The colorful garments and accessories gave us a glimpse into the rich culture of the Cordilleran people. We took plenty of photos while enjoying the cool breeze and the scenic view overlooking the mountains. It was a fun and memorable way to end our trip. </p>
     `,
     images: [
       {
-        src: gallery1Day5 || fallbackImage,
-        alt: "Botanical Gardens entrance",
-        caption: "The beautiful entrance to the Botanical Gardens",
+        src: gallery6Day6 || fallbackImage,
+        alt: "Strawberry Farm",
+        caption: "Strawberry Farm",
       },
       {
-        src: gallery2Day5 || fallbackImage,
-        alt: "Tropical rainforest section",
-        caption: "Exploring the tropical rainforest section",
+        src: gallery7Day6 || fallbackImage,
+        alt: "Strawberry Farm",
+        caption: "Strawberry Farm",
       },
       {
-        src: gallery3Day5 || fallbackImage,
-        alt: "Seed planting workshop",
-        caption: "Students participating in the seed planting workshop",
+        src: gallery1Day6 || fallbackImage,
+        alt: "Bell Church Temple",
+        caption: "Bell Church Temple",
+      },
+      {
+        src: gallery2Day6 || fallbackImage,
+        alt: "Bell Church Temple",
+        caption: "Bell Church Temple",
+      },
+      {
+        src: gallery3Day6 || fallbackImage,
+        alt: "Igorot Costume",
+        caption: "Igorot Costume",
+      },
+      {
+        src: gallery4Day6 || fallbackImage,
+        alt: "PMA",
+        caption: "PMA",
+      },
+      {
+        src: gallery5Day6 || fallbackImage,
+        alt: "PMA",
+        caption: "PMA View",
+      },
+      {
+        src: gallery8Day6 || fallbackImage,
+        alt: "Mines View",
+        caption: "Mines View",
       },
     ],
-    tags: ["MMDA", "Train Depot", "Transportation", "Traffic Management", "Urban Planning"],
-    category: "infrastructure",
+    tags: ["Strawberry Farm", "Mines View", "Bell Church Temple", "PMA"],
   },
   {
     id: 7,
-    title: "Educational Tour - Day 5",
-    date: "April 11, 2025",
-    excerpt: "Fifth day of the educational tour in MMDA and Train Depot",
-    coverImage: tourDay5Image || fallbackImage,
+    title: "Baguio Tour - Day 2",
+    date: "April 13, 2025",
+    excerpt: "7th day in Baguio City",
+    coverImage: tourDay7Image || fallbackImage,
     content: `
-    <p>Our final day of the educational tour we left at 8:00 AM to visit a train facility and the MMDA (Metropolitan Manila 
-    Development Authority).When we arrived at the train site, we were given safety equipment like helmets and reflective vests. 
-    We explored the train depot and observed how the trains are cleaned, repaired, and prepared for daily operations. We even had 
-    the opportunity to go inside the trains and take photos. It was fascinating to see how much work goes on behind the scenes to 
-    make sure trains are safe and efficient for passengers.",</p>
-
-    <p>After the train visit, we proceeded to the MMDA office. Inside, we were shown the main control room where live traffic feeds 
-    from across Metro Manila are displayed on large screens. An officer explained how they monitor traffic, respond to emergencies, 
-    and help reduce congestion in busy areas. We realized how important traffic management is in keeping the city organized.</p>
-
-    <p>the day was full of learning and new experiences. We gained a better understanding of how transportation systems and traffic 
-    management work, and we appreciated the effort of the people behind them. </p>
+    <p>We spent the last day of our educational tour at Burnham Park. We rode bikes around the park, enjoying the cool Baguio breeze and the scenic view of trees and flowers. </p>
+    <p> After biking, since it was already our last day in Baguio, we bought more local food and souvenirs to take home for our families and friends. The market was full of delicious treats like ube jam, lengua de gato, and fresh strawberries, along with handmade crafts and woven items.</p>
+    <p>Before heading back to Quezon City, we took some final group pictures to capture the memories of our trip. It was a fun, educational, and unforgettable experience that gave us the chance to bond with our classmates while learning more about the culture, history, and beauty of Baguio City.
+ </p>
     `,
     images: [
       {
-        src: gallery1Day5 || fallbackImage,
-        alt: "Botanical Gardens entrance",
-        caption: "The beautiful entrance to the Botanical Gardens",
+        src: gallery1Day7 || fallbackImage,
+        alt: "SM City Baguio",
+        caption: "SM City Baguio",
       },
       {
-        src: gallery2Day5 || fallbackImage,
-        alt: "Tropical rainforest section",
-        caption: "Exploring the tropical rainforest section",
+        src: gallery2Day7 || fallbackImage,
+        alt: "Group Photo",
+        caption: "Group Photo",
       },
       {
-        src: gallery3Day5 || fallbackImage,
-        alt: "Seed planting workshop",
-        caption: "Students participating in the seed planting workshop",
+        src: gallery3Day7 || fallbackImage,
+        alt: "Burnham Park",
+        caption: "Burnham Park",
+        
+      },
+      {
+        src: gallery4Day7 || fallbackImage,
+        alt: "Burnham Park",
+        caption: "Burnham Park",
+      },
+      {
+        src: gallery5Day7 || fallbackImage,
+        alt: "Burnham Park",
+        caption: "Burnham Park",
       },
     ],
-    tags: ["MMDA", "Train Depot", "Transportation", "Traffic Management", "Urban Planning"],
-    category: "infrastructure",
+    tags: ["SM City Baguio", "Burnham Park"],
   },
 ]
 

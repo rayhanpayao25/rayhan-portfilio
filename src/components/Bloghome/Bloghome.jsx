@@ -27,6 +27,7 @@ import traindepotandmmda from "../../assets/traindepotandmmda.mov"
 
 import lazerarena from "../../assets/lazer.mov"
 import burnham from "../../assets/burnham.mov"
+import bgc from "../../assets/bgc.mov"
 
 // Import thumbnail images - these should be actual image files in your assets folder
 import fortsantiagothumbnail from "../../assets/fortsantiagothumbnail.jpg"
@@ -130,64 +131,64 @@ export default function Bloghome() {
     {
       id: 1,
       title: "Fort Santiago",
-      date: "2 weeks ago",
-      duration: "12:34",
+      date: "- April 7, 2025",
+      duration: "00:22",
       videoSrc: fortsantiago,
       thumbnail: fortsantiagothumbnail,
     },
     {
       id: 2,
       title: "Subic Bay",
-      date: "2 weeks ago",
-      duration: "12:34",
+      date: "- April 8, 2025",
+      duration: "00:19",
       videoSrc: subicbay,
       thumbnail: subicbaythumbnail,
     },
     {
       id: 3,
       title: "National Museum of Natural History",
-      date: "2 weeks ago",
-      duration: "12:34",
+      date: "- April 9, 2025",
+      duration: "00:21",
       videoSrc: nationalmuseums,
       thumbnail: nationalmuseumthumbnail,
     },
     {
       id: 4,
       title: "Hytec Power Inc",
-      date: "2 weeks ago",
-      duration: "12:34",
+      date: "- April 10, 2025",
+      duration: "00:16",
       videoSrc: hytec,
       thumbnail: hytecthumbnail,
     },
     {
       id: 5,
       title: "Train Depot and MMDA",
-      date: "2 weeks ago",
-      duration: "12:34",
+      date: "- April 11, 2025",
+      duration: "00:26",
       videoSrc: traindepotandmmda,
       thumbnail: traindepotthumbnail,
     },
     {
       id: 6,
       title: "Laser Tag SM North, Quezon City - IT4A",
-      date: "2 weeks ago",
-      duration: "12:34",
+      date: "- April 10, 2025",
+      duration: "00:24",
       videoSrc: lazerarena,
       thumbnail: lazerthumbnail,
     },
     {
       id: 7,
       title: "BGC",
-      date: "2 weeks ago",
-      duration: "12:34",
-      videoSrc: rayhanVideo,
+      date: "- April 6, 2025",
+      duration: "00:18",
+      videoSrc: bgc,
       thumbnail: bgcthumbnail,
     },
     {
       id: 8,
       title: "Burnham Park, Baguio City",
-      date: "2 weeks ago",
-      duration: "12:34",
+      date: "- April 13, 2025",
+      duration: "00:20",
       videoSrc: burnham,
       thumbnail: burnhamthumbnail,
     },
@@ -245,7 +246,7 @@ export default function Bloghome() {
       date: "April 12, 2025",
       excerpt: "First day in Baguio City",
       coverImage: tourDay6Image || fallbackImage,
-      tags: ["MMDA", "Train Depot", "Transportation", "Traffic Management", "Urban Planning"],
+      tags: ["Strawberry Farm", "Mines View", "Bell Church Temple", "PMA"],
       category: "infrastructure",
     },
     {
@@ -254,7 +255,7 @@ export default function Bloghome() {
       date: "April 13, 2025",
       excerpt: "2nd day in Baguio City",
       coverImage: tourDay7Image || fallbackImage,
-      tags: ["MMDA", "Train Depot", "Transportation", "Traffic Management", "Urban Planning"],
+      tags: ["SM City Baguio", "Burnham Park"],
       category: "infrastructure",
     },
   ]
