@@ -100,7 +100,7 @@ export default function ContactMe() {
           <a href="https://https//github.com/rayhanpayao25/" className="social-icon">
             <i className="fab fa-github"></i>
           </a>
-          <a href="https://www.linkedin.com/in/rayhan-payao-747296354/" className="social-icon">
+          <a href="https://www.linkedin.com/in/rayhan-payao-13b651360/" className="social-icon">
             <i className="fab fa-linkedin-in"></i>
           </a>
           <a href="https://www.facebook.com/rayraysoo.25/" className="social-icon">

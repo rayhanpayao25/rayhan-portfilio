@@ -12,8 +12,10 @@ import est from "../../assets/est.png"
 import pm from "../../assets/pm.jpg"
 import computernetworking from "../../assets/computernetworking.jpg"
 import cloudcomputing from "../../assets/cloudcomputing.jpg"
-
-
+import html from "../../assets/html.jpg"
+import css from "../../assets/css.jpg"
+import webanalytics from "../../assets/webanalytics.jpg"
+import cloudsecurity from "../../assets/cloudsecurity.jpg"
 
 import Cybersecuritypdf from "../../assets/certificate/3736_8196935.pdf"
 import frontenddevpdf from "../../assets/certificate/4511_8266560.pdf"
@@ -24,8 +26,10 @@ import computernetworkingpdf from "../../assets/certificate/7219_8203529.pdf"
 import cloudcomputingpdf from "../../assets/certificate/3971_8197280.pdf"
 import istPDF from "../../assets/certificate/Rayhan Payao - 2024-02-01.pdf"
 import estPDF from "../../assets/certificate/Rayhan.Payao- 2024-02-01.pdf"
-
-
+import htmlpdf from "../../assets/certificate/4496_8294039.pdf"
+import csspdf from "../../assets/certificate/4513_8295028.pdf"
+import webanalyticspdf from "../../assets/certificate/7101_8295351.pdf"
+import cloudsecuritypdf from "../../assets/certificate/4250_8290995.pdf"
 
 
 const Certificate = () => {
@@ -38,6 +42,43 @@ const Certificate = () => {
   const [selectedCertificate, setSelectedCertificate] = useState(null)
 
   const certificates = [
+
+    {
+      id: 8,
+      title: "Introduction to HTML",
+      issuer: "SimpliLearn",
+      date: "April 2025",
+      image: html,
+      pdf: htmlpdf,
+      pdfName: "Rayhan Payao - 4496_8294039.pdf",
+    },
+    {
+      id: 9,
+      title: "Introduction to CSS",
+      issuer: "SimpliLearn",
+      date: "April 2025",
+      image: css,
+      pdf: csspdf,
+      pdfName: "Rayhan Payao - 4513_8295028.pdf",
+    },
+    {
+      id: 10,
+      title: "Introduction to Web Analytics",
+      issuer: "SimpliLearn",
+      date: "April 2025",
+      image: webanalytics,
+      pdf: webanalyticspdf,
+      pdfName: "Rayhan Payao - 7101_8295351.pdf",
+    },
+    {
+      id: 11,
+      title: "Introduction to Cloud Security",
+      issuer: "SimpliLearn",
+      date: "April 2025",
+      image: cloudsecurity,
+      pdf: cloudsecuritypdf,
+      pdfName: "Rayhan Payao - 2024-02-01.pdf",
+    },
     {
       id: 1,
       title: "Front-End Web Development",
@@ -105,8 +146,9 @@ const Certificate = () => {
       pdf: Cybersecuritypdf,
       pdfName: "Rayhan Payao - 2024-02-01.pdf",
     },
+    
     {
-      id: 8,
+      id: 12,
       title: "Information Security Training",
       issuer: "Salary.com Learning Lab",
       date: "April 2024",
@@ -115,7 +157,7 @@ const Certificate = () => {
       pdfName: "Rayhan Payao - 2024-02-01.pdf",
     },
     {
-      id: 9,
+      id: 13,
       title: "Email Security Training",
       issuer: "Salary.com Learning Lab",
       date: "April 2023",
