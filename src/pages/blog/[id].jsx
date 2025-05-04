@@ -395,10 +395,6 @@ export default function BlogPost() {
     }
   }
 
-  const toggleLike = (postId, e) => {
-    e.stopPropagation()
-    setLikedPosts((prev) => (prev.includes(postId) ? prev.filter((id) => id !== postId) : [...prev, postId]))
-  }
 
   const toggleSave = (postId, e) => {
     e.stopPropagation()
@@ -465,34 +461,7 @@ export default function BlogPost() {
               {post.title}
             </motion.h1>
 
-            <div className="blog-post-meta">
-              <div className="meta-left">
-                <span className="blog-date">
-                  <Calendar size={16} />
-                  {post.date}
-                </span>
-              </div>
-              <div className="meta-right">
-                <button
-                  className={`action-button ${likedPosts.includes(post.id) ? "active" : ""}`}
-                  onClick={(e) => toggleLike(post.id, e)}
-                >
-                  <ThumbsUp size={16} />
-                  <span>Like</span>
-                </button>
-                <button
-                  className={`action-button ${savedPosts.includes(post.id) ? "active" : ""}`}
-                  onClick={(e) => toggleSave(post.id, e)}
-                >
-                  <Bookmark size={16} />
-                  <span>Save</span>
-                </button>
-                <button className="action-button">
-                  <Share2 size={16} />
-                  <span>Share</span>
-                </button>
-              </div>
-            </div>
+          
 
             <div className="blog-post-featured-image">
               <img src={post.coverImage || "/placeholder.svg"} alt={post.title} />

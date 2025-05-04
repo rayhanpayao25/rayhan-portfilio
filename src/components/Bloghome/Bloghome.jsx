@@ -290,7 +290,7 @@ export default function Bloghome() {
 
   const handlePostClick = (post) => {
     // Open in a new tab with the correct URL format
-    window.open(`http://localhost:5174/blog/${post.id}`, "_blank", "noopener,noreferrer")
+    window.open(`/blog/${post.id}`, "_blank", "noopener,noreferrer")
   }
 
   return (
