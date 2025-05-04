@@ -606,7 +606,7 @@ export default function Bloghome() {
               <h4>Connect</h4>
               <ul>
                 <li>
-                  <a href="https://www.linkedin.com/in/rayhan-payao-13b651360/">LinedkIn</a>
+                  <a href="https://www.linkedin.com/in/rayhan-payao-13b651360/">LinkedIn</a>
                 </li>
                 <li>
                   <a href="https://github.com/rayhanpayao25/">Github</a>
