@@ -31,7 +31,7 @@ const Footer = () => {
         <div className="footer-content">
           <div className="footer-section">
             <h3 className="footer-title">Rayhan Portfolio</h3>
-            <p className="footer-description">Building innovative solutions with passion and creativity.</p>
+            <p className="footer-description">Porfortlio Website 2025 - BSIT</p>
           </div>
 
           <div className="footer-section">
