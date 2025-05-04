@@ -1,17 +1,24 @@
-import React from "react"
-import ReactDOM from "react-dom/client"
-import { BrowserRouter, Routes, Route } from "react-router-dom"
-import App from "./App.jsx"
-import BlogPost from "./pages/blog/[id].jsx"
-import "./index.css"
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
-ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <BrowserRouter>
+function BlogPost() {
+
+  return (
+    <div>
+      <h1>Blog Post</h1>
+      <p>This is a placeholder for a blog post.</p>
+    </div>
+  );
+}
+
+function Main() {
+  return (
+    <Router>
       <Routes>
-        <Route path="/" element={<App />} />
         <Route path="/blog/:id" element={<BlogPost />} />
       </Routes>
-    </BrowserRouter>
-  </React.StrictMode>,
-)
+    </Router>
+  );
+}
+
+export default Main;
