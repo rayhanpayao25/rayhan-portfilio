@@ -47,7 +47,7 @@ const Footer = () => {
                 <Github size={20} />
               </a>
               <a
-                href="https://www.linkedin.com/in/rayhan-payao-747296354/"
+                href="https://www.linkedin.com/in/rayhan-payao-13b651360/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="social-link"

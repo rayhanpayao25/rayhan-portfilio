@@ -148,7 +148,7 @@ export default function Navbar() {
           ))}
           <li>
             <button className="btn mobile-btn" onClick={navigateToBloghome}>
-            bloghome
+            Blog Post
             </button>
           </li>
         </ul>
