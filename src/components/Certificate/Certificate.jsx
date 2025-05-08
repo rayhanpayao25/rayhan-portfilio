@@ -7,8 +7,6 @@ import cybersecurity from "../../assets/cybersecurity.jpg"
 import frontenddev from "../../assets/frontend.jpg"
 import webdev from "../../assets/webdev.jpg"
 import datascience from "../../assets/datascience.jpg"
-import ist from "../../assets/ist.png"
-import est from "../../assets/est.png"
 import pm from "../../assets/pm.jpg"
 import computernetworking from "../../assets/computernetworking.jpg"
 import cloudcomputing from "../../assets/cloudcomputing.jpg"
@@ -16,7 +14,11 @@ import html from "../../assets/html.jpg"
 import css from "../../assets/css.jpg"
 import webanalytics from "../../assets/webanalytics.jpg"
 import cloudsecurity from "../../assets/cloudsecurity.jpg"
+import machinelearning from "../../assets/machinelearning.jpg"
+import computernetworking2 from "../../assets/computernetworking2.jpg"
 
+import freecoderay from "../../assets/freecoderayhan.png"
+ 
 import Cybersecuritypdf from "../../assets/certificate/3736_8196935.pdf"
 import frontenddevpdf from "../../assets/certificate/4511_8266560.pdf"
 import webdevpdf from "../../assets/certificate/6051_8249690.pdf"
@@ -24,12 +26,13 @@ import datasciencepdf from "../../assets/certificate/4227_8245098.pdf"
 import projectmanagement from "../../assets/certificate/6032_8197863.pdf"
 import computernetworkingpdf from "../../assets/certificate/7219_8203529.pdf"
 import cloudcomputingpdf from "../../assets/certificate/3971_8197280.pdf"
-import istPDF from "../../assets/certificate/Rayhan Payao - 2024-02-01.pdf"
-import estPDF from "../../assets/certificate/Rayhan.Payao- 2024-02-01.pdf"
 import htmlpdf from "../../assets/certificate/4496_8294039.pdf"
 import csspdf from "../../assets/certificate/4513_8295028.pdf"
 import webanalyticspdf from "../../assets/certificate/7101_8295351.pdf"
 import cloudsecuritypdf from "../../assets/certificate/4250_8290995.pdf"
+import machinelearningpdf from "../../assets/certificate/2789_8304631.pdf"
+import computernetworking2pdf from "../../assets/certificate/7741_8299772.pdf"
+
 
 
 const Certificate = () => {
@@ -61,15 +64,7 @@ const Certificate = () => {
       pdf: csspdf,
       pdfName: "Rayhan Payao - 4513_8295028.pdf",
     },
-    {
-      id: 10,
-      title: "Introduction to Web Analytics",
-      issuer: "SimpliLearn",
-      date: "April 2025",
-      image: webanalytics,
-      pdf: webanalyticspdf,
-      pdfName: "Rayhan Payao - 7101_8295351.pdf",
-    },
+   
     {
       id: 11,
       title: "Introduction to Cloud Security",
@@ -146,26 +141,45 @@ const Certificate = () => {
       pdf: Cybersecuritypdf,
       pdfName: "Rayhan Payao - 2024-02-01.pdf",
     },
-    
+
     {
       id: 12,
-      title: "Information Security Training",
-      issuer: "Salary.com Learning Lab",
-      date: "April 2024",
-      image: ist,
-      pdf: istPDF,
+      title: "Introduction to Web Analytics",
+      issuer: "SimpliLearn",
+      date: "May 2025",
+      image: webanalytics,
+      pdf: webanalyticspdf,
       pdfName: "Rayhan Payao - 2024-02-01.pdf",
     },
+
     {
       id: 13,
-      title: "Email Security Training",
-      issuer: "Salary.com Learning Lab",
-      date: "April 2023",
-      image: est,
-      pdf: estPDF,
-      pdfName: "Rayhan.Payao- 2024-02-01.pdf",
-    
+      title: "Introduction to Computer-Networking",
+      issuer: "SimpliLearn",
+      date: "May 2025",
+      image: computernetworking2, 
+      pdf: computernetworking2pdf,
+      pdfName: "Rayhan Payao - /7741_8299772.pdf",
     },
+
+    {
+      id: 14,
+      title: "Machine Learning",
+      issuer: "SimpliLearn",
+      date: "May 2025",
+      image: machinelearning,
+      pdf: machinelearningpdf,
+      pdfName: "Rayhan Payao - /2789_8304631.pdf",
+    },
+
+    {
+      id: 15,
+      title: "Responsive Web Design",
+      issuer: "FreecodeCamp",
+      date: "May 2025",
+      image: freecoderay,
+    },
+    
 
   ]
 
