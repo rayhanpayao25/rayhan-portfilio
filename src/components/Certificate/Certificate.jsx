@@ -47,61 +47,13 @@ const Certificate = () => {
   const certificates = [
 
     {
-      id: 8,
-      title: "Introduction to HTML",
+      id: 7,
+      title: "Introduction to Cybersecurity",
       issuer: "SimpliLearn",
       date: "April 2025",
-      image: html,
-      pdf: htmlpdf,
-      pdfName: "Rayhan Payao - 4496_8294039.pdf",
-    },
-    {
-      id: 9,
-      title: "Introduction to CSS",
-      issuer: "SimpliLearn",
-      date: "April 2025",
-      image: css,
-      pdf: csspdf,
-      pdfName: "Rayhan Payao - 4513_8295028.pdf",
-    },
-   
-    {
-      id: 11,
-      title: "Introduction to Cloud Security",
-      issuer: "SimpliLearn",
-      date: "April 2025",
-      image: cloudsecurity,
-      pdf: cloudsecuritypdf,
+      image: cybersecurity,
+      pdf: Cybersecuritypdf,
       pdfName: "Rayhan Payao - 2024-02-01.pdf",
-    },
-    {
-      id: 1,
-      title: "Front-End Web Development",
-      issuer: "SimpliLearn",
-      date: "April 2025",
-      image: frontenddev,
-      pdf: frontenddevpdf,
-      pdfName: "4511_8266560.pdf",
-    },
-
-    {
-      id: 2,
-      title: "Web Development",
-      issuer: "SimpliLearn",
-      date: "April 2025",
-      image: webdev,
-      pdf: webdevpdf,
-      pdfName: "6051_8249690.pdf",
-    },
-    
-    {
-      id: 3,
-      title: "Introduction to Data Science",
-      issuer: "SimpliLearn",
-      date: "April 2025",
-      image: datascience,
-      pdf: datasciencepdf,
-      pdfName: "4227_8245098.pdf",
     },
 
     {
@@ -113,6 +65,37 @@ const Certificate = () => {
       pdf: projectmanagement,
       pdfName: "6032_8197863.pdf",
     },
+
+    {
+      id: 3,
+      title: "Introduction to Data Science",
+      issuer: "SimpliLearn",
+      date: "April 2025",
+      image: datascience,
+      pdf: datasciencepdf,
+      pdfName: "4227_8245098.pdf",
+    },
+
+    {
+      id: 2,
+      title: "Web Development",
+      issuer: "SimpliLearn",
+      date: "April 2025",
+      image: webdev,
+      pdf: webdevpdf,
+      pdfName: "6051_8249690.pdf",
+    },
+    {
+      id: 1,
+      title: "Front-End Web Development",
+      issuer: "SimpliLearn",
+      date: "April 2025",
+      image: frontenddev,
+      pdf: frontenddevpdf,
+      pdfName: "4511_8266560.pdf",
+    },
+   
+ 
     {
       id: 5,
       title: "Introduction to Computer Networking",
@@ -122,6 +105,7 @@ const Certificate = () => {
       pdf: computernetworkingpdf,
       pdfName: "7219_8203529.pdf",
     },
+
     {
       id: 6,
       title: "Introduction to Cloud Computing",
@@ -132,15 +116,38 @@ const Certificate = () => {
       pdfName: "3971_8197280,pfd",
     },
 
+
     {
-      id: 7,
-      title: "Introduction to Cybersecurity",
+      id: 8,
+      title: "Introduction to HTML",
       issuer: "SimpliLearn",
-      date: "April 2025",
-      image: cybersecurity,
-      pdf: Cybersecuritypdf,
+      date: "May 2025",
+      image: html,
+      pdf: htmlpdf,
+      pdfName: "Rayhan Payao - 4496_8294039.pdf",
+    },
+    {
+      id: 9,
+      title: "Introduction to CSS",
+      issuer: "SimpliLearn",
+      date: "May 2025",
+      image: css,
+      pdf: csspdf,
+      pdfName: "Rayhan Payao - 4513_8295028.pdf",
+    },
+   
+    {
+      id: 11,
+      title: "Introduction to Cloud Security",
+      issuer: "SimpliLearn",
+      date: "May 2025",
+      image: cloudsecurity,
+      pdf: cloudsecuritypdf,
       pdfName: "Rayhan Payao - 2024-02-01.pdf",
     },
+ 
+
+
 
     {
       id: 12,
