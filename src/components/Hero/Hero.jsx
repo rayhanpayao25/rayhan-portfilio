@@ -140,9 +140,15 @@ const Hero = () => {
           </h1>
 
           <p ref={paragraphRef} className="hero-paragraph">
-            Welcome to my little corner of the web. I'm a front-end developer, and I'm all about turning ideas into
-            interactive, fun, and beautiful websites. I'm here to make your web experience something special. Take a
-            look around, explore, and feel free to reach out if you want to create something awesome together!
+            A dedicated, passionate and a very highly
+            adaptable and trainable seeker that is willing to
+            seek every opportunity and every challenging
+            tasks that can be able to perform. I’m confident
+            that I’m able to adapt to new technologies and
+            systems or tasks to do the job done. Working in
+            an organizational manner is a no problem for
+            me at all because i am confident enough that i
+            have the ability to work well with other people
           </p>
 
           <div className="buttons-container" ref={buttonsContainerRef}>
