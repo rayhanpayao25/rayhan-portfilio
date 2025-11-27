@@ -28,7 +28,7 @@ const AboutMe = () => {
       </div>
 
       <h1 className="name">Rayhan Payao</h1>
-      <h2 className="title">Frontend Developer & UI Designer</h2>
+      <h2 className="title">Quality Assurance Specialist</h2>
 
       <div className="social-links">
         <a href="https://github.com/rayhanpayao25/" className="social-icon">
@@ -45,14 +45,10 @@ const AboutMe = () => {
       <div className="introduction-section">
         <h2 className="intro-title">Introduction</h2>
         <p className="intro-text">
-          I'm a passionate frontend developer still early in my journey, but I've already spent a few years building
-          beautiful, responsive, and user-friendly web applications. I mainly work with React, Html/Css and modern
-          JavaScript, and I really love finding that sweet spot between good design and smooth functionality.
-        </p>
-        <p className="intro-text">
-          I believe technology has the power to change lives, and I'm excited to keep growing, learning, and building
-          projects that actually make an impact. Every new challenge is an opportunity to innovate, create meaningful
-          solutions, and contribute to a better future through technology.
+          Welcome to my space! I’m Rayhan, a Quality Assurance Specialist with 2 years of experience
+          ensuring that every application I test is reliable and user-ready. I’m passionate about clean,
+          stable products, and I enjoy working with teams to find issues early and improve overall quality.
+          I’m always learning, exploring new tools, and pushing myself to grow in the QA field.
         </p>
       </div>
 
@@ -65,6 +61,16 @@ const AboutMe = () => {
               <Laptop size={32} />
             </div>
             <h3 className="skill-name">Frontend Development</h3>
+            <p className="skill-description">
+              Building responsive, accessible, and performant web applications with modern frameworks.
+            </p>
+          </div>
+
+          <div className="skill-card">
+            <div className="skill-icon">
+              <Laptop size={32} />
+            </div>
+            <h3 className="skill-name">Manual and Automated Testing</h3>
             <p className="skill-description">
               Building responsive, accessible, and performant web applications with modern frameworks.
             </p>
@@ -93,17 +99,16 @@ const AboutMe = () => {
       </div>
 
       <div className="current-work-section">
-        <h2 className="current-work-title">I'm Currently Working As</h2>
+        <h2 className="current-work-title">Work Experience</h2>
 
         <div className="current-work-content">
           <div className="current-work-image">
             <img src={qaImage || "/placeholder.svg"} alt="Current Work" />
           </div>
-
           <div className="current-work-details">
             <h3 className="current-work-position">QUALITY ASSURANCE SPECIALIST</h3>
             <p className="current-work-text">
-              I have over a year of experience as a Quality Assurance Specialist at Salary.com, working remotely. I use
+              I have over 2 years of experience as a Quality Assurance Specialist at Salary.com, working remotely. I use
               tools like Jira and DevOps to manage workflows, track issues, and ensure the quality of products. My
               responsibilities include testing, identifying bugs, and providing feedback to development teams to improve
               functionality.
@@ -116,14 +121,23 @@ const AboutMe = () => {
 
             <div className="tech-stack">
               <span className="tech-tag">Javascript</span>
+              <span className="tech-tag">Python</span>
               <span className="tech-tag">Jira</span>
-              <span className="tech-tag">Devops</span>
-              <span className="tech-tag">Html</span>
-              <span className="tech-tag">Css</span>
+              <span className="tech-tag">Azure DevOps</span>
+              <span className="tech-tag">Html5</span>
+              <span className="tech-tag">CSS</span>
               <span className="tech-tag">Test Planning</span>
-              <span className="tech-tag">Manual Planning</span>
-              <span className="tech-tag">Test Automation</span>
+              <span className="tech-tag">Manual Testing</span>
+              <span className="tech-tag">Automation Testing</span>
+              <span className="tech-tag">API Testing</span>
               <span className="tech-tag">Functional Testing</span>
+              <span className="tech-tag">Regression Testing</span>
+              <span className="tech-tag">Performance Testing</span>
+              <span className="tech-tag">Smoke Testing</span>
+              <span className="tech-tag">Sanity Testing</span>
+              <span className="tech-tag">Agile</span>
+              <span className="tech-tag">Waterfall</span>
+
             </div>
           </div>
         </div>
@@ -135,15 +149,19 @@ const AboutMe = () => {
         <div className="goal-container">
           <div className="goal-card">
             <div className="goal-icon">
-   
+
             </div>
-          
+
             <p className="goal-description">
-            I want to Enhance my proficiency in using ReactJS and 3D web tools to make websites more fun and interactive. I also plan to earn a certification in using AI with frontend development to build smarter and more responsive apps. I’m also exploring new design trends, improving my UI/UX skills, and working on real-world projects to apply what I’ve learned. My goal is to become a well-rounded frontend developer who can create modern, innovative, and user-friendly web experiences.
+
+              I aim to expand my QA skills by focusing on automation frameworks and API testing tools. Since
+              I’m still developing in these areas, my goal is to continue learning, practicing, and applying
+              automation techniques in real projects. Over time, I hope to move into a more advanced QA role
+              where I can design automated test suites and contribute to more efficient testing strategies.
             </p>
           </div>
 
-          
+
         </div>
       </div>
 
@@ -194,7 +212,7 @@ const AboutMe = () => {
         </div>
       </div>
 
-      
+
       <div className="personal-section">
         <h2 className="personal-title">Personal Touch</h2>
 
@@ -238,8 +256,8 @@ const AboutMe = () => {
               When I'm not coding, you'll find me playing guitar, playing piano, or playing mobile games. I believe
               diverse interests fuel creativity in tech.
             </p>
-       
-            </div>
+
+          </div>
         </div>
       </div>
     </div>

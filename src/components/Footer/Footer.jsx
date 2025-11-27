@@ -13,13 +13,13 @@ const Footer = () => {
       setIsMobile(window.innerWidth < 768)
     }
 
-    
+
     checkScreenSize()
 
- 
+
     window.addEventListener("resize", checkScreenSize)
 
-   
+
     return () => {
       window.removeEventListener("resize", checkScreenSize)
     }
@@ -31,7 +31,7 @@ const Footer = () => {
         <div className="footer-content">
           <div className="footer-section">
             <h3 className="footer-title">Rayhan Portfolio</h3>
-            <p className="footer-description">Porfortlio Website 2025 - BSIT</p>
+            <p className="footer-description">Porfortlio Website 2025</p>
           </div>
 
           <div className="footer-section">
@@ -62,7 +62,7 @@ const Footer = () => {
           </div>
         </div>
 
-      
+
       </div>
     </footer>
   )

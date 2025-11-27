@@ -9,14 +9,14 @@ import ContactMe from "./components/ContactMe/ContactMe";
 import Projects from "./components/Projects/Projects";
 import AnimatedSection from "./components/AnimatedSection/AnimatedSection";
 import Footer from "./components/Footer/Footer";
-import Certificate from "./components/Certificate/Certificate"; 
+import Certificate from "./components/Certificate/Certificate";
 
 
 const App = () => {
   return (
     <Router>
       <Routes>
-      
+
         <Route path="/" element={
           <>
             <Navbar />
@@ -37,7 +37,7 @@ const App = () => {
             </AnimatedSection>
 
             <AnimatedSection id="programs" className="container">
-              <Title subTitle="GDSC Program" title="My GDSC Projects" />
+              <Title subTitle="GDGC Program" title="My Google Development Group Club Projects" />
               <Programs />
             </AnimatedSection>
 
@@ -45,11 +45,11 @@ const App = () => {
           </>
         } />
 
-        {}
-        <Route path="/certificates" element={<Certificate />} /> {}
+        { }
+        <Route path="/certificates" element={<Certificate />} /> { }
       </Routes>
 
-      
+
     </Router>
   );
 };
