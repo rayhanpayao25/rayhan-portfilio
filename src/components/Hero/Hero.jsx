@@ -140,10 +140,9 @@ const Hero = () => {
           </h1>
 
           <p ref={paragraphRef} className="hero-paragraph">
-            Welcome to my little corner of the web. I'm a Quality Assurance professional with 2 years of experience
-            ensuring products are reliable, smooth, and user-friendly. I’m all about finding issues before users
-            do and helping teams deliver high-quality, seamless experiences. Take a look around, explore, and feel
-            free to reach out if you want to build something stable, efficient, and truly excellent together.
+            Welcome to my little corner of the web. I'm a front-end developer, and I'm all about turning ideas into
+            interactive, fun, and beautiful websites. I'm here to make your web experience something special. Take a
+            look around, explore, and feel free to reach out if you want to create something awesome together!
           </p>
 
           <div className="buttons-container" ref={buttonsContainerRef}>
@@ -151,14 +150,15 @@ const Hero = () => {
               Hire Me
               <span className="button-glow"></span>
             </button>
+            <button className="secondary-button" onClick={handleDownloadCV}>
+              View CV
+            </button>
+
             {/* 
-<button className="secondary-button" onClick={handleDownloadCV}>
-  View CV
-</button>
-*/}
+
             <button className="secondary-button" onClick={handleViewCertificates}>
               View Certificates
-            </button>
+            </button>*/}
           </div>
         </div>
 
