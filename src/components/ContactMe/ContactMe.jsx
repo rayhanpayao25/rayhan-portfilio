@@ -11,7 +11,7 @@ export default function ContactMe() {
   useEffect(() => {
     setIsVisible(true)
 
-    
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -71,14 +71,14 @@ export default function ContactMe() {
         </motion.p>
 
         <motion.div className="contact-buttons" variants={itemVariants}>
-        
-            
-        <button className="portfolio-button" onClick={() => (window.location.href = "/#projects")}>
-        View My Projects
-      </button>
+
+
+          <button className="portfolio-button" onClick={() => (window.location.href = "/#projects")}>
+            View My Projects
+          </button>
           <button className="contact-button" onClick={() => (window.location.href = "mailto:rayhanpyo2016@gmail.com")}>
-      Contact Me
-    </button>
+            Contact Me
+          </button>
         </motion.div>
 
         <motion.div className="contact-info" variants={itemVariants}>
@@ -88,7 +88,7 @@ export default function ContactMe() {
           </div>
           <div className="info-item">
             <i className="fas fa-phone"></i>
-            <span>+63 (123) 456-789</span>
+            <span>+63 9458457281</span>
           </div>
           <div className="info-item">
             <i className="fas fa-map-marker-alt"></i>
