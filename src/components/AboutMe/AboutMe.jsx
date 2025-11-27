@@ -225,9 +225,8 @@ const AboutMe = () => {
             </div>
             <h3 className="personal-name">Fun Fact</h3>
             <p className="personal-description">
-              I love cramming because honestly, it's the only time I feel like a real academic weapon. All of my
-              creativity comes out and I become super motivated and focused when doing tasks. There's this one time I
-              once coded an website while in side the Tricycle.
+              I love cramming because honestly, it's the only time I feel like a real weapon. All of my
+              creativity comes out and I become super motivated and focused when doing tasks.
             </p>
           </div>
 
@@ -237,11 +236,10 @@ const AboutMe = () => {
                 <Plane size={24} />
               </div>
             </div>
-            <h3 className="personal-name">Life-Changing Trip</h3>
+            <h3 className="personal-name">Photography</h3>
             <p className="personal-description">
-              Backpacking through Luzon for 10 days for our Academic tour changed my perspective on design. I now
-              incorporate elements of natural beauty and cultural richness inspired by the mountains, buildings, and
-              historic towns I explored.
+              I like taking photos of landscapes, sunsets, and city scenes whenever I travel.
+              It helps me capture memories and be creative.
             </p>
           </div>
 
@@ -253,7 +251,7 @@ const AboutMe = () => {
             </div>
             <h3 className="personal-name">Hobbies</h3>
             <p className="personal-description">
-              When I'm not coding, you'll find me playing guitar, playing piano, or playing mobile games. I believe
+              When I'm not working, you'll find me playing guitar, playing piano, or playing mobile games. I believe
               diverse interests fuel creativity in tech.
             </p>
 
