@@ -109,7 +109,7 @@ const AboutMe = () => {
             <h3 className="current-work-position">QUALITY ASSURANCE SPECIALIST</h3>
             <p className="current-work-text">
               I have over 2 years of experience as a Quality Assurance Specialist at Salary.com, working remotely. I use
-              tools like Jira and Azure DevOps to manage workflows, track issues, and ensure the quality of products. My
+              tools like Azure DevOps similar to Jira to manage workflows, track issues, and ensure the quality of products. My
               responsibilities include testing, identifying bugs, and providing feedback to development teams to improve
               functionality.
             </p>
