@@ -28,7 +28,7 @@ const AboutMe = () => {
       </div>
 
       <h1 className="name">Rayhan Payao</h1>
-      <h2 className="title">Quality Assurance Specialist</h2>
+      <h2 className="title">Quality Assurance Engineer</h2>
 
       <div className="social-links">
         <a href="https://github.com/rayhanpayao25/" className="social-icon">
@@ -45,10 +45,10 @@ const AboutMe = () => {
       <div className="introduction-section">
         <h2 className="intro-title">Introduction</h2>
         <p className="intro-text">
-          Welcome to my space! I’m Rayhan, a Quality Assurance Specialist with 2 years of experience
-          ensuring that every application I test is reliable and user-ready. I’m passionate about clean,
-          stable products, and I enjoy working with teams to find issues early and improve overall quality.
-          I’m always learning, exploring new tools, and pushing myself to grow in the QA field.
+         Welcome to my space! I’m Rayhan, a Quality Assurance Engineer with almost 3 years of experience in software testing and quality assurance. I’m passionate about ensuring that applications are reliable, stable, and user-friendly.
+
+I enjoy working closely with development and cross-functional teams to identify issues early, improve product quality, and help deliver a smooth user experience. I’m always eager to learn, explore new tools and technologies, and continue growing my skills and career in the QA field.
+
         </p>
       </div>
 
@@ -106,12 +106,14 @@ const AboutMe = () => {
             <img src={qaImage || "/placeholder.svg"} alt="Current Work" />
           </div>
           <div className="current-work-details">
-            <h3 className="current-work-position">QUALITY ASSURANCE SPECIALIST</h3>
+            <h3 className="current-work-position">QUALITY ASSURANCE ENGINEER</h3>
             <p className="current-work-text">
-              I have over 2 years of experience as a Quality Assurance Specialist at Salary.com, working remotely. I use
-              tools like Azure DevOps similar to Jira to manage workflows, track issues, and ensure the quality of products. My
-              responsibilities include testing, identifying bugs, and providing feedback to development teams to improve
-              functionality.
+             I have almost 3 years of experience in Quality Assurance, working as a QA Specialist at Salary.com and as a QA Engineer at iCxeed Philippines. Throughout my experience, I have been responsible for testing software products, identifying and reporting bugs, managing issues, and providing valuable feedback to development teams to improve product functionality and quality.
+
+I have experience using tools such as Azure DevOps, similar to Jira, to manage workflows, track issues, and collaborate effectively with cross-functional teams. I work closely with developers, project managers, and other stakeholders to ensure that products meet quality standards before release.
+
+With strong attention to detail, problem-solving skills, and a focus on efficiency, I help ensure smooth project timelines and deliver reliable, high-quality products that meet customer expectations.
+
             </p>
             <p className="current-work-text">
               As a QA Specialist, I work closely with cross-functional teams to ensure that all products meet the

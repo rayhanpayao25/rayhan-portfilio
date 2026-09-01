@@ -88,7 +88,7 @@ export default function ContactMe() {
           </div>
           <div className="info-item">
             <i className="fas fa-phone"></i>
-            <span>+63 9458457281</span>
+            <span>+63 9765855263</span>
           </div>
           <div className="info-item">
             <i className="fas fa-map-marker-alt"></i>

@@ -128,9 +128,16 @@ export default function Navbar() {
           </li>
         ))}
         <li>
+
+
+          {/*
           <button className="btn" onClick={navigateToBloghome}>
-            Blog Post
-          </button>
+           Blog Post
+           </button>
+           */}
+
+
+           
         </li>
       </ul>
 
