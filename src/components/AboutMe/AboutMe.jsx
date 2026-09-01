@@ -116,7 +116,7 @@ With strong attention to detail, problem-solving skills, and a focus on efficien
 
             </p>
             <p className="current-work-text">
-              As a QA Specialist, I work closely with cross-functional teams to ensure that all products meet the
+              As a QA Engineer, I work closely with cross-functional teams to ensure that all products meet the
               highest standards before release. With a strong focus on detail and efficiency, I help maintain smooth
               project timelines and ensure the final products meet customer expectations.
             </p>
@@ -135,10 +135,15 @@ With strong attention to detail, problem-solving skills, and a focus on efficien
               <span className="tech-tag">Functional Testing</span>
               <span className="tech-tag">Regression Testing</span>
               <span className="tech-tag">Performance Testing</span>
+              <span className="tech-tag">UAT Testing</span>
+              <span className="tech-tag">Exploratory Testing</span>
               <span className="tech-tag">Smoke Testing</span>
               <span className="tech-tag">Sanity Testing</span>
               <span className="tech-tag">Agile</span>
               <span className="tech-tag">Waterfall</span>
+              <span className="tech-tag">AWS Practioner</span>
+              
+              
 
             </div>
           </div>
