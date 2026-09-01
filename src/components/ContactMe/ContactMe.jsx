@@ -92,7 +92,7 @@ export default function ContactMe() {
           </div>
           <div className="info-item">
             <i className="fas fa-map-marker-alt"></i>
-            <span>Zamboanga City, PH</span>
+            <span>Zamboanga City, PH</span> 
           </div>
         </motion.div>
 
